@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3277a74ac26f9534794786b408a261b8, type: 3}
+  m_Name: ProjectSettings
+  m_EditorClassIdentifier: 
+  m_LevelsPath: Assets/Resources/Data/Levels
+  m_ItemsPath: Assets/Resources/Data/Items
+  m_ThemesPath: Assets/Resources/Data/Themes
+  m_LevelDB: {fileID: 11400000, guid: 5830e5f2c25e3dd4981d40530603e42f, type: 2}
+  m_ThemeDB: {fileID: 11400000, guid: 2b373edf572e91245beae0b064648725, type: 2}
+  m_GameObjectWithContainer: {fileID: 7154756770770838695, guid: a2ae5e6da5bef664696d18dec27f8fc1,
+    type: 3}
+  m_UIObjectWithContainer: {fileID: 4553004484730972346, guid: c3b26283ea607614daed967f4527a629,
+    type: 3}
+  m_UIObjectWithAnimatedContainer: {fileID: 8657957632591266073, guid: 7b959707469e0324a9242b262c104f10,
+    type: 3}
+  m_ButtonPub: {fileID: 1605276817472940162, guid: 4b64140c018f58a44b25669c0f3e6cf0,
+    type: 3}
+  m_ButtonRounded_1: {fileID: 1085422641142350870, guid: 1d41722dc79cf1c4393c0a07faa835e9,
+    type: 3}
+  m_ButtonOutlinedRounded_1: {fileID: 4462230773908005253, guid: 9be1378b4dcdbe949b85b3352fc69f4f,
+    type: 3}
+  m_ButtonRounded_2: {fileID: 6374150396020550637, guid: 182b6c743310cb84d9b8aadf159422fb,
+    type: 3}
+  m_ButtonOutlinedRounded_2: {fileID: 385380893573189305, guid: 2eb4dea5e0e7eaa43a9bbe83faf02435,
+    type: 3}
+  m_SelectionSound: {fileID: 8300000, guid: e34a85610342a5741870125dbf3671b3, type: 3}
+  m_HeavySound: {fileID: 8300000, guid: 01f8c08c232a98442adab34f9f6a9e2b, type: 3}
+  m_MediumSound: {fileID: 8300000, guid: e7d94b7eb4365644dbf38ac76491f785, type: 3}
+  m_LightSound: {fileID: 8300000, guid: 558b751e70d33a44e9e966a851a47803, type: 3}
+  m_RigidSound: {fileID: 8300000, guid: 90a406e003ce31d46aee9288e49305d0, type: 3}
+  m_SoftSound: {fileID: 8300000, guid: f71a1e80a1b8f384388b92c885e0f580, type: 3}
+  m_SuccessSound: {fileID: 8300000, guid: 2083eeb70ee76814b8d4b2aa2ccf3e9f, type: 3}
+  m_WarningSound: {fileID: 8300000, guid: bf049755c09f744449ea314eaac3c103, type: 3}
+  m_FailSound: {fileID: 8300000, guid: 4e5df196409707341a99a771fe3487c9, type: 3}
+  m_Prizes: 0
+  m_Shop: 0
+  m_ShopUnlockType: 1
+  m_BaseRandomUnlockCost: 100
+  m_RandomUnlockCostIncreaseRate: 50
