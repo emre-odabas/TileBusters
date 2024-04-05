@@ -44,8 +44,7 @@ namespace GameCore.Managers
         private void Start()
         {
             Debug.Log("DataManager Start");
-            m_DataLayer = new PersistenceDataLayer(
-              new LocalPersistence("FoundationData", new JsonDataSerializer()));
+            m_DataLayer = new PersistenceDataLayer(new LocalPersistence("FoundationData", new JsonDataSerializer()));
             GameFoundation.Initialize(m_DataLayer, OnGameFoundationInitialized, Debug.LogError);
             LoadGameData();
         } 
@@ -130,9 +129,19 @@ namespace GameCore.Managers
         [Button]
         private void ResetLocalData()
         {
-            string jsonFile = Application.persistentDataPath + "/" + m_SavedGamesFileName;
+            /*string jsonFile = Application.persistentDataPath + "/" + m_SavedGamesFileName;
             File.Delete(jsonFile);
-            Debug.Log("Game Data Deleted: " + jsonFile);
+            Debug.Log("Game Data Deleted: " + jsonFile);*/
+
+
+            string rootFolder = Application.persistentDataPath;
+            System.IO.DirectoryInfo di = new DirectoryInfo(rootFolder);
+            foreach (FileInfo file in di.GetFiles())
+            {
+                file.Delete(); 
+                Debug.Log(file + " deleted.");
+            }
+            Debug.Log("Game Data Reset Successfull");
         }
 
     }
