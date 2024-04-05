@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using GameCore.Core;
 using GameCore.Controllers;
-
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
-//using GameAnalyticsSDK;
-
-
 using Cinemachine;
-
 using MoreMountains.Feedbacks;
 using UnityEngine.GameFoundation;
 using UnityEngine.GameFoundation.DefaultLayers;
@@ -57,20 +52,13 @@ namespace GameCore.Managers
         #endregion
         #region Variables
         
-        [ReadOnly]
-        public State m_State = State.Awaiting;
-        [FoldoutGroup("Currencies", expanded:true), ReadOnly]
-        public int m_InGameCoin;
-        [FoldoutGroup("Currencies"), ReadOnly]
-        public int m_InGameKey;
-        [FoldoutGroup("Currencies"), ReadOnly]
-        public Currency m_CoinCurrency;
-        [FoldoutGroup("Currencies"), ReadOnly]
-        public Currency m_KeyCurrency;
-        [FoldoutGroup("Level", expanded: true), ReadOnly]
-        public List<Level> m_Levels = new List<Level>();
-        [FoldoutGroup("Level"), SerializeField, Range(1, 100)]
-        private int StartLevel;
+        [ReadOnly] public State m_State = State.Awaiting;
+        [FoldoutGroup("Currencies", expanded:true), ReadOnly] public int m_InGameCoin;
+        [FoldoutGroup("Currencies"), ReadOnly] public int m_InGameKey;
+        [FoldoutGroup("Currencies"), ReadOnly] public Currency m_CoinCurrency;
+        [FoldoutGroup("Currencies"), ReadOnly] public Currency m_KeyCurrency;
+        [FoldoutGroup("Level", expanded: true), ReadOnly] public List<Level> m_Levels = new List<Level>();
+        [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int StartLevel;
         public int m_StartLevel
         {
             get
@@ -351,7 +339,7 @@ namespace GameCore.Managers
         #endregion
         #region Economy
        
-
+        [Button]
         public void IncreaseInGameCoin(int coin)
         {
             if (m_InGameCoin>=m_CoinCurrency.maximumBalance)
@@ -359,6 +347,8 @@ namespace GameCore.Managers
             m_InGameCoin += coin;
             onInGameCoinChange?.Invoke(m_InGameCoin);
         }
+
+        [Button]
         public void DecreaseInGameCoin(int coin)
         {
             if (m_InGameCoin <= 0)
@@ -366,10 +356,13 @@ namespace GameCore.Managers
             m_InGameCoin -= coin;
             onInGameCoinChange?.Invoke(m_InGameCoin);
         }
+
         public void SaveCoin()
         {
             WalletManager.SetBalance(m_CoinCurrency, m_InGameCoin);
         }
+
+        [Button]
         public void IncreaseInGameKey()
         {
             if (m_InGameKey >= m_KeyCurrency.maximumBalance)
@@ -377,6 +370,8 @@ namespace GameCore.Managers
             m_InGameKey += 1;
             onInGameKeyChange?.Invoke(m_InGameKey);
         }
+
+        [Button]
         public void DecreaseInGameKey()
         {
             if (m_InGameKey <= 0)
