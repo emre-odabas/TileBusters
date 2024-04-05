@@ -127,6 +127,14 @@ namespace GameCore.Managers
             DataManager.Instance.SaveGameData();
         }
 
+        [Button]
+        private void ResetLocalData()
+        {
+            string jsonFile = Application.persistentDataPath + "/" + m_SavedGamesFileName;
+            File.Delete(jsonFile);
+            Debug.Log("Game Data Deleted: " + jsonFile);
+        }
+
     }
 
 }

@@ -13,10 +13,7 @@ namespace GameCore.UI
 
         private void Start()
         {
-            if (!ProjectSettings.Instance.m_Prizes)
-            {
-                gameObject.SetActive(false);
-            }
+            gameObject.SetActive(false);
         }
         public virtual void UpdateKeys(int _unlockedKeys)
         {

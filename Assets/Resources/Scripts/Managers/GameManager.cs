@@ -140,13 +140,6 @@ namespace GameCore.Managers
         IEnumerator DOInitialize()
         {
             m_SplashScreen.SetActive(true);
-            while (RemoteConfigManager.Instance.m_UseRemote && RemoteConfigManager.Instance.m_LoadState == RemoteConfigManager.LoadState.Unloaded)
-            {
-                yield return null;
-            }
-            Core.Logger.Log("Game Manager", "On Remote Config Loaded");
-            Core.Logger.Log("Game Manager", JsonUtility.ToJson(RemoteConfigManager.Instance.m_RemoteParameters));
-            InitRemoteConfig();
             while (DataManager.Instance.m_LoadState == DataManager.LoadState.Unloaded)
             {
                 yield return null;
@@ -164,15 +157,6 @@ namespace GameCore.Managers
             InitializeGame();
             onInitialize?.Invoke();
             
-        }
-        void InitRemoteConfig()
-        {
-            //Remote
-            if (RemoteConfigManager.Instance.m_UseRemote)
-            {
-                m_IsDebug = RemoteConfigManager.Instance.m_RemoteParameters.m_IsDebug;
-                m_StartLevel = RemoteConfigManager.Instance.m_RemoteParameters.m_StartLevel;
-            }
         }
         void InitializeGameFoundation()
         {
@@ -331,24 +315,29 @@ namespace GameCore.Managers
             yield return null;
         }
         #region Level Loop Controls
+        [Button]
         public void FailLevel()
         {
             m_State = State.Failed;
         }
+        [Button]
         public void FinishLevel()
         {
             m_State = State.Finished;
         }
+        [Button]
         public void CompleteLevel()
         {
             m_State = State.Completed;
         }
+        [Button]
         public void NextLevel()
         {
             m_CurrentLevelIndex++;
             StartLevelLoop();
             onNextLevel?.Invoke();
         }
+        [Button]
         public void RestartLevel()
         {
             StartLevelLoop();

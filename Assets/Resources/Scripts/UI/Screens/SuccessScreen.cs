@@ -77,44 +77,9 @@ namespace GameCore.UI
         {
             base.Show();
             HideCoins();
-            m_BtnNextLevel.gameObject.SetActive(false);
-
-            if (ProjectSettings.Instance.m_Shop)
-            {
-                //SetCurrent Coin Amount
-                m_CoinBar.UpdateCoin(m_CurrentCoin, m_CurrentCoin, false);
-                m_RewardText.text = "+" + m_RewardedCoin.ToString();
-                DOVirtual.DelayedCall(0.1f, () =>
-                {
-                    m_RewardBoxShowFeedback.PlayFeedbacks();
-                });
-                DOVirtual.DelayedCall(1, () =>
-                {
-                    m_CoinExplosionFeedback.PlayFeedbacks();
-                    AnimateCoins(() =>
-                    {
-                        if (ProjectSettings.Instance.m_Prizes)
-                        {
-                            if (GameManager.Instance.m_InGameKey >= (int)GameFoundation.catalogs.currencyCatalog.FindItem("ckey").maximumBalance)
-                                PrizeScreen.Instance.Show();
-                        }
-                        m_BtnNextLevel.gameObject.SetActive(true);
-                    });
-                });
-                DOVirtual.DelayedCall(2f, () =>
-                {
-                    m_CoinBar.UpdateCoin(m_CurrentCoin, GameManager.Instance.m_InGameCoin, true);
-                });
-
-
-                m_KeyBar.UpdateKeys(GameManager.Instance.m_InGameKey);
-            }
-            else
-            {
-                m_RewardTextContainer.gameObject.SetActive(false);
-                m_RewardBoxContainer.gameObject.SetActive(false);
-                m_BtnNextLevel.gameObject.SetActive(true);
-            }
+            m_RewardTextContainer.gameObject.SetActive(false);
+            m_RewardBoxContainer.gameObject.SetActive(false);
+            m_BtnNextLevel.gameObject.SetActive(true);
             
             //m_RewardBar.UpdateKeys();
         }

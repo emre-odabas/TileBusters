@@ -16,10 +16,7 @@ namespace GameCore.UI
         public float m_UpdateDuration;
         void Start()
         {
-            if (!ProjectSettings.Instance.m_Shop)
-            {
-                gameObject.SetActive(false);
-            }
+            gameObject.SetActive(false);
         }
         public void UpdateCoin(int _currentCoin, int _coin, bool _animate)
         {
