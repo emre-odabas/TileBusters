@@ -139,7 +139,7 @@ namespace GameCore.Managers
             foreach (FileInfo file in di.GetFiles())
             {
                 file.Delete(); 
-                Debug.Log(file + " deleted.");
+                Debug.Log(file + " File Deleted.");
             }
             Debug.Log("Game Data Reset Successfull");
         }
