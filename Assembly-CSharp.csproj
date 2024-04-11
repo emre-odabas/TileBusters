@@ -46,11 +46,13 @@
      <Compile Include="Assets\Resources\Scripts\Core\Utilities\Logger.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\UI\CoreUIAnimation.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\QHull\SimpleExample.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\00 Database And Assets (required for samples)\SamplesHelper.cs" />
      <Compile Include="Assets\Resources\Scripts\Managers\ThemeManager.cs" />
      <Compile Include="Assets\Resources\Scripts\Managers\DataManager.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanSelectableGraphicColor.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanDragColorMesh.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\08 Store\PrefabTutorial.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanDestroy.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\HullPainter.cs" />
@@ -59,7 +61,6 @@
      <Compile Include="Assets\Tools\Lean\Common\Examples\Scripts\LeanCircuit.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Components\QuickBase.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanInfoText.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\05 Properties\PropertiesSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanFollow.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Buttons\SoundButtonToggle.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanFingerSwipe.cs" />
@@ -71,7 +72,6 @@
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanFingerTap.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanPulseScale.cs" />
      <Compile Include="Assets\Tools\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\01 Inventory Basics\InventoryBasics.cs" />
      <Compile Include="Assets\Resources\Scripts\Controllers\PlayerController.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Level.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanDragTranslateRigidbody2D.cs" />
@@ -99,8 +99,6 @@
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanDrop.cs" />
      <Compile Include="Assets\Tools\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\ParticleEffectsLibrary.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\00 Database And Assets (required for samples)\Animations\WaitAnimation.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\08 Store\StoreSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanTwistRotateAxis.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanChaseRigidbody2D.cs" />
@@ -109,8 +107,8 @@
      <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoGhost.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanSelectableTime.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Scripts\LeanSnapshot.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\06 Data Persistence\DataPersistenceSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanMouseWheel.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\04 Wallet\WalletSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanFingerTapExpired.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\HullData.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanSwipeEdge.cs" />
@@ -118,6 +116,7 @@
      <Compile Include="Assets\Tools\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEButtonScript.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanFingerOld.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\01 Inventory Basics\InventoryBasics.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanSelect.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselItem.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\QHull\QuickHull3DTest.cs" />
@@ -125,7 +124,6 @@
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanFingerDownCanvas.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\04 Wallet\WalletSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanManualSwipe.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Databases\ThemeDB.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanTwistCamera.cs" />
@@ -143,6 +141,7 @@
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanPinchScale.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanStepValue2D.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoBall.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\00 Database And Assets (required for samples)\Animations\WaitAnimation.cs" />
      <Compile Include="Assets\Resources\Scripts\Managers\TutorialManager.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Theme.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanRevertTransform.cs" />
@@ -153,13 +152,14 @@
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanShape.cs" />
      <Compile Include="Assets\Resources\Scripts\Feedbacks\MMFeedbackHaptics.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\08 Store\PrefabTutorial.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\LevelProgressionSlider.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\08 Store\StoreSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanConstrainScale.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanPinchCamera.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\Utilities\CollisionEmitter.cs" />
      <Compile Include="Assets\Tools\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\05 Properties\PropertiesSample.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\QHull\Vector3d.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\QHull\InternalErrorException.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanManualTranslateRigidbody2D.cs" />
@@ -172,6 +172,7 @@
      <Compile Include="Assets\Tools\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\Data\GameData.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\07 Transactions\TransactionsSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanMultiPull.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanMultiSetCanvas.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanFingerData.cs" />
@@ -200,7 +201,6 @@
      <Compile Include="Assets\Resources\Scripts\Feedbacks\MMFeedbackSound.cs" />
      <Compile Include="Assets\Tools\Lean\Common\Scripts\LeanHelper.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanMultiSwipe.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\07 Transactions\TransactionsSample.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanSwipeBase.cs" />
      <Compile Include="Assets\Tools\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
      <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTap.cs" />
@@ -213,7 +213,6 @@
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanPitchYawAutoRotate.cs" />
      <Compile Include="Assets\Tools\Technie\PhysicsCreator\Scripts\QHull\HalfEdge.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanDragSelect.cs" />
-     <Compile Include="Assets\Samples\Game Foundation\0.6.0-preview.2\00 Database And Assets (required for samples)\SamplesHelper.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanMultiPinch.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanSelectablePressureScale.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Screens\FailScreen.cs" />
@@ -230,6 +229,7 @@
      <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselPaginationItem.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Bars\TutorialBar.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Screens\MainScreen.cs" />
+     <Compile Include="Assets\Tools\Game Foundation\0.6.0-preview.2\06 Data Persistence\DataPersistenceSample.cs" />
      <Compile Include="Assets\Resources\Scripts\UI\Screens\SuccessScreen.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanSelectableRendererColor.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanDragTranslate.cs" />
@@ -427,6 +427,7 @@
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS (Specular).shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_RimOutline_OutlineBlending.shader" />
      <None Include="Assets\Tools\Technie\PhysicsCreator\Shaders\HullPainterOverlay.shader" />
+     <None Include="Assets\Tools\CodeStage\Package2Folder\readme.txt" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Mobile_Outline.shader" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Desktop_Specular_Outline.shader" />
@@ -1249,6 +1250,10 @@
     <ProjectReference Include="MoreMountains.Tools.csproj">
       <Project>{f3dcf804-ff75-f7b5-b960-b0fad7eabd9d}</Project>
       <Name>MoreMountains.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="CodeStage.Package2Folder.csproj">
+      <Project>{4b7aadb8-513d-4c4e-b0e0-5952951e1e1b}</Project>
+      <Name>CodeStage.Package2Folder</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
       <Project>{961c04de-0aaf-e92c-89cb-4b66a2f6d150}</Project>

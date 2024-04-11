@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{bcff8ae9-5b44-e9b8-dd31-dfe7ea3207db}</ProjectGuid>
+    <ProjectGuid>{4b7aadb8-513d-4c4e-b0e0-5952951e1e1b}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <AssemblyName>CodeStage.Package2Folder</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -40,42 +40,8 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchMenu.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCAxisInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickDragInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickPinchInspector.cs" />
-     <Compile Include="Assets\Resources\Scripts\Editor\CoreButtonEditor.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchWelcomeScreen.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickSwipeInspector.cs" />
-     <Compile Include="Assets\Tools\BookmarkEverything\Editor\BookmarkEverythingEditor.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\SelectionUtil.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCTouchPadInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCAreaInspector.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\CommonUi.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickEnterExitInspector.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\HullPainterWindow.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCMenu.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCButtonInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCJoystickInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTouchInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchTriggerInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\HTGuiTools.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\HullPainterEditor.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchInspector.cs" />
-     <Compile Include="Assets\Tools\BookmarkEverything\Editor\EntryDataGUIDComparer.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTapInspector.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickLongTapInspector.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\PhysicsSeeder.cs" />
-     <Compile Include="Assets\Tools\BookmarkEverything\Editor\IOHelper.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCDPadInspector.cs" />
-     <Compile Include="Assets\Resources\Scripts\Editor\LevelEditor.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCGuiTools.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\RaycastUtil.cs" />
-     <Compile Include="Assets\Resources\Scripts\Editor\MenuItems.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTwistInspector.cs" />
-     <Compile Include="Assets\Tools\Technie\PhysicsCreator\Editor\SceneManipulator.cs" />
-     <Compile Include="Assets\Tools\EasyTouchBundle\EasyTouch\Plugins\Editor\EasytouchHierachyCallBack.cs" />
-     <None Include="Assets\Tools\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+     <Compile Include="Assets\Tools\CodeStage\Package2Folder\Scripts\Package2Folder.cs" />
+     <None Include="Assets\Tools\CodeStage\Package2Folder\Scripts\CodeStage.Package2Folder.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -787,179 +753,20 @@
     <Reference Include="System.Xml.XPath.XDocument">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.10f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.TestRunner">
         <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
         <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.GameFoundation.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.DefaultCatalog.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.DefaultCatalog.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.DefaultLayers">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.DefaultLayers.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.GameFoundation">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Base">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Core">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Analytics">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Core.Environments">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.UI">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.UI.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.UI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.DefaultCatalog">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.GameFoundation.DefaultCatalog.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Core.Analytics">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Promise">
-        <HintPath>D:\Masaüstü\GitHub\TileBusters\Library\ScriptAssemblies\Unity.Promise.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{bff6c719-e3c6-cfe6-5d74-cf6ad6d4d5be}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.csproj">
-      <Project>{3dfce3e4-d82e-f809-6272-eef3fd1d0e7d}</Project>
-      <Name>MoreMountains.Feedbacks.Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{771c0bac-b2f9-0178-a4bc-4cd2595e6164}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro2.Demo.csproj">
-      <Project>{8fcfd12b-8085-220f-406e-78be7feafa0d}</Project>
-      <Name>ToonyColorsPro2.Demo</Name>
-    </ProjectReference>
-    <ProjectReference Include="DOTween.Modules.csproj">
-      <Project>{bb9ae3ab-9546-57bf-8a76-b4b91834bf19}</Project>
-      <Name>DOTween.Modules</Name>
-    </ProjectReference>
-    <ProjectReference Include="DOTweenPro.Scripts.csproj">
-      <Project>{ee807288-f1ae-00ce-85a5-c28b5c70dcde}</Project>
-      <Name>DOTweenPro.Scripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.Editor.csproj">
-      <Project>{4fb86a6b-ecc0-e126-276e-0069292ce6ab}</Project>
-      <Name>MoreMountains.Feedbacks.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.MMTools.csproj">
-      <Project>{d04fa412-92a8-26d1-e077-73bf96be4705}</Project>
-      <Name>MoreMountains.Feedbacks.MMTools</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
-      <Project>{db323e0f-1a2c-2bd1-e3eb-d40a720ea44d}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.csproj">
-      <Project>{f3dcf804-ff75-f7b5-b960-b0fad7eabd9d}</Project>
-      <Name>MoreMountains.Tools</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
-      <Project>{961c04de-0aaf-e92c-89cb-4b66a2f6d150}</Project>
-      <Name>MoreMountains.Tools.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.csproj">
-      <Project>{befecaf1-dd87-8b3a-112c-ceb59320d6f4}</Project>
-      <Name>MoreMountains.Feedbacks</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Editor.csproj">
-      <Project>{fc12d3c1-c4ea-0ca9-0f5c-fd706ba9aec9}</Project>
-      <Name>ToonyColorsPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
-      <Project>{2af4775e-1d7c-60bf-972f-dee01d961c88}</Project>
-      <Name>ToonyColorsPro.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Feedbacks.Editor.csproj">
-      <Project>{053dab72-31bc-9d55-20d2-c088d7dd9317}</Project>
-      <Name>MoreMountains.Tools.Feedbacks.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Cinemachine.csproj">
-      <Project>{4c498f03-d797-ef90-31a6-fe54bbdcb2cb}</Project>
-      <Name>MoreMountains.Tools.Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
-      <Project>{b0ddd825-270e-dc20-5678-d60415b4c2aa}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Feedbacks.csproj">
-      <Project>{94559c9a-60b0-dad7-7c27-012647416f10}</Project>
-      <Name>MoreMountains.Tools.Feedbacks</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

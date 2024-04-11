@@ -17410,7 +17410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_State: 0
   m_InGameCoin: 0
-  m_InGameKey: 0
   m_Levels: []
   StartLevel: 1
   m_CurrentLevelIndex: 0

@@ -180,7 +180,7 @@ namespace GameCore.Managers
 
         public void StartLevelLoop()
         {
-            StartCoroutine(DOLevelLoop(GetLevel(m_CurrentLevelIndex)));
+            StartCoroutine(DOLevelLoop(GetCurrentLevel()));
         }
         public void StartPlay()
         {
@@ -329,6 +329,12 @@ namespace GameCore.Managers
         {
             return m_Levels[index];
         }
+
+        public Level GetCurrentLevel()
+        {
+            return GetLevel(m_CurrentLevelIndex);
+        }
+        
         #endregion
         #endregion
         #region Economy

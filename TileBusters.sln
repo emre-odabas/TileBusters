@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DOTweenPro.Scripts", "DOTwe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Feedbacks.Editor", "MoreMountains.Feedbacks.Editor.csproj", "{4fb86a6b-ecc0-e126-276e-0069292ce6ab}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeStage.Package2Folder", "CodeStage.Package2Folder.csproj", "{4b7aadb8-513d-4c4e-b0e0-5952951e1e1b}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.CompatibilityLayer", "Sirenix.OdinInspector.CompatibilityLayer.csproj", "{771c0bac-b2f9-0178-a4bc-4cd2595e6164}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Tools.Feedbacks.Editor", "MoreMountains.Tools.Feedbacks.Editor.csproj", "{053dab72-31bc-9d55-20d2-c088d7dd9317}"
@@ -80,6 +82,8 @@ Global
 		{ee807288-f1ae-00ce-85a5-c28b5c70dcde}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4fb86a6b-ecc0-e126-276e-0069292ce6ab}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4fb86a6b-ecc0-e126-276e-0069292ce6ab}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4b7aadb8-513d-4c4e-b0e0-5952951e1e1b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4b7aadb8-513d-4c4e-b0e0-5952951e1e1b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{771c0bac-b2f9-0178-a4bc-4cd2595e6164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{771c0bac-b2f9-0178-a4bc-4cd2595e6164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053dab72-31bc-9d55-20d2-c088d7dd9317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

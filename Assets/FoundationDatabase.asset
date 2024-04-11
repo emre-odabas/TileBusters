@@ -166,7 +166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Tags:
   - {fileID: 1888568194301090427}
-  - {fileID: 0}
   m_Database: {fileID: 11400000}
 --- !u!114 &8299239432308024168
 MonoBehaviour:
