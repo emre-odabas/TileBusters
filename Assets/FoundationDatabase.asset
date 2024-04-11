@@ -35,37 +35,6 @@ MonoBehaviour:
   m_Database: {fileID: 11400000}
   m_Items:
   - {fileID: -5491603864120282260}
-  - {fileID: 7166769265595301250}
---- !u!114 &-6806634585942033989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_10
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_10
-  m_Key: tP_CoinPack_10
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys: []
-  m_StaticPropertyValues: []
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 10
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
 --- !u!114 &-5491603864120282260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +55,7 @@ MonoBehaviour:
   m_StaticPropertyKeys: []
   m_StaticPropertyValues: []
   m_DetailValues: []
-  m_InitialBalance: 150
+  m_InitialBalance: 0
   m_MaximumBalance: 9999
   m_Type: 0
 --- !u!114 &-2628620582084764756
@@ -103,41 +72,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Database: {fileID: 11400000}
   m_Items: []
---- !u!114 &-2441618905807218009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_1000
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_1000
-  m_Key: tP_CoinPack_1000
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys:
-  - prizeUnlockLevel
-  m_StaticPropertyValues:
-  - <type>k__BackingField: 0
-    valueType:
-      longValue: 1
-    stringValue: 
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 1000
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
 --- !u!114 &-2214141435899730243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,16 +85,7 @@ MonoBehaviour:
   m_Name: _Catalog_Transaction
   m_EditorClassIdentifier: 
   m_Database: {fileID: 11400000}
-  m_Items:
-  - {fileID: -2441618905807218009}
-  - {fileID: -518800015888340068}
-  - {fileID: 4378952344883075570}
-  - {fileID: 8583621780327641780}
-  - {fileID: 4736559459361977905}
-  - {fileID: 603346455894752910}
-  - {fileID: 3657048865391250866}
-  - {fileID: -6806634585942033989}
-  - {fileID: 8675432493285577480}
+  m_Items: []
 --- !u!114 &-589356940758999368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,41 +106,6 @@ MonoBehaviour:
   m_StaticPropertyValues: []
   m_DetailValues: []
   m_StoreItems: []
---- !u!114 &-518800015888340068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_500
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_500
-  m_Key: tP_CoinPack_500
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys:
-  - prizeUnlockLevel
-  m_StaticPropertyValues:
-  - <type>k__BackingField: 0
-    valueType:
-      longValue: 1
-    stringValue: 
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 500
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,36 +124,6 @@ MonoBehaviour:
   m_CurrencyCatalog: {fileID: -8748276842837705238}
   m_TransactionCatalog: {fileID: -2214141435899730243}
   m_GameParameterCatalog: {fileID: 8299239432308024168}
---- !u!114 &603346455894752910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_50
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_50
-  m_Key: tP_CoinPack_50
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys: []
-  m_StaticPropertyValues: []
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 50
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
 --- !u!114 &1002683156723183741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,115 +152,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Key: coin
   m_Catalog: {fileID: 6354519601351983818}
---- !u!114 &2807542328995648207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4178f7fa125e7644ba2a2d0c6300db1, type: 3}
-  m_Name: Tag_ckey
-  m_EditorClassIdentifier: 
-  m_Key: ckey
-  m_Catalog: {fileID: 6354519601351983818}
---- !u!114 &3657048865391250866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_25
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_25
-  m_Key: tP_CoinPack_25
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys: []
-  m_StaticPropertyValues: []
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 25
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
---- !u!114 &4378952344883075570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_250
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_250
-  m_Key: tP_CoinPack_250
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys:
-  - prizeUnlockLevel
-  m_StaticPropertyValues:
-  - <type>k__BackingField: 0
-    valueType:
-      longValue: 1
-    stringValue: 
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 250
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
---- !u!114 &4736559459361977905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_100
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_100
-  m_Key: tP_CoinPack_100
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys: []
-  m_StaticPropertyValues: []
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 100
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
 --- !u!114 &6354519601351983818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,31 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Tags:
   - {fileID: 1888568194301090427}
-  - {fileID: 2807542328995648207}
+  - {fileID: 0}
   m_Database: {fileID: 11400000}
---- !u!114 &7166769265595301250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6736b79f77dc474c8bc820c305c2c2e, type: 3}
-  m_Name: Currency_ckey
-  m_EditorClassIdentifier: 
-  m_DisplayName: Ckey
-  m_Key: ckey
-  m_Tags:
-  - {fileID: 2807542328995648207}
-  m_Catalog: {fileID: -8748276842837705238}
-  m_StaticPropertyKeys: []
-  m_StaticPropertyValues: []
-  m_DetailValues: []
-  m_InitialBalance: 0
-  m_MaximumBalance: 3
-  m_Type: 1
 --- !u!114 &8299239432308024168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,68 +182,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Database: {fileID: 11400000}
   m_Items: []
---- !u!114 &8583621780327641780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_200
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_200
-  m_Key: tP_CoinPack_200
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys:
-  - prizeUnlockLevel
-  m_StaticPropertyValues:
-  - <type>k__BackingField: 0
-    valueType:
-      longValue: 1
-    stringValue: 
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 200
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
---- !u!114 &8675432493285577480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188049432bcf74f78b314dc2b03ee516, type: 3}
-  m_Name: VirtualTransaction_tP_CoinPack_150
-  m_EditorClassIdentifier: 
-  m_DisplayName: TP_CoinPack_150
-  m_Key: tP_CoinPack_150
-  m_Tags:
-  - {fileID: 1888568194301090427}
-  m_Catalog: {fileID: -2214141435899730243}
-  m_StaticPropertyKeys: []
-  m_StaticPropertyValues: []
-  m_DetailValues: []
-  m_Rewards:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: -5491603864120282260}
-      m_Amount: 150
-  m_Costs:
-    m_Items: []
-    m_Currencies:
-    - m_Currency: {fileID: 7166769265595301250}
-      m_Amount: 1
