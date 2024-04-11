@@ -17,33 +17,20 @@ namespace GameCore.UI
 {
     public class SuccessScreen : CoreScreen<SuccessScreen>
     {
-        [FoldoutGroup("Bars", expanded: true)]
-        public KeyBar m_KeyBar;
-        [FoldoutGroup("Bars")]
-        public RewardBar m_RewardBar;
-        [FoldoutGroup("Bars")]
-        public CoinBar m_CoinBar;
+        [FoldoutGroup("Bars")] public RewardBar m_RewardBar;
+        [FoldoutGroup("Bars")] public CoinBar m_CoinBar;
 
 
-        [FoldoutGroup("Texts", expanded: true)]
-        public TextMeshProUGUI m_RewardText;
-        [FoldoutGroup("Buttons", expanded: true)]
-        public CoreButton m_BtnNextLevel;
-        [FoldoutGroup("Components")]
-        public List<RectTransform> m_Coins;
-        [FoldoutGroup("Components")]
-        public RectTransform m_CoinTarget;
-        [FoldoutGroup("Components")]
-        public RectTransform m_RewardTextContainer;
-        [FoldoutGroup("Components")]
-        public RectTransform m_RewardBoxContainer;
+        [FoldoutGroup("Texts", expanded: true)] public TextMeshProUGUI m_RewardText;
+        [FoldoutGroup("Buttons", expanded: true)] public CoreButton m_BtnNextLevel;
+        [FoldoutGroup("Components")] public List<RectTransform> m_Coins;
+        [FoldoutGroup("Components")] public RectTransform m_CoinTarget;
+        [FoldoutGroup("Components")] public RectTransform m_RewardTextContainer;
+        [FoldoutGroup("Components")] public RectTransform m_RewardBoxContainer;
 
-        [FoldoutGroup("Feedbacks", expanded: true)]
-        public MMFeedbacks m_CoinExplosionFeedback;
-        [FoldoutGroup("Feedbacks")]
-        public MMFeedbacks m_CoinAnimationCompleteFeedback;
-        [FoldoutGroup("Feedbacks")]
-        public MMFeedbacks m_RewardBoxShowFeedback;
+        [FoldoutGroup("Feedbacks", expanded: true)] public MMFeedbacks m_CoinExplosionFeedback;
+        [FoldoutGroup("Feedbacks")] public MMFeedbacks m_CoinAnimationCompleteFeedback;
+        [FoldoutGroup("Feedbacks")] public MMFeedbacks m_RewardBoxShowFeedback;
 
 
         int m_CurrentCoin;

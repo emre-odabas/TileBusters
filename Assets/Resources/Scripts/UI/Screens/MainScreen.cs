@@ -12,14 +12,9 @@ namespace GameCore.UI
 {
     public class MainScreen : CoreScreen<MainScreen>
     {
-        [FoldoutGroup("Bars")]
-        public KeyBar m_Keybar;
-        [FoldoutGroup("Bars")]
-        public CoinBar m_CoinBar;
-        [FoldoutGroup("Texts", expanded: true)]
-        public TextMeshProUGUI m_CoinText;
-        [FoldoutGroup("Texts")]
-        public TextMeshProUGUI m_LevelText;
+        [FoldoutGroup("Bars")] public CoinBar m_CoinBar;
+        [FoldoutGroup("Texts", expanded: true)] public TextMeshProUGUI m_CoinText;
+        [FoldoutGroup("Texts")] public TextMeshProUGUI m_LevelText;
 
         #region MonoBehavour
         protected override void Awake()
@@ -45,8 +40,7 @@ namespace GameCore.UI
         public override void Show()
         {
             base.Show();
-            //New System
-            m_Keybar.UpdateKeys((int)WalletManager.GetBalance(GameManager.Instance.m_KeyCurrency));
+            
             m_CoinBar.UpdateCoin((int)WalletManager.GetBalance(GameManager.Instance.m_CoinCurrency), false);
         }
         #endregion
@@ -61,8 +55,6 @@ namespace GameCore.UI
             Debug.Log("Balance Changed :" + _args.newBalance);
             if (_args.currency.key == GameManager.Instance.m_CoinCurrency.key)
                 m_CoinBar.UpdateCoin((int)_args.newBalance, false);
-            if (_args.currency.key == GameManager.Instance.m_KeyCurrency.key)
-                m_Keybar.UpdateKeys((int)_args.newBalance);
         }
         #endregion
     }

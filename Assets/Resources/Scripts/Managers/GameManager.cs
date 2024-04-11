@@ -46,7 +46,6 @@ namespace GameCore.Managers
         public UnityAction onRestartLevel;
         public UnityAction<int> onCoinChange;
         public UnityAction<int> onInGameCoinChange;
-        public UnityAction<int> onInGameKeyChange;
         public UnityAction<int> onKeyChange;
         public UnityAction<int> onScoreChange;
         #endregion
@@ -54,9 +53,7 @@ namespace GameCore.Managers
         
         [ReadOnly] public State m_State = State.Awaiting;
         [FoldoutGroup("Currencies", expanded:true), ReadOnly] public int m_InGameCoin;
-        [FoldoutGroup("Currencies"), ReadOnly] public int m_InGameKey;
         [FoldoutGroup("Currencies"), ReadOnly] public Currency m_CoinCurrency;
-        [FoldoutGroup("Currencies"), ReadOnly] public Currency m_KeyCurrency;
         [FoldoutGroup("Level", expanded: true), ReadOnly] public List<Level> m_Levels = new List<Level>();
         [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int StartLevel;
         public int m_StartLevel
@@ -148,9 +145,7 @@ namespace GameCore.Managers
         }
         void InitializeGameFoundation()
         {
-
             m_CoinCurrency = GameFoundation.catalogs.currencyCatalog.FindItem("coin");
-            m_KeyCurrency = GameFoundation.catalogs.currencyCatalog.FindItem("ckey");
         }
         void InitializeGame()
         {
@@ -233,7 +228,6 @@ namespace GameCore.Managers
             m_IsPlayerFirstAct = true;
             //New System
             m_InGameCoin = (int)WalletManager.GetBalance(m_CoinCurrency);
-            m_InGameKey = (int)WalletManager.GetBalance(m_KeyCurrency);
             yield return new WaitForSeconds(m_DelayOnLevelSetup);
             onLevelSetup?.Invoke();
             yield return new WaitForSeconds(m_DelayAfterLevelSetup);
@@ -289,7 +283,6 @@ namespace GameCore.Managers
             onLevelComplete?.Invoke();
             yield return new WaitForSeconds(m_DelayOnComplete);
             SaveCoin();
-            SaveKey();
             DataManager.Instance.m_GameData.m_PlayerLevel++;
             DataManager.Instance.SaveGameData();
         }
@@ -303,6 +296,7 @@ namespace GameCore.Managers
             yield return null;
         }
         #region Level Loop Controls
+        [Title("Debug")]
         [Button]
         public void FailLevel()
         {
@@ -360,28 +354,6 @@ namespace GameCore.Managers
         public void SaveCoin()
         {
             WalletManager.SetBalance(m_CoinCurrency, m_InGameCoin);
-        }
-
-        [Button]
-        public void IncreaseInGameKey()
-        {
-            if (m_InGameKey >= m_KeyCurrency.maximumBalance)
-                return;
-            m_InGameKey += 1;
-            onInGameKeyChange?.Invoke(m_InGameKey);
-        }
-
-        [Button]
-        public void DecreaseInGameKey()
-        {
-            if (m_InGameKey <= 0)
-                return;
-            m_InGameKey -= 1;
-            onInGameKeyChange?.Invoke(m_InGameKey);
-        }
-        public void SaveKey()
-        {
-            WalletManager.SetBalance(m_KeyCurrency, m_InGameKey);
         }
         #endregion
 

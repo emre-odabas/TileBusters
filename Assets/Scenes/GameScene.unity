@@ -368,8 +368,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1044880137}
   - {fileID: 1305770317}
+  - {fileID: 1044880137}
   - {fileID: 2078714821}
   - {fileID: 422599229}
   - {fileID: 1183094281}
@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 374992107555879881}
+    - target: {fileID: 3704017195309067680, guid: c5ee2ce207d1bed45a1d59eb9df98129,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.0000305
+      objectReference: {fileID: 0}
     - target: {fileID: 7148745218017760050, guid: c5ee2ce207d1bed45a1d59eb9df98129,
         type: 3}
       propertyPath: m_Pivot.x
@@ -498,6 +503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8759279778554987646, guid: c5ee2ce207d1bed45a1d59eb9df98129,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 69.45645
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1047,6 +1057,11 @@ PrefabInstance:
       propertyPath: onTap.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 374992107555879881}
+    - target: {fileID: 3670314464689518515, guid: a7e35feea0eccf644aa10ee12c4130a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5439113319116853593, guid: a7e35feea0eccf644aa10ee12c4130a1,
         type: 3}
       propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2284,6 +2299,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 374992107555879881}
+    - target: {fileID: 4100809436595172503, guid: fbbad69a7286c6c469a36818888fb019,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -30.99997
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195123642424254966, guid: fbbad69a7286c6c469a36818888fb019,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -246.11478
+      objectReference: {fileID: 0}
     - target: {fileID: 7148745218017760050, guid: fbbad69a7286c6c469a36818888fb019,
         type: 3}
       propertyPath: m_Pivot.x

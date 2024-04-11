@@ -272,7 +272,6 @@
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Tools\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Outline.shader" />
-     <None Include="Assets\Tools\BuildReport\CustomBuildScriptExample.txt" />
      <None Include="Assets\Tools\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Rim_OutlineBlending.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Rim.shader" />
@@ -303,7 +302,6 @@
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Rim_OutlineBlending.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Sketch.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Texture Blending.txt" />
-     <None Include="Assets\Tools\BuildReport\README.txt" />
      <None Include="Assets\Tools\Lean\Common\Examples\Shaders\Object.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_RimOutline.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_ShadowHSV.txt" />
@@ -365,8 +363,6 @@
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Blended Outline.shader" />
      <None Include="Assets\Tools\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
      <None Include="Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.xml" />
-     <None Include="Assets\Tools\BuildReport\license.txt" />
-     <None Include="Assets\Tools\BuildReport\BuildReportToolOptions.xml" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_VertExmotion.txt" />
@@ -377,7 +373,6 @@
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap.shader" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Subsurface Scattering.shader" />
-     <None Include="Assets\Tools\BuildReport\VERSION.txt" />
      <None Include="Assets\Tools\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
      <None Include="Assets\Tools\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Rim_Outline.shader" />
