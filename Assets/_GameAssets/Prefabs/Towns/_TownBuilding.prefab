@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 5566413406820620412}
   - component: {fileID: 544218777524064616}
   m_Layer: 5
-  m_Name: TownBuilding
+  m_Name: _TownBuilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
