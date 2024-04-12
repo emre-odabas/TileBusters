@@ -50,7 +50,7 @@ namespace GameCore.Managers
         [ReadOnly] public State m_State = State.Awaiting;
         [FoldoutGroup("Currencies", expanded:true), ReadOnly] public int m_InGameCoin;
         [FoldoutGroup("Currencies"), ReadOnly] public Currency m_CoinCurrency;
-        [FoldoutGroup("Level", expanded: true), ReadOnly] public List<Town> m_Levels = new List<Town>();
+        [FoldoutGroup("Level", expanded: true), ReadOnly] public List<TownData> m_Levels = new List<TownData>();
         [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int StartLevel;
         public int m_StartLevel
         {
@@ -65,8 +65,8 @@ namespace GameCore.Managers
         }
         [FoldoutGroup("Level"), ReadOnly]
         public int m_CurrentLevelIndex = 0;
-        [FormerlySerializedAs("m_CurrentLevel")] [FoldoutGroup("Level"), ReadOnly]
-        public Town m_CurrentTown;
+        [FormerlySerializedAs("m_CurrentTown")] [FormerlySerializedAs("m_CurrentLevel")] [FoldoutGroup("Level"), ReadOnly]
+        public TownData m_CurrentTownData;
         [FoldoutGroup("Level"), ReadOnly]
         public bool m_IsPlayerAct = false;
         [FoldoutGroup("Level"), ReadOnly]
@@ -156,7 +156,7 @@ namespace GameCore.Managers
 
             //Loop Levels
             m_Levels.AddRange(TownDB.Instance.m_List);
-            List<Town> _levels = new List<Town>();
+            List<TownData> _levels = new List<TownData>();
             for (int i = 0; i < 10; i++)
             {
                 _levels.AddRange(m_Levels);
@@ -182,45 +182,45 @@ namespace GameCore.Managers
         {
             m_IsPlayerAct = true;
         }
-        IEnumerator DOLevelLoop(Town town)
+        IEnumerator DOLevelLoop(TownData townData)
         {
             Core.Logger.Log("Game Manager", "Level Loop Started");
-            yield return StartCoroutine(DOSetup(town));
+            yield return StartCoroutine(DOSetup(townData));
             if (!m_IsPlayerAct)
-                yield return StartCoroutine(DOWaitPlayerAct(town));
+                yield return StartCoroutine(DOWaitPlayerAct(townData));
             //else
             //    yield return StartCoroutine(DOWaitFirstPlayerAct(level));
-            yield return StartCoroutine(DOStartPlay(town));
-            yield return StartCoroutine(DOLevelFinish(town));
+            yield return StartCoroutine(DOStartPlay(townData));
+            yield return StartCoroutine(DOLevelFinish(townData));
             if (m_State == State.Completed)
-                yield return StartCoroutine(DOLevelComplete(town));
+                yield return StartCoroutine(DOLevelComplete(townData));
             else if (m_State == State.Failed)
-                yield return StartCoroutine(DOLevelFail(town));
+                yield return StartCoroutine(DOLevelFail(townData));
 
             m_IsPlayerAct = false;
         }
-        IEnumerator DOSetup(Town town)
+        IEnumerator DOSetup(TownData townData)
         {
             m_State = State.SettingUp;
             yield return StartCoroutine(DOClearCurrentLevel());
-            yield return StartCoroutine(DOSetupLevel(town));
-            yield return StartCoroutine(DOSetupUI(town));
+            yield return StartCoroutine(DOSetupLevel(townData));
+            yield return StartCoroutine(DOSetupUI(townData));
             onLevelReady?.Invoke();
             m_SplashScreen.SetActive(false);
         }
         IEnumerator DOClearCurrentLevel()
         {
-            if (m_CurrentTown != null)
-                Destroy(m_CurrentTown.m_Platform);
+            if (m_CurrentTownData != null)
+                Destroy(m_CurrentTownData.m_Platform);
 
             yield return null;
         }
-        IEnumerator DOSetupLevel(Town town)
+        IEnumerator DOSetupLevel(TownData townData)
         {
-            m_CurrentTown = ScriptableObject.CreateInstance<Town>();
+            m_CurrentTownData = ScriptableObject.CreateInstance<TownData>();
 
             Transform platform = GameScreen.Instance.m_TownsPlaceholder;
-            m_CurrentTown.m_Platform = Instantiate(town.m_Platform, platform);
+            m_CurrentTownData.m_Platform = Instantiate(townData.m_Platform, platform);
             m_IsPlayerFirstAct = true;
             //New System
             m_InGameCoin = (int)WalletManager.GetBalance(m_CoinCurrency);
@@ -229,13 +229,13 @@ namespace GameCore.Managers
             yield return new WaitForSeconds(m_DelayAfterLevelSetup);
             Core.Logger.Log("Game Manager", "On Level Generator Setup");
         }
-        IEnumerator DOSetupUI(Town town)
+        IEnumerator DOSetupUI(TownData townData)
         {
             onUISetup?.Invoke();
             yield return null;
             Core.Logger.Log("Game Manager", "On UI Setup");
         }
-        IEnumerator DOWaitPlayerAct(Town town)
+        IEnumerator DOWaitPlayerAct(TownData townData)
         {
             onWaitPlayerAct?.Invoke();
             Core.Logger.Log("Game Manager", "On Wait Player Act");
@@ -244,7 +244,7 @@ namespace GameCore.Managers
                 yield return null;
             }
         }
-        IEnumerator DOWaitFirstPlayerAct(Town town)
+        IEnumerator DOWaitFirstPlayerAct(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Wait Player First Act");
             while (m_IsPlayerFirstAct)
@@ -253,7 +253,7 @@ namespace GameCore.Managers
             }
             onPlayerFirstAct?.Invoke();
         }
-        IEnumerator DOStartPlay(Town town)
+        IEnumerator DOStartPlay(TownData townData)
         {
             m_State = State.Playing;
             yield return new WaitForSeconds(m_DelayOnStartPlay);
@@ -265,13 +265,13 @@ namespace GameCore.Managers
             }
             yield return null;
         }
-        IEnumerator DOLevelFinish(Town town)
+        IEnumerator DOLevelFinish(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Finish Game");
             onLevelFinish?.Invoke();
             yield return new WaitForSeconds(m_DelayOnFinish);
         }
-        IEnumerator DOLevelComplete(Town town)
+        IEnumerator DOLevelComplete(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Complete Level");
             if (m_WinFeedback != null)
@@ -282,7 +282,7 @@ namespace GameCore.Managers
             DataManager.Instance.m_GameData.m_PlayerLevel++;
             DataManager.Instance.SaveGameData();
         }
-        IEnumerator DOLevelFail(Town town)
+        IEnumerator DOLevelFail(TownData townData)
         {
             yield return new WaitForSeconds(m_DelayOnFail);
             Core.Logger.Log("Game Manager", "On Level Fail");
@@ -321,12 +321,12 @@ namespace GameCore.Managers
             StartLevelLoop();
             onRestartLevel?.Invoke();
         }
-        public Town GetLevel(int index)
+        public TownData GetLevel(int index)
         {
             return m_Levels[index];
         }
 
-        public Town GetCurrentLevel()
+        public TownData GetCurrentLevel()
         {
             return GetLevel(m_CurrentLevelIndex);
         }

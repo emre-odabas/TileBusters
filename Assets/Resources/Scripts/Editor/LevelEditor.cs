@@ -90,11 +90,11 @@ namespace GameCore.Editor
                 {
                     System.IO.Directory.CreateDirectory(Application.dataPath + "/Resources/Data");
                 }
-                Town _town = new Town();
-                UnityEditor.AssetDatabase.CreateAsset(_town, ProjectSettings.Instance.m_TownsPath + "/New Town.asset");
+                TownData townData = new TownData();
+                UnityEditor.AssetDatabase.CreateAsset(townData, ProjectSettings.Instance.m_TownsPath + "/New Town.asset");
                 UnityEditor.AssetDatabase.SaveAssets();
-                if (_town != null)
-                    Selection.activeObject = _town;
+                if (townData != null)
+                    Selection.activeObject = townData;
             }
         }
         
@@ -103,7 +103,7 @@ namespace GameCore.Editor
     public class TownListEditor
     {
         [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 25, ShowPaging = true, ShowIndexLabels = true)]
-        public List<Town> m_Towns;
+        public List<TownData> m_Towns;
         public TownListEditor()
         {
             m_Towns = TownDB.Instance.m_List;

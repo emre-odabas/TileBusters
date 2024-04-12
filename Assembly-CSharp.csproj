@@ -72,7 +72,7 @@
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanFingerTap.cs" />
      <Compile Include="Assets\Tools\Lean\Touch\Examples\Scripts\LeanPulseScale.cs" />
      <Compile Include="Assets\Tools\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
-     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Town.cs" />
+     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\TownData.cs" />
      <Compile Include="Assets\Resources\Scripts\Town\TownBuilding.cs" />
      <Compile Include="Assets\Tools\Lean\Touch+\Examples\Scripts\LeanDragTranslateRigidbody2D.cs" />
      <Compile Include="Assets\Resources\Scripts\Core\UI\CoreScreen.cs" />

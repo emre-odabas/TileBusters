@@ -7,6 +7,6 @@ namespace GameCore.Core
 	[System.Serializable]
 	public class TownDB : SingletonScriptableObject<TownDB>
 	{
-		public List<Town> m_List = new List<Town>();
+		public List<TownData> m_List = new List<TownData>();
 	} 
 }

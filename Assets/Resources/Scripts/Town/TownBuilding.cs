@@ -13,7 +13,9 @@ namespace GameCore.Utilities
         #region FIELDS
 
         //Parameters
-        //[FoldoutGroup("Parameters"), SerializeField] private
+        [FoldoutGroup("Parameters")] 
+        [FoldoutGroup("Parameters"), SerializeField] private string m_Id = "building_";
+        //[FoldoutGroup("Parameters/Properties"), SerializeField] private
 
         //Components
         [FoldoutGroup("Components")] 
@@ -78,20 +80,6 @@ namespace GameCore.Utilities
 
         }
          
-        #endregion
-
-        #region EDITOR
-
-#if UNITY_EDITOR
-
-        [FoldoutGroup("Editor")]
-        [Button]
-        public void SetLevelInEditor(int level = 1)
-        {
-            //SetLevel(level);
-        }
-#endif
-
         #endregion
     }
 }
