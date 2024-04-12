@@ -1830,12 +1830,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LoadState: 2
   m_GameData:
-    m_SettingsData:
+    m_SettingsLocalData:
       m_IsSoundON: 1
       m_IsHapticON: 1
-    m_PlayerLevel: 0
-    m_SeletedItem: 
-    m_RandomUnlockedItemCount: 0
+    m_TownLocalData:
+      m_TownLevel: 0
 --- !u!4 &1736403015
 Transform:
   m_ObjectHideFlags: 0
@@ -17337,9 +17336,9 @@ MonoBehaviour:
   m_State: 0
   m_InGameCoin: 0
   m_Levels: []
-  StartLevel: 1
-  m_CurrentLevelIndex: 0
-  m_CurrentLevel: {fileID: 0}
+  StartTownLevel: 0
+  m_CurrentTownLevelIndex: 0
+  m_CurrentTownData: {fileID: 0}
   m_IsPlayerAct: 0
   m_IsPlayerFirstAct: 1
   m_IsDebug: 0

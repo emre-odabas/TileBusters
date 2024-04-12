@@ -44,59 +44,48 @@ namespace GameCore.Managers
         public UnityAction<int> onInGameCoinChange;
         public UnityAction<int> onKeyChange;
         public UnityAction<int> onScoreChange;
+        
         #endregion
+
         #region Variables
         
         [ReadOnly] public State m_State = State.Awaiting;
         [FoldoutGroup("Currencies", expanded:true), ReadOnly] public int m_InGameCoin;
         [FoldoutGroup("Currencies"), ReadOnly] public Currency m_CoinCurrency;
         [FoldoutGroup("Level", expanded: true), ReadOnly] public List<TownData> m_Levels = new List<TownData>();
-        [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int StartLevel;
-        public int m_StartLevel
+        [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int StartTownLevel;
+        public int m_StartTownLevel
         {
             get
             {
-                return StartLevel - 1;
+                return StartTownLevel - 1;
             }
             set
             {
-                StartLevel = value;
+                StartTownLevel = value;
             }
         }
-        [FoldoutGroup("Level"), ReadOnly]
-        public int m_CurrentLevelIndex = 0;
-        [FormerlySerializedAs("m_CurrentTown")] [FormerlySerializedAs("m_CurrentLevel")] [FoldoutGroup("Level"), ReadOnly]
-        public TownData m_CurrentTownData;
-        [FoldoutGroup("Level"), ReadOnly]
-        public bool m_IsPlayerAct = false;
-        [FoldoutGroup("Level"), ReadOnly]
-        public bool m_IsPlayerFirstAct = true;
-        [FoldoutGroup("Level")]
-        public bool m_IsDebug = true;
+        [FoldoutGroup("Level"), ReadOnly] public int m_CurrentTownLevelIndex = 0;
+        [FoldoutGroup("Level"), ReadOnly] public TownData m_CurrentTownData;
+        [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
+        [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
+        [FoldoutGroup("Level")] public bool m_IsDebug = true;
+        
         #endregion
-        [FoldoutGroup("Components", expanded: true)]
-        //public Transform m_PlatformPlaceHolder;
-        [FoldoutGroup("Components")]
-        public Camera m_UICamera;
-        [FoldoutGroup("Feedbacks", expanded: true)]
-        public MMFeedbacks m_WinFeedback;
-        [FoldoutGroup("Feedbacks")]
-        public MMFeedbacks m_FailFeedback;
-        [FoldoutGroup("Loop Delay Settings", expanded: true)]
-        public float m_DelayOnStartPlay = 0;
-        [FoldoutGroup("Loop Delay Settings")]
-        public float m_DelayOnLevelSetup = 0;
-        [FoldoutGroup("Loop Delay Settings")]
-        public float m_DelayAfterLevelSetup = 0;
-        [FoldoutGroup("Loop Delay Settings")]
-        public float m_DelayOnFinish = 0;
-        [FoldoutGroup("Loop Delay Settings")]
-        public float m_DelayOnComplete = 0;
-        [FoldoutGroup("Loop Delay Settings")]
-        public float m_DelayOnFail = 0;
-
+        
+        [FoldoutGroup("Components")] public Camera m_UICamera;
+        [FoldoutGroup("Feedbacks", expanded: true)] public MMFeedbacks m_WinFeedback;
+        [FoldoutGroup("Feedbacks")] public MMFeedbacks m_FailFeedback;
+        [FoldoutGroup("Loop Delay Settings", expanded: true)] public float m_DelayOnStartPlay = 0;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnLevelSetup = 0;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayAfterLevelSetup = 0;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFinish = 0;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnComplete = 0;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFail = 0;
         public GameObject m_SplashScreen;
+
         #region MonoBehaviour
+
         protected override void Awake()
         {
 #if UNITY_IOS
@@ -106,18 +95,22 @@ namespace GameCore.Managers
             base.Awake();
             Init();
         }
-        // Start is called before the first frame update
+        
         void Start()
         {
             Core.Logger.Log("Game Manager", "On App Start");
             onAppStart?.Invoke();
         }
+
         #endregion
+
         #region Initialization
+
         void Init()
         {
             StartCoroutine(DOInitialize());
         }
+
         IEnumerator DOInitialize()
         {
             m_SplashScreen.SetActive(true);
@@ -139,20 +132,20 @@ namespace GameCore.Managers
             onInitialize?.Invoke();
             
         }
+
         void InitializeGameFoundation()
         {
             m_CoinCurrency = GameFoundation.catalogs.currencyCatalog.FindItem("coin");
         }
+
         void InitializeGame()
         {
-           
             GameData gameData = DataManager.Instance.m_GameData;
 
-
             if (!m_IsDebug)
-                m_CurrentLevelIndex = gameData.m_PlayerLevel;
+                m_CurrentTownLevelIndex = gameData.m_TownLocalData.m_TownLevel;
             else
-                m_CurrentLevelIndex = m_StartLevel;
+                m_CurrentTownLevelIndex = m_StartTownLevel;
 
             //Loop Levels
             m_Levels.AddRange(TownDB.Instance.m_List);
@@ -164,8 +157,11 @@ namespace GameCore.Managers
             m_Levels = _levels;
             StartLevelLoop();
         }
+
         #endregion
+
         #region EasyTouch
+
         public void OnTouchStart(Gesture gesture)
         {
             if (m_IsPlayerAct && m_IsPlayerFirstAct) m_IsPlayerFirstAct = false;
@@ -271,6 +267,7 @@ namespace GameCore.Managers
             onLevelFinish?.Invoke();
             yield return new WaitForSeconds(m_DelayOnFinish);
         }
+
         IEnumerator DOLevelComplete(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Complete Level");
@@ -279,9 +276,10 @@ namespace GameCore.Managers
             onLevelComplete?.Invoke();
             yield return new WaitForSeconds(m_DelayOnComplete);
             SaveCoin();
-            DataManager.Instance.m_GameData.m_PlayerLevel++;
+            DataManager.Instance.m_GameData.m_TownLocalData.m_TownLevel++;
             DataManager.Instance.SaveGameData();
         }
+
         IEnumerator DOLevelFail(TownData townData)
         {
             yield return new WaitForSeconds(m_DelayOnFail);
@@ -291,7 +289,9 @@ namespace GameCore.Managers
             onLevelFail?.Invoke();
             yield return null;
         }
+
         #region Level Loop Controls
+
         [Title("Debug")]
         [Button]
         public void FailLevel()
@@ -311,7 +311,7 @@ namespace GameCore.Managers
         [Button]
         public void NextLevel()
         {
-            m_CurrentLevelIndex++;
+            m_CurrentTownLevelIndex++;
             StartLevelLoop();
             onNextLevel?.Invoke();
         }
@@ -328,7 +328,7 @@ namespace GameCore.Managers
 
         public TownData GetCurrentLevel()
         {
-            return GetLevel(m_CurrentLevelIndex);
+            return GetLevel(m_CurrentTownLevelIndex);
         }
         
         #endregion

@@ -56,7 +56,7 @@ namespace GameCore.UI
             base.Show();
             
             m_CoinBar.UpdateCoin(GameManager.Instance.m_InGameCoin,false);
-            m_LevelText.text = "Level " + (GameManager.Instance.m_CurrentLevelIndex + 1).ToString();
+            m_LevelText.text = "Level " + (GameManager.Instance.m_CurrentTownLevelIndex + 1).ToString();
             //m_TouchPanel.gameObject.SetActive(true);
         }
 

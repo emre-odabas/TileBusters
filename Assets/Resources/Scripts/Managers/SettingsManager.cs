@@ -29,8 +29,8 @@ namespace GameCore.Managers
         } 
         void OnDataLoad(GameData _data)
         {
-            SetOnOffHaptic(_data.m_SettingsData.m_IsHapticON, false);
-            SetOnOffSound(_data.m_SettingsData.m_IsSoundON, false);
+            SetOnOffHaptic(_data.m_SettingsLocalData.m_IsHapticON, false);
+            SetOnOffSound(_data.m_SettingsLocalData.m_IsSoundON, false);
         }
         #endregion
         public void SetOnOffHaptic(bool value, bool _saveData)
@@ -39,7 +39,7 @@ namespace GameCore.Managers
             onHapticToggle?.Invoke(m_IsHapticOn);
             if (_saveData)
             {
-                DataManager.Instance.m_GameData.m_SettingsData.m_IsHapticON = m_IsHapticOn;
+                DataManager.Instance.m_GameData.m_SettingsLocalData.m_IsHapticON = m_IsHapticOn;
                 DataManager.Instance.SaveGameData();
             }
         }
@@ -49,7 +49,7 @@ namespace GameCore.Managers
             onSoundToggle?.Invoke(m_IsSoundOn);
             if (_saveData)
             {
-                DataManager.Instance.m_GameData.m_SettingsData.m_IsSoundON = m_IsSoundOn;
+                DataManager.Instance.m_GameData.m_SettingsLocalData.m_IsSoundON = m_IsSoundOn;
                 DataManager.Instance.SaveGameData();
             }
         }

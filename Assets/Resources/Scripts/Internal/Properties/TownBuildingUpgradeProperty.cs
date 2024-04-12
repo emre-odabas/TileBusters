@@ -6,6 +6,6 @@ using Sirenix.OdinInspector;
 public class TownBuildingUpgradeProperty
 {
     public int m_RequiredHammer = 2;
-    public Sprite m_Sprite;
+    [PreviewField] public Sprite m_Sprite;
 }
 

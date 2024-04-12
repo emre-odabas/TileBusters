@@ -35,8 +35,8 @@ namespace GameCore.UI
 
         private void OnDataLoad(GameData gameData)
         {
-            m_SoundBtn.SetOnOff(gameData.m_SettingsData.m_IsSoundON);
-            m_TapticBtn.SetOnOff(gameData.m_SettingsData.m_IsHapticON);
+            m_SoundBtn.SetOnOff(gameData.m_SettingsLocalData.m_IsSoundON);
+            m_TapticBtn.SetOnOff(gameData.m_SettingsLocalData.m_IsHapticON);
         }
 
         public override void Show()

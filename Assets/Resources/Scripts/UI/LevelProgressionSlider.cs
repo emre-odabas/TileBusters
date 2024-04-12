@@ -20,7 +20,7 @@ public class LevelProgressionSlider : MonoBehaviour
 
     private void OnStartPlay()
     {
-        SetCurrentLevel(GameManager.Instance.m_CurrentLevelIndex, false);
+        SetCurrentLevel(GameManager.Instance.m_CurrentTownLevelIndex, false);
     }
 
     private void Start()
