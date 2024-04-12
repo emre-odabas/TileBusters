@@ -13,6 +13,7 @@ using UnityEngine.GameFoundation.DefaultLayers.Persistence;
 using UnityEngine.Promise;
 using Currency = UnityEngine.GameFoundation.Currency;
 using HedgehogTeam.EasyTouch;
+using GameCore.UI;
 
 namespace GameCore.Managers
 {
@@ -79,7 +80,7 @@ namespace GameCore.Managers
         public bool m_IsDebug = true;
         #endregion
         [FoldoutGroup("Components", expanded: true)]
-        public Transform m_PlatformPlaceHolder;
+        //public Transform m_PlatformPlaceHolder;
         [FoldoutGroup("Components")]
         public Camera m_UICamera;
         [FoldoutGroup("Feedbacks", expanded: true)]
@@ -223,7 +224,9 @@ namespace GameCore.Managers
         {
             m_CurrentLevel = ScriptableObject.CreateInstance<Level>();
             m_CurrentLevel.m_Theme = level.m_Theme;
-            m_CurrentLevel.m_Platform = Instantiate(level.m_Platform, m_PlatformPlaceHolder);
+
+            Transform platform = GameScreen.Instance.m_TownsPlaceholder;
+            m_CurrentLevel.m_Platform = Instantiate(level.m_Platform, platform);
             ThemeManager.Instance.SelectTheme(level.m_Theme);
             m_IsPlayerFirstAct = true;
             //New System

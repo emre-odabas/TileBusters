@@ -17,6 +17,7 @@ namespace GameCore.UI
         [FoldoutGroup("Bars", expanded: true)]public CoinBar m_CoinBar;
         [FoldoutGroup("Texts", expanded: true)] public TextMeshProUGUI m_LevelText;
         //[FoldoutGroup("Components")] public GameObject m_TouchPanel;
+        [FoldoutGroup("Components")] public Transform m_TownsPlaceholder;
 
         #region MonoBehaviour
         protected override void Awake()
