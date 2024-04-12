@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Serialization;
+
 namespace GameCore.Core
 {
 	[System.Serializable]	
 	public class ProjectSettings : SingletonScriptableObject<ProjectSettings>
 	{
-		[FoldoutGroup("Paths", expanded: true), FolderPath]public string m_LevelsPath;
+		[FoldoutGroup("Paths", expanded: true), FolderPath]public string m_TownsPath;
 		[FoldoutGroup("Paths"), FolderPath] public string m_ItemsPath;
 		[FoldoutGroup("Paths"), FolderPath] public string m_ThemesPath;
-		[FoldoutGroup("Databases", expanded: true)] public LevelDB m_LevelDB;
+		[FormerlySerializedAs("m_LevelDB")] [FoldoutGroup("Databases", expanded: true)] public TownDB m_TownDB;
 		[FoldoutGroup("Object ShortCuts", expanded: true)] public GameObject m_GameObjectWithContainer;
 		[FoldoutGroup("Object ShortCuts")] public GameObject m_UIObjectWithContainer;
 		[FoldoutGroup("Object ShortCuts")] public GameObject m_UIObjectWithAnimatedContainer;

@@ -6,7 +6,6 @@ using GameCore.Controllers;
 using GameCore.Managers;
 namespace GameCore.Core
 {
-
     public enum Direction
     {
         Forward,
@@ -16,9 +15,9 @@ namespace GameCore.Core
 
     [System.Serializable]
     [HideLabel]
-    [CreateAssetMenu(fileName = "NewLevel", menuName = "GameCore/Create/Level", order = 1)]
+    [CreateAssetMenu(fileName = "New Town", menuName = "GameCore/Create/Town", order = 1)]
    
-    public class Level : ScriptableObject
+    public class Town : ScriptableObject
     {
         public GameObject m_Platform;
 

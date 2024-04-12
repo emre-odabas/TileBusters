@@ -30,7 +30,7 @@ namespace GameCore.Editor
         {
             OdinMenuTree tree = new OdinMenuTree(supportsMultiSelect: false)
             {
-                {"Levels", new LevelListEditor(), EditorIcons.List},
+                {"Towns", new TownListEditor(), EditorIcons.List},
                 {"ProjectSettings", ProjectSettings.Instance, EditorIcons.Globe}
             };
             return tree;
@@ -46,12 +46,12 @@ namespace GameCore.Editor
                 {
                     System.IO.Directory.CreateDirectory(Application.dataPath + "/Resources/Data");
                 }
-                Object _db = LevelDB.Instance;
+                Object _db = TownDB.Instance;
                 if (_db != null)
                     Selection.activeObject = _db;
                 else
                 {
-                    LevelDB _newdb = new LevelDB();
+                    TownDB _newdb = new TownDB();
                     AssetDatabase.CreateAsset(_newdb, Application.dataPath + "/Resources/Data/LevelDB.asset");
                     AssetDatabase.SaveAssets();
                 }
@@ -81,8 +81,8 @@ namespace GameCore.Editor
         }
         #endregion
         #region New Object Creating
-        [MenuItem("Tools/GameCore/Create/Level")]
-        private static void CreateLevel()
+        [MenuItem("Tools/GameCore/Create/Town")]
+        private static void CreateTown()
         {
             if (!Application.isPlaying)
             {
@@ -90,23 +90,23 @@ namespace GameCore.Editor
                 {
                     System.IO.Directory.CreateDirectory(Application.dataPath + "/Resources/Data");
                 }
-                Level _level = new Level();
-                UnityEditor.AssetDatabase.CreateAsset(_level, ProjectSettings.Instance.m_LevelsPath + "/New Level.asset");
+                Town _town = new Town();
+                UnityEditor.AssetDatabase.CreateAsset(_town, ProjectSettings.Instance.m_TownsPath + "/New Town.asset");
                 UnityEditor.AssetDatabase.SaveAssets();
-                if (_level != null)
-                    Selection.activeObject = _level;
+                if (_town != null)
+                    Selection.activeObject = _town;
             }
         }
         
         #endregion
     }
-    public class LevelListEditor
+    public class TownListEditor
     {
         [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 25, ShowPaging = true, ShowIndexLabels = true)]
-        public List<Level> m_Levels;
-        public LevelListEditor()
+        public List<Town> m_Towns;
+        public TownListEditor()
         {
-            m_Levels = LevelDB.Instance.m_List;
+            m_Towns = TownDB.Instance.m_List;
         }
     }
     

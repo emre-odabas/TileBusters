@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3277a74ac26f9534794786b408a261b8, type: 3}
   m_Name: ProjectSettings
   m_EditorClassIdentifier: 
-  m_LevelsPath: Assets/Resources/Data/Levels
+  m_TownsPath: Assets/Resources/Data/Town/Datas
   m_ItemsPath: Assets/Resources/Data/Items
   m_ThemesPath: Assets/Resources/Data/Themes
   m_LevelDB: {fileID: 11400000, guid: 5830e5f2c25e3dd4981d40530603e42f, type: 2}
-  m_ThemeDB: {fileID: 11400000, guid: 2b373edf572e91245beae0b064648725, type: 2}
   m_GameObjectWithContainer: {fileID: 7154756770770838695, guid: a2ae5e6da5bef664696d18dec27f8fc1,
     type: 3}
   m_UIObjectWithContainer: {fileID: 4553004484730972346, guid: c3b26283ea607614daed967f4527a629,
@@ -42,8 +41,3 @@ MonoBehaviour:
   m_SuccessSound: {fileID: 8300000, guid: 2083eeb70ee76814b8d4b2aa2ccf3e9f, type: 3}
   m_WarningSound: {fileID: 8300000, guid: bf049755c09f744449ea314eaac3c103, type: 3}
   m_FailSound: {fileID: 8300000, guid: 4e5df196409707341a99a771fe3487c9, type: 3}
-  m_Prizes: 0
-  m_Shop: 0
-  m_ShopUnlockType: 1
-  m_BaseRandomUnlockCost: 100
-  m_RandomUnlockCostIncreaseRate: 50

@@ -5,8 +5,8 @@ using UnityEngine;
 namespace GameCore.Core
 {
 	[System.Serializable]
-	public class LevelDB : SingletonScriptableObject<LevelDB>
+	public class TownDB : SingletonScriptableObject<TownDB>
 	{
-		public List<Level> m_List = new List<Level>();
+		public List<Town> m_List = new List<Town>();
 	} 
 }
