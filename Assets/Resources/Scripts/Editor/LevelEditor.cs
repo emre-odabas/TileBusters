@@ -31,10 +31,6 @@ namespace GameCore.Editor
             OdinMenuTree tree = new OdinMenuTree(supportsMultiSelect: false)
             {
                 {"Levels", new LevelListEditor(), EditorIcons.List},
-                {"Themes", new ThemeListEditor(), EditorIcons.EyeDropper},
-                //{"Skins", new SkinListEditor(), EditorIcons.Podium},
-                //{"Prize - Skin Packs", new SkinPrizeListEditor(), EditorIcons.ShoppingBasket},
-                //{"Prize - Coin Packs", new CoinPrizeListEditor(), EditorIcons.ShoppingCart},
                 {"ProjectSettings", ProjectSettings.Instance, EditorIcons.Globe}
             };
             return tree;
@@ -61,28 +57,7 @@ namespace GameCore.Editor
                 }
             }
         }
-        [MenuItem("Tools/GameCore/DB/ThemeDB", priority = 2)]
-        private static void SelectThemeDB()
-        {
-            if (!Application.isPlaying)
-            {
-                if (!System.IO.Directory.Exists(Application.dataPath + "/Resources/Data"))
-                {
-                    System.IO.Directory.CreateDirectory(Application.dataPath + "/Resources/Data");
-                }
-                Object _db = ThemeDB.Instance;
-                Debug.Log(ThemeDB.Instance);
-                if (_db != null)
-                    Selection.activeObject = _db;
-                else
-                {
-                    ThemeDB _newdb = new ThemeDB();
-                    AssetDatabase.CreateAsset(_newdb, Application.dataPath + "/Resources/Data/ThemeDB.asset");
-                    AssetDatabase.SaveAssets();
-                }
-                EditorUtility.FocusProjectWindow();
-            }
-        }
+        
         [MenuItem("Tools/GameCore/ProjectSettings", priority = 4)]
         private static void SelectProjectSettings()
         {
@@ -122,22 +97,7 @@ namespace GameCore.Editor
                     Selection.activeObject = _level;
             }
         }
-        [MenuItem("Tools/GameCore/Create/Theme")]
-        private static void CreateTheme()
-        {
-            if (!Application.isPlaying)
-            {
-                if (!System.IO.Directory.Exists(Application.dataPath + "/Resources/Data"))
-                {
-                    System.IO.Directory.CreateDirectory(Application.dataPath + "/Resources/Data");
-                }
-                Theme _theme = new Theme();
-                UnityEditor.AssetDatabase.CreateAsset(_theme, ProjectSettings.Instance.m_ThemesPath + "/New Theme.asset");
-                UnityEditor.AssetDatabase.SaveAssets();
-                if (_theme != null)
-                    Selection.activeObject = _theme;
-            }
-        }
+        
         #endregion
     }
     public class LevelListEditor
@@ -149,14 +109,6 @@ namespace GameCore.Editor
             m_Levels = LevelDB.Instance.m_List;
         }
     }
-    public class ThemeListEditor
-    {
-        [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 25, ShowPaging = true, ShowIndexLabels = true)]
-        public List<Theme> m_Themes;
-        public ThemeListEditor()
-        {
-            m_Themes = ThemeDB.Instance.m_List;
-        }
-    }
+    
 #endif
 }

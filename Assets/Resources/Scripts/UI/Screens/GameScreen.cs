@@ -14,11 +14,12 @@ namespace GameCore.UI
 {
     public class GameScreen : CoreScreen<GameScreen>
     {
-        [FoldoutGroup("Bars", expanded: true)]public CoinBar m_CoinBar;
-        [FoldoutGroup("Texts", expanded: true)] public TextMeshProUGUI m_LevelText;
-        //[FoldoutGroup("Components")] public GameObject m_TouchPanel;
-        [FoldoutGroup("Components")] public Transform m_TownsPlaceholder;
-
+        [FoldoutGroup("Components")]
+        [FoldoutGroup("Components/Utilities")] public Transform m_TownsPlaceholder;
+        [FoldoutGroup("Components/Utilities")] public GameObject m_TempLevel;
+        [FoldoutGroup("Components/Utilities", expanded: true)]public CoinBar m_CoinBar;
+        [FoldoutGroup("Components/Utilities", expanded: true)] public TextMeshProUGUI m_LevelText;
+        
         #region MonoBehaviour
         protected override void Awake()
         {
@@ -33,12 +34,17 @@ namespace GameCore.UI
 
         protected override void OnEnable()
         {
-            
+            base.OnEnable();
+
+            if(m_TempLevel != null)
+            {
+                Destroy(m_TempLevel);
+            }
         }
 
         protected override void OnDisable()
         {
-            
+            base.OnDisable();
         }
         
         #endregion

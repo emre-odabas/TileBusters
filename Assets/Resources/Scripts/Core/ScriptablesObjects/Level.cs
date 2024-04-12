@@ -22,7 +22,7 @@ namespace GameCore.Core
     {
         public GameObject m_Platform;
 
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
         [ValueDropdown("GetThemes")]
 #endif
         public string m_Theme;
@@ -36,7 +36,7 @@ namespace GameCore.Core
             }
             return _themes;
         }
-#endif
+#endif*/
 
     }
 }

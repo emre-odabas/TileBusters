@@ -53,7 +53,7 @@ namespace GameCore.Editor
         static void CreateObjectToScene(GameObject _object, string _name)
         {
             GameObject go = PrefabUtility.InstantiatePrefab(_object, Selection.activeTransform) as GameObject;
-            PrefabUtility.UnpackPrefabInstance(go, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+            //PrefabUtility.UnpackPrefabInstance(go, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
             go.name = _name;
             Selection.activeObject = go;
         }

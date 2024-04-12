@@ -56,5 +56,19 @@ namespace GameCore.UI
         }*/
 
         #endregion
+
+        #region Buttons
+
+        public void BtnTown()
+        {
+            GameManager.Instance.StartPlay();
+        }
+
+        public void BtnPlay()
+        {
+            GameManager.Instance.StartPlay();
+        }
+
+        #endregion
     }
 }

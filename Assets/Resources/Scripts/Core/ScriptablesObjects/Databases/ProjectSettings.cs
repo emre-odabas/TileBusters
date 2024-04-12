@@ -11,7 +11,6 @@ namespace GameCore.Core
 		[FoldoutGroup("Paths"), FolderPath] public string m_ItemsPath;
 		[FoldoutGroup("Paths"), FolderPath] public string m_ThemesPath;
 		[FoldoutGroup("Databases", expanded: true)] public LevelDB m_LevelDB;
-		[FoldoutGroup("Databases")] public ThemeDB m_ThemeDB;
 		[FoldoutGroup("Object ShortCuts", expanded: true)] public GameObject m_GameObjectWithContainer;
 		[FoldoutGroup("Object ShortCuts")] public GameObject m_UIObjectWithContainer;
 		[FoldoutGroup("Object ShortCuts")] public GameObject m_UIObjectWithAnimatedContainer;

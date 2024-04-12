@@ -36,7 +36,6 @@ namespace GameCore.Managers
         public UnityAction onUISetup;
         public UnityAction onLevelReady;
         public UnityAction onInitialize;
-        public UnityAction<Theme> onThemeSetup;
         public UnityAction onWaitPlayerAct;
         public UnityAction onPlayerFirstAct;
         public UnityAction onStartPlay;
@@ -223,11 +222,9 @@ namespace GameCore.Managers
         IEnumerator DOSetupLevel(Level level)
         {
             m_CurrentLevel = ScriptableObject.CreateInstance<Level>();
-            m_CurrentLevel.m_Theme = level.m_Theme;
 
             Transform platform = GameScreen.Instance.m_TownsPlaceholder;
             m_CurrentLevel.m_Platform = Instantiate(level.m_Platform, platform);
-            ThemeManager.Instance.SelectTheme(level.m_Theme);
             m_IsPlayerFirstAct = true;
             //New System
             m_InGameCoin = (int)WalletManager.GetBalance(m_CoinCurrency);
