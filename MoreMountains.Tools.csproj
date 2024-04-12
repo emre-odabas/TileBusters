@@ -251,8 +251,8 @@
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\MMAttributes\MMHiddenAttribute.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\Animation\MMStopMotionAnimation.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\GUI\MMSelectionBase.cs" />
-     <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\Audio\Playlist\MMPlaylist.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\MMDebugMenu\Scripts\MMDebugMenuItems\MMDebugMenuItemCheckbox.cs" />
+     <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\Audio\Playlist\MMPlaylist.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\GUI\SelectionBase.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\MMTween\Demo\Plotter\MMPlotter.cs" />
      <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Tools\Events\MMEventManager.cs" />

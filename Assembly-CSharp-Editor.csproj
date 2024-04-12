@@ -928,6 +928,10 @@
       <Project>{f3dcf804-ff75-f7b5-b960-b0fad7eabd9d}</Project>
       <Name>MoreMountains.Tools</Name>
     </ProjectReference>
+    <ProjectReference Include="CodeStage.Package2Folder.csproj">
+      <Project>{4b7aadb8-513d-4c4e-b0e0-5952951e1e1b}</Project>
+      <Name>CodeStage.Package2Folder</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
       <Project>{961c04de-0aaf-e92c-89cb-4b66a2f6d150}</Project>
       <Name>MoreMountains.Tools.Editor</Name>
