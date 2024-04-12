@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc9ae7007280844593eacc0e8820837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_State: 1
+  m_State: 0
   m_Container: {fileID: 4040565750330155495}
   m_CoinBar: {fileID: 6631306785467326209}
   m_LevelText: {fileID: 4858495494649453414}
