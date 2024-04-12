@@ -27,22 +27,22 @@ namespace GameCore.UI
 
         protected override void Start()
         {
-            GameManager.Instance.onAppStart += Hide;
-            GameManager.Instance.onStartPlay += Show;
-            GameManager.Instance.onLevelFinish += Hide;
-            //Cache Currencies
+            GameManager.Instance.onAppStart += Show;
             GameManager.Instance.onInGameCoinChange += OnCoinChange;
         }
+
         protected override void OnEnable()
         {
             
         }
+
         protected override void OnDisable()
         {
             
         }
         
         #endregion
+
         #region Controls
         
         public override void Show()
