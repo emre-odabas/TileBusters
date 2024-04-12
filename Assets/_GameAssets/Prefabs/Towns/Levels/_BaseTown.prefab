@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 4074506673844000834, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
       propertyPath: m_Name
-      value: _TownBuilding
+      value: TownBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 5566413406820620412, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 4074506673844000834, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
       propertyPath: m_Name
-      value: _TownBuilding
+      value: TownBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 5566413406820620412, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
@@ -440,7 +440,7 @@ PrefabInstance:
     - target: {fileID: 4074506673844000834, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
       propertyPath: m_Name
-      value: _TownBuilding
+      value: TownBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 5566413406820620412, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
@@ -569,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 4074506673844000834, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
       propertyPath: m_Name
-      value: _TownBuilding
+      value: TownBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 5566413406820620412, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
@@ -698,7 +698,7 @@ PrefabInstance:
     - target: {fileID: 4074506673844000834, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}
       propertyPath: m_Name
-      value: _TownBuilding
+      value: TownBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 5566413406820620412, guid: 61f0317e811b69b4f9248b4e43b36b98,
         type: 3}

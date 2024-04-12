@@ -1,8 +1,9 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
+using MoreMountains.Feedbacks;
 
-namespace GameCore.Utilities
+namespace GameCore.Gameplay
 {
     public class TownBuilding : MonoBehaviour
     {
@@ -15,12 +16,17 @@ namespace GameCore.Utilities
         //Parameters
         [FoldoutGroup("Parameters")] 
         [FoldoutGroup("Parameters"), SerializeField] private string m_Id = "building_";
-        //[FoldoutGroup("Parameters/Properties"), SerializeField] private
 
         //Components
         [FoldoutGroup("Components")] 
-        [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Image;
-        //[FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks 
+        [FoldoutGroup("Components/Upgrade"), SerializeField] private Image m_BuildingSprite;
+        [FoldoutGroup("Components/Upgrade"), SerializeField] private Transform m_BtnTiersContainer;
+        [FoldoutGroup("Components/Upgrade"), SerializeField] private GameObject m_RefButtonUpgradeTier;
+        
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowButtonFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideButtonFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_UpgradeFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_MaxUpgradeFeedbacks;
         
         //Indicator
         //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
