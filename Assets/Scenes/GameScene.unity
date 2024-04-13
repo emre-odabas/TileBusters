@@ -2135,11 +2135,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LoadState: 2
   m_GameData:
+    m_TownLocalData:
+      m_TownLevel: 0
     m_SettingsLocalData:
       m_IsSoundON: 1
       m_IsHapticON: 1
-    m_TownLocalData:
-      m_TownLevel: 0
 --- !u!4 &1736403015
 Transform:
   m_ObjectHideFlags: 0

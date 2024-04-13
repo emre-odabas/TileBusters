@@ -12,12 +12,15 @@ namespace GameCore.UI
 {
     public class MainScreen : CoreScreen<MainScreen>
     {
-        //[FoldoutGroup("Bars")] public CoinBar m_CoinBar;
+        [FoldoutGroup("Components", expanded: true)]
+        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtTownTitle;
+        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtPuzzleTitle;
 
         #region MonoBehavour
 
         protected override void Awake()
         {
+            base.Awake();
             if (m_State == State.Hidden)
             {
                 Hide();
@@ -27,9 +30,26 @@ namespace GameCore.UI
         protected override void Start()
         {
             base.Start();
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
             GameManager.Instance.onWaitPlayerAct += Show;
             GameManager.Instance.onStartPlay += Hide;
             //WalletManager.balanceChanged += OnCurrencyBalanceChanged;
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            
+            if(GameManager.Instance != null)
+            {
+                GameManager.Instance.onWaitPlayerAct -= Show;
+                GameManager.Instance.onStartPlay -= Hide;
+            }
+            //WalletManager.balanceChanged -= OnCurrencyBalanceChanged;
         }
 
         #endregion
@@ -40,6 +60,8 @@ namespace GameCore.UI
         {
             base.Show();
             
+            m_TxtTownTitle.text = "Town " + (GameManager.Instance.m_CurrentTownLevelIndex + 1).ToString();
+            m_TxtPuzzleTitle.text = "1";
             //m_CoinBar.UpdateCoin((int)WalletManager.GetBalance(GameManager.Instance.m_CoinCurrency), false);
         }
         

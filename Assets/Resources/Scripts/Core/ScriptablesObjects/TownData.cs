@@ -20,7 +20,11 @@ namespace GameCore.Core
 
         public TownBuildingProperty GetBuildingData(string id)
         {
-            return m_TownBuildingProperties.FirstOrDefault(c => c.m_Id == id);
+            TownBuildingProperty data = m_TownBuildingProperties.FirstOrDefault(c => c.m_Id == id);
+            if (data == null)
+                Logger.LogError("TownData", "Could not find building with ID: " + id);
+                
+            return data;
         }
 
         #endregion

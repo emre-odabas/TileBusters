@@ -6,12 +6,16 @@ using System;
 using System.Collections.Generic;
 using GameCore.Gameplay;
 using System.Linq;
+using UnityEngine.Events;
+using GameCore.Core;
 
 namespace GameCore.Controllers
 {
-    public class TownController : MonoBehaviour
+    public class TownController : SingletonComponent<TownController>
     {
         #region UTILITIES
+
+        public UnityAction onBuildingUpgraded;
 
         #endregion
         
@@ -39,6 +43,7 @@ namespace GameCore.Controllers
         private void OnEnable()
         {
             GameManager.Instance.onLevelSetup += OnLevelSetup;
+            onBuildingUpgraded += OnBuildingUpgraded;
         }
         
         private void OnDisable()
@@ -47,6 +52,7 @@ namespace GameCore.Controllers
             {
                 GameManager.Instance.onLevelSetup -= OnLevelSetup;
             }
+            onBuildingUpgraded -= OnBuildingUpgraded;
         }
 
         private void Start()
@@ -63,9 +69,27 @@ namespace GameCore.Controllers
             Setup();
         }
 
+        private void OnBuildingUpgraded()
+        {
+            if (IsAllBuildingsMaxLevel())
+            {
+                GameManager.Instance.CompleteLevel();
+            }
+        }
+
         #endregion
 
         #region RETURN FUNCTIONS
+
+        private bool IsAllBuildingsMaxLevel()
+        {
+            for(int i = 0; i < m_Buildings.Count; i++)
+            {
+                if (!m_Buildings[i].IsMaxLevel())
+                    return false;
+            }
+            return true;
+        }
 
         #endregion
 

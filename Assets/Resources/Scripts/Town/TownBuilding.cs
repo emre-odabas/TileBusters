@@ -5,6 +5,7 @@ using MoreMountains.Feedbacks;
 using GameCore.Managers;
 using System;
 using GameCore.Core;
+using GameCore.Controllers;
 
 namespace GameCore.Gameplay
 {
@@ -32,12 +33,13 @@ namespace GameCore.Gameplay
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_MaxUpgradeFeedbacks;
         
         //Indicator
-        [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool m_isBusy = false;
-        [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool m_isMaxLevel = false;
+        [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool isMaxLevel = false;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private int currentLevel = 0;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private TownBuildingProperty townBuildingProperty;
         
         //Privates
+        private bool isBusy = false;
+        private bool lastButtonState = true;
 
         #endregion
 
@@ -55,6 +57,11 @@ namespace GameCore.Gameplay
                 GameManager.Instance.onStartPlay -= OnStartPlay;
             }
         }
+        
+        private void Update()
+        {
+            CheckButtonToggle();
+        }
 
         #endregion
 
@@ -62,12 +69,17 @@ namespace GameCore.Gameplay
 
         private void OnStartPlay()
         {
-            ButtonToggle(true);
+            
         }
 
         #endregion
 
         #region RETURN FUNCTIONS
+
+        public bool IsMaxLevel()
+        {
+            return isMaxLevel;
+        }
 
         #endregion
 
@@ -78,7 +90,6 @@ namespace GameCore.Gameplay
             currentLevel = -1;
             townBuildingProperty = GameManager.Instance.m_CurrentTownData.GetBuildingData(m_Id);
             Customize();
-            ButtonToggle(false);
         }
 
         private void Customize()
@@ -91,11 +102,20 @@ namespace GameCore.Gameplay
                 m_BuildingImage.sprite = townBuildingProperty.m_UpgradeList[currentLevel].m_Sprite;
 
             //Button
-            
+
+        }
+
+        private void CheckButtonToggle()
+        {
+            bool value = (GameManager.Instance.m_State == GameManager.State.Playing && !isMaxLevel);
+            ButtonToggle(value);
         }
 
         private void ButtonToggle(bool isShow)
         {
+            if (isShow == lastButtonState) return;
+
+            lastButtonState = isShow;
             if (isShow)
             {
                 m_ShowButtonFeedbacks.PlayFeedbacks();
@@ -108,24 +128,25 @@ namespace GameCore.Gameplay
 
         public void Upgrade()
         {
-            if (m_isBusy) return;
-            if (m_isMaxLevel) return;
+            if (isBusy) return;
+            if (isMaxLevel) return;
 
-            m_isBusy = true;
+            isBusy = true;
             currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
             Customize();
             
-            m_isMaxLevel = currentLevel == townBuildingProperty.m_UpgradeList.Count - 1;
-            ButtonToggle(!m_isMaxLevel);
+            isMaxLevel = currentLevel == townBuildingProperty.m_UpgradeList.Count - 1;
 
-            MMFeedbacks upgradeFeedbacks = m_isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
+            MMFeedbacks upgradeFeedbacks = isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
             upgradeFeedbacks.PlayFeedbacks();
 
             /*Utilities.DelayedCall(upgradeFeedbacks.Feedbacks[0], () =>
             {
                 m_isBusy = false;
             });*/
-            m_isBusy = false;
+            isBusy = false;
+
+            TownController.Instance.onBuildingUpgraded?.Invoke();
         }
          
         #endregion
