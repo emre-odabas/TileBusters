@@ -3,6 +3,9 @@ using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using GameCore.Managers;
 using System;
+using System.Collections.Generic;
+using GameCore.Gameplay;
+using System.Linq;
 
 namespace GameCore.Controllers
 {
@@ -23,9 +26,10 @@ namespace GameCore.Controllers
         //[FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks 
         
         //Indicator
-        //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
+        [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private List<TownBuilding> m_Buildings = new List<TownBuilding>();
         
         //Privates
+        
 
         #endregion
 
@@ -39,12 +43,15 @@ namespace GameCore.Controllers
         
         private void OnDisable()
         {
-            GameManager.Instance.onLevelSetup -= OnLevelSetup;
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.onLevelSetup -= OnLevelSetup;
+            }
         }
 
         private void Start()
         {
-            
+            m_Buildings = GetComponentsInChildren<TownBuilding>().ToList();
         }
 
         #endregion
@@ -53,7 +60,7 @@ namespace GameCore.Controllers
 
         private void OnLevelSetup()
         {
-            m_BackgroundImage.sprite = GameManager.Instance.m_CurrentTownData.m_Background;
+            Setup();
         }
 
         #endregion
@@ -63,6 +70,16 @@ namespace GameCore.Controllers
         #endregion
 
         #region FUNCTIONS
+
+        private void Setup()
+        {
+            m_BackgroundImage.sprite = GameManager.Instance.m_CurrentTownData.m_Background;
+
+            for(int i = 0; i < m_Buildings.Count; i++)
+            {
+                m_Buildings[i].Setup();
+            }
+        }
 
         #endregion
 

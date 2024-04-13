@@ -18,7 +18,7 @@ namespace GameCore.UI
         [FoldoutGroup("Components/Utilities")] public Transform m_TownsPlaceholder;
         [FoldoutGroup("Components/Utilities")] public GameObject m_TempLevel;
         [FoldoutGroup("Components/Utilities", expanded: true)]public CoinBar m_CoinBar;
-        [FoldoutGroup("Components/Utilities", expanded: true)] public TextMeshProUGUI m_LevelText;
+        [FoldoutGroup("Components/Utilities", expanded: true)] public TextMeshProUGUI m_TxtTownName;
         
         #region MonoBehaviour
         protected override void Awake()
@@ -28,41 +28,49 @@ namespace GameCore.UI
 
         protected override void Start()
         {
-            GameManager.Instance.onAppStart += Show;
-            GameManager.Instance.onInGameCoinChange += OnCoinChange;
+            base.Start();
         }
 
         protected override void OnEnable()
         {
             base.OnEnable();
+            GameManager.Instance.onAppStart += Show;
+            GameManager.Instance.onLevelSetup += OnLevelSetup;
+            GameManager.Instance.onInGameCoinChange += OnCoinChange;
 
             if(m_TempLevel != null)
-            {
                 Destroy(m_TempLevel);
-            }
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
+            if(GameManager.Instance != null)
+            {
+                GameManager.Instance.onAppStart -= Show;
+                GameManager.Instance.onLevelSetup -= OnLevelSetup;
+                GameManager.Instance.onInGameCoinChange -= OnCoinChange;
+            }
         }
-        
+
         #endregion
 
         #region Controls
-        
+
         public override void Show()
         {
             base.Show();
-            
-            m_CoinBar.UpdateCoin(GameManager.Instance.m_InGameCoin,false);
-            m_LevelText.text = "Level " + (GameManager.Instance.m_CurrentTownLevelIndex + 1).ToString();
-            //m_TouchPanel.gameObject.SetActive(true);
         }
 
         #endregion
 
         #region Events
+
+        private void OnLevelSetup()
+        {
+            m_CoinBar.UpdateCoin(GameManager.Instance.m_InGameCoin,false);
+            m_TxtTownName.text = GameManager.Instance.m_CurrentTownData.m_TownName;
+        }
 
         void OnCoinChange(int _coin)
         {

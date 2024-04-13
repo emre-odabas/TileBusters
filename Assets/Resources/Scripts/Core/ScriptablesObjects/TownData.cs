@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using System.Linq;
 
 namespace GameCore.Core
 {
@@ -14,5 +15,14 @@ namespace GameCore.Core
         public Sprite m_Background;
         public List<TownBuildingProperty> m_TownBuildingProperties = new List<TownBuildingProperty>();
         public GameObject m_Platform;
+
+        #region RECALL FUNCTIONS
+
+        public TownBuildingProperty GetBuildingData(string id)
+        {
+            return m_TownBuildingProperties.FirstOrDefault(c => c.m_Id == id);
+        }
+
+        #endregion
     }
 }

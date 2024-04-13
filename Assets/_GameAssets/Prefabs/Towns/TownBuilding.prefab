@@ -219,7 +219,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7046878993492660944}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 544218777524064616}
+        m_TargetAssemblyTypeName: GameCore.Gameplay.TownBuilding, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_ClickFeedback: {fileID: 0}
 --- !u!1 &2273661975789810441
 GameObject:
@@ -233,7 +245,7 @@ GameObject:
   - component: {fileID: 1979104880116411852}
   - component: {fileID: 8535131512659355361}
   m_Layer: 5
-  m_Name: Sprite
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Id: building_
-  m_BuildingSprite: {fileID: 8535131512659355361}
+  m_BuildingImage: {fileID: 8535131512659355361}
   m_BtnTiersContainer: {fileID: 557597819374986321}
   m_RefButtonUpgradeTier: {fileID: 6850627981657232487, guid: 4837e8b8bdd77c946a527757e2e22906,
     type: 3}
@@ -676,6 +688,12 @@ MonoBehaviour:
   m_HideButtonFeedbacks: {fileID: 500474324499984987}
   m_UpgradeFeedbacks: {fileID: 4778708915798002961}
   m_MaxUpgradeFeedbacks: {fileID: 3416950873714323104}
+  m_isBusy: 0
+  m_isMaxLevel: 0
+  currentLevel: 0
+  townBuildingProperty:
+    m_Id: building_
+    m_UpgradeList: []
 --- !u!1 &4893259667374396232
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,6 +741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3030591834578797537}
   - component: {fileID: 500474324499984987}
+  - component: {fileID: 4343496892346193399}
   m_Layer: 5
   m_Name: HideFeedbacks
   m_TagString: Untagged
@@ -761,11 +780,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Feedbacks: []
+  Feedbacks:
+  - {fileID: 4343496892346193399}
   InitializationMode: 2
   SafeMode: 3
   AutoPlayOnStart: 0
   DebugActive: 0
+--- !u!114 &4343496892346193399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388118522203265339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Set Active
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  TargetGameObject: {fileID: 8126047078772061372}
+  SetStateOnInit: 0
+  StateOnInit: 1
+  SetStateOnPlay: 1
+  StateOnPlay: 1
+  SetStateOnStop: 0
+  StateOnStop: 1
+  SetStateOnReset: 0
+  StateOnReset: 1
 --- !u!1 &5744532800012782662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8356006330720409306}
   - component: {fileID: 6245637804450898589}
+  - component: {fileID: 6470332913757629292}
   m_Layer: 5
   m_Name: ShowFeedbacks
   m_TagString: Untagged
@@ -1363,11 +1420,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Feedbacks: []
+  Feedbacks:
+  - {fileID: 6470332913757629292}
   InitializationMode: 2
   SafeMode: 3
   AutoPlayOnStart: 0
   DebugActive: 0
+--- !u!114 &6470332913757629292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8808746061747285315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  Label: Set Active
+  Chance: 100
+  Timing:
+    TimescaleMode: 0
+    InitialDelay: 0
+    CooldownDuration: 0
+    NumberOfRepeats: 0
+    RepeatForever: 0
+    DelayBetweenRepeats: 1
+    Sequence: {fileID: 0}
+    TrackID: 0
+    Quantized: 0
+    TargetBPM: 120
+  DebugActive: 0
+  TargetGameObject: {fileID: 8126047078772061372}
+  SetStateOnInit: 0
+  StateOnInit: 1
+  SetStateOnPlay: 1
+  StateOnPlay: 0
+  SetStateOnStop: 0
+  StateOnStop: 1
+  SetStateOnReset: 0
+  StateOnReset: 1
 --- !u!1001 &1391543726642420506
 PrefabInstance:
   m_ObjectHideFlags: 0

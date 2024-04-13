@@ -772,6 +772,11 @@ PrefabInstance:
       propertyPath: onTouch.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 374992107555879881}
+    - target: {fileID: 4858495495580325097, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
+        type: 3}
+      propertyPath: m_Name
+      value: TitleBar
+      objectReference: {fileID: 0}
     - target: {fileID: 5394694944895075051, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
         type: 3}
       propertyPath: m_AnchorMax.y

@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BackgroundImage: {fileID: 229616054083871022}
+  m_Buildings: []
 --- !u!1001 &1943125616979473989
 PrefabInstance:
   m_ObjectHideFlags: 0
