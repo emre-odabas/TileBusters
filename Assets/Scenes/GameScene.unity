@@ -17636,9 +17636,10 @@ MonoBehaviour:
   m_State: 0
   m_InGameCoin: 0
   m_Levels: []
-  StartTownLevel: 0
+  StartTownLevel: 1
   m_CurrentTownLevelIndex: 0
   m_CurrentTownData: {fileID: 0}
+  m_CurrentPlatform: {fileID: 0}
   m_IsPlayerAct: 0
   m_IsPlayerFirstAct: 1
   m_IsDebug: 0

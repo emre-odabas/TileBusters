@@ -67,6 +67,7 @@ namespace GameCore.Managers
         }
         [FoldoutGroup("Level"), ReadOnly] public int m_CurrentTownLevelIndex = 0;
         [FoldoutGroup("Level"), ReadOnly] public TownData m_CurrentTownData;
+        [FoldoutGroup("Level"), ReadOnly] public GameObject m_CurrentPlatform;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
         [FoldoutGroup("Level")] public bool m_IsDebug = true;
@@ -206,17 +207,23 @@ namespace GameCore.Managers
         }
         IEnumerator DOClearCurrentLevel()
         {
-            if (m_CurrentTownData != null)
-                Destroy(m_CurrentTownData.m_Platform);
+            //if (m_CurrentTownData != null)
+                //Destroy(m_CurrentTownData.m_Platform);
+
+            if (m_CurrentPlatform != null)
+                Destroy(m_CurrentPlatform); 
 
             yield return null;
         }
         IEnumerator DOSetupLevel(TownData townData)
         {
-            m_CurrentTownData = ScriptableObject.CreateInstance<TownData>();
+            //m_CurrentTownData = ScriptableObject.CreateInstance<TownData>();
+            //Transform platform = GameScreen.Instance.m_TownsPlaceholder;
+            //m_CurrentTownData.m_Platform = Instantiate(townData.m_Platform, platform);
 
-            Transform platform = GameScreen.Instance.m_TownsPlaceholder;
-            m_CurrentTownData.m_Platform = Instantiate(townData.m_Platform, platform);
+            m_CurrentTownData = townData.Clone<TownData>();
+            m_CurrentPlatform = Instantiate(m_CurrentTownData.m_Platform, GameScreen.Instance.m_TownsPlaceholder);
+
             m_IsPlayerFirstAct = true;
             //New System
             m_InGameCoin = (int)WalletManager.GetBalance(m_CoinCurrency);

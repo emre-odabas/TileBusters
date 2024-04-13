@@ -1,6 +1,8 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
+using GameCore.Managers;
+using System;
 
 namespace GameCore.Controllers
 {
@@ -30,32 +32,17 @@ namespace GameCore.Controllers
 
         #region MONOBEHAVIOUR
 
-        private void Awake()
-        {
-            
-        }
-
-        private void Start()
-        {
-            
-        }
-        
-        private void Update()
-        {
-            
-        }
-        
         private void OnEnable()
         {
-            
+            GameManager.Instance.onLevelSetup += OnLevelSetup;
         }
         
         private void OnDisable()
         {
-            
+            GameManager.Instance.onLevelSetup -= OnLevelSetup;
         }
 
-        private void OnValidate()
+        private void Start()
         {
             
         }
@@ -64,6 +51,11 @@ namespace GameCore.Controllers
 
         #region CALLBACKS
 
+        private void OnLevelSetup()
+        {
+            m_BackgroundImage.sprite = GameManager.Instance.m_CurrentTownData.m_Background;
+        }
+
         #endregion
 
         #region RETURN FUNCTIONS
@@ -71,7 +63,7 @@ namespace GameCore.Controllers
         #endregion
 
         #region FUNCTIONS
-         
+
         #endregion
 
     }

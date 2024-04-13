@@ -13,12 +13,6 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 229616054083871022, guid: b3e216151df25674ca30941e2d9b0880,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e9adf946fbde5364bbe33107547f1304,
-        type: 3}
     - target: {fileID: 3134077423153195221, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: m_Pivot.x
