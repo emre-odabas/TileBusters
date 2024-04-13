@@ -18,7 +18,6 @@ namespace GameCore.Gameplay
         //Components
         [FoldoutGroup("Components")] 
         [FoldoutGroup("Components/Utilities"), SerializeField] private GameObject m_FillObject;
-        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_FillFeedbacks;
         
         //Indicator
         //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
@@ -44,7 +43,6 @@ namespace GameCore.Gameplay
         public void Fill()
         {
             m_FillObject.SetActive(true);
-            m_FillFeedbacks.PlayFeedbacks();
         }
 
         public void EmptyIt()

@@ -6,6 +6,7 @@ using GameCore.Managers;
 using System;
 using GameCore.Core;
 using GameCore.Controllers;
+using System.Collections.Generic;
 
 namespace GameCore.Gameplay
 {
@@ -40,24 +41,12 @@ namespace GameCore.Gameplay
         //Privates
         private bool isBusy = false;
         private bool lastButtonState = true;
+        private List<ButtonUpgradeTier> buttonUpgradeTierList = new List<ButtonUpgradeTier>();
 
         #endregion
 
         #region MONOBEHAVIOUR
 
-        private void OnEnable()
-        {
-            GameManager.Instance.onStartPlay += OnStartPlay;
-        }
-
-        private void OnDisable()
-        {
-            if (GameManager.Instance != null)
-            {
-                GameManager.Instance.onStartPlay -= OnStartPlay;
-            }
-        }
-        
         private void Update()
         {
             CheckButtonToggle();
@@ -66,11 +55,6 @@ namespace GameCore.Gameplay
         #endregion
 
         #region CALLBACKS
-
-        private void OnStartPlay()
-        {
-            
-        }
 
         #endregion
 
@@ -89,6 +73,16 @@ namespace GameCore.Gameplay
         {
             currentLevel = -1;
             townBuildingProperty = GameManager.Instance.m_CurrentTownData.GetBuildingData(m_Id);
+
+            for (int i = 0; i < townBuildingProperty.m_UpgradeList.Count; i++)
+            {
+                GameObject buttonTierObj = Instantiate(m_RefButtonUpgradeTier, m_BtnTiersContainer);
+                ButtonUpgradeTier buttonUpgradeTier = buttonTierObj.GetComponent<ButtonUpgradeTier>();
+                buttonUpgradeTier.EmptyIt();
+
+                buttonUpgradeTierList.Add(buttonUpgradeTier);
+            }
+
             Customize();
         }
 
@@ -102,7 +96,17 @@ namespace GameCore.Gameplay
                 m_BuildingImage.sprite = townBuildingProperty.m_UpgradeList[currentLevel].m_Sprite;
 
             //Button
-
+            for (int i = 0; i < buttonUpgradeTierList.Count; i++)
+            {
+                if (i <= currentLevel)
+                {
+                    buttonUpgradeTierList[i].Fill();
+                }
+                else
+                {
+                    buttonUpgradeTierList[i].EmptyIt();
+                }
+            }
         }
 
         private void CheckButtonToggle()
