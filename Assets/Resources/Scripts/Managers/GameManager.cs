@@ -347,6 +347,7 @@ namespace GameCore.Managers
 
             m_CurrencyData.SetCurrentCurrencyValue(currencyType, increasedValue);
             onInGameCoinChange?.Invoke(increasedValue);
+            DataManager.Instance.SaveGameData();
         }
 
         public void DecreaseCurrency(CurrencyType currencyType, int value)
@@ -356,6 +357,7 @@ namespace GameCore.Managers
 
             m_CurrencyData.SetCurrentCurrencyValue(currencyType, increasedValue);
             onInGameCoinChange?.Invoke(increasedValue);
+            DataManager.Instance.SaveGameData();
         }
 
 #if UNITY_EDITOR
