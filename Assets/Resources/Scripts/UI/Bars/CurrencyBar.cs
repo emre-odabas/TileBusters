@@ -19,6 +19,8 @@ namespace GameCore.UI
         [FoldoutGroup("Components/Utilities"), SerializeField] private TextMeshProUGUI m_CurrencyText;
         [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Image;
 
+        //Privates
+
         #region MONOBEHAVIOUR
 
         private void OnEnable()
@@ -40,7 +42,10 @@ namespace GameCore.UI
         {
             if (!Application.isPlaying)
             {
-                Customize();
+                CurrencyProperty currencyProperty = GameManager.Instance.m_CurrencyData.GetCurrencyProperty(m_CurrencyType);
+                if (currencyProperty == null) return;
+
+                m_Image.sprite = currencyProperty.m_Sprite;
             }
         }
 
@@ -50,6 +55,7 @@ namespace GameCore.UI
 
         private void OnLevelSetup()
         {
+            Customize();
             UpdateCurrency(false);
         }
 
@@ -88,22 +94,7 @@ namespace GameCore.UI
         private void UpdateCurrency(bool animate)
         {
             int currentCoin = int.Parse(m_CurrencyText.text);
-            int targetCoin = 0;
-
-            switch(m_CurrencyType)
-            {
-                case CurrencyType.Coin:
-                    targetCoin = (int)WalletManager.GetBalance(GameFoundation.catalogs.currencyCatalog.FindItem("coin"));
-                    break;
-
-                case CurrencyType.Hammer:
-                    targetCoin = (int)WalletManager.GetBalance(GameFoundation.catalogs.currencyCatalog.FindItem("hammer"));
-                    break;
-
-                case CurrencyType.Star:
-                    targetCoin = (int)WalletManager.GetBalance(GameFoundation.catalogs.currencyCatalog.FindItem("star"));
-                    break;
-            }
+            int targetCoin = GameManager.Instance.m_CurrencyData.GetCurrentCurrencyValue(m_CurrencyType);
 
             UpdateCurrency(currentCoin, targetCoin, animate);
         }

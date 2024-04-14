@@ -50,8 +50,6 @@ namespace GameCore.Managers
         #region Variables
         
         [ReadOnly] public State m_State = State.Awaiting;
-        [FoldoutGroup("Currencies", expanded:true), ReadOnly] public int m_InGameCoin;
-        [FoldoutGroup("Currencies"), ReadOnly] public Currency m_CoinCurrency;
         [FoldoutGroup("Level", expanded: true), ReadOnly] public List<TownData> m_Levels = new List<TownData>();
         [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int StartTownLevel;
         public int m_StartTownLevel
@@ -137,7 +135,7 @@ namespace GameCore.Managers
 
         void InitializeGameFoundation()
         {
-            m_CoinCurrency = GameFoundation.catalogs.currencyCatalog.FindItem("coin");
+
         }
 
         void InitializeGame()
@@ -226,8 +224,6 @@ namespace GameCore.Managers
             m_CurrentPlatform = Instantiate(m_CurrentTownData.m_Platform, GameScreen.Instance.m_TownsPlaceholder);
 
             m_IsPlayerFirstAct = true;
-            //New System
-            m_InGameCoin = (int)WalletManager.GetBalance(m_CoinCurrency);
             yield return new WaitForSeconds(m_DelayOnLevelSetup);
             onLevelSetup?.Invoke();
             yield return new WaitForSeconds(m_DelayAfterLevelSetup);
@@ -283,7 +279,7 @@ namespace GameCore.Managers
                 m_WinFeedback.PlayFeedbacks();
             onLevelComplete?.Invoke();
             yield return new WaitForSeconds(m_DelayOnComplete);
-            SaveCoin();
+            //SaveCoin();
             DataManager.Instance.m_GameData.m_TownLocalData.m_TownLevel++;
             DataManager.Instance.SaveGameData();
         }
@@ -341,30 +337,65 @@ namespace GameCore.Managers
         
         #endregion
         #endregion
-        #region Economy
-       
-        [Button]
-        public void IncreaseInGameCoin(int coin)
+
+        #region Currency
+
+        public void IncreaseCurrency(CurrencyType currencyType, int value)
         {
-            if (m_InGameCoin>=m_CoinCurrency.maximumBalance)
-                return;
-            m_InGameCoin += coin;
-            onInGameCoinChange?.Invoke(m_InGameCoin);
+            int currentValue = m_CurrencyData.GetCurrentCurrencyValue(currencyType);
+            int increasedValue = currentValue + value;
+
+            m_CurrencyData.SetCurrentCurrencyValue(currencyType, increasedValue);
+            onInGameCoinChange?.Invoke(increasedValue);
+        }
+
+        public void DecreaseCurrency(CurrencyType currencyType, int value)
+        {
+            int currentCoin = m_CurrencyData.GetCurrentCurrencyValue(currencyType);
+            int increasedValue = Mathf.Clamp(currentCoin - value, 0, 999999);
+
+            m_CurrencyData.SetCurrentCurrencyValue(currencyType, increasedValue);
+            onInGameCoinChange?.Invoke(increasedValue);
+        }
+
+#if UNITY_EDITOR
+        [Button]
+        private void IncreaseCurrency_Coin(int value)
+        {
+            IncreaseCurrency(CurrencyType.Coin, value);
         }
 
         [Button]
-        public void DecreaseInGameCoin(int coin)
+        private void DecreaseCurrency_Coin(int value)
         {
-            if (m_InGameCoin <= 0)
-                return;
-            m_InGameCoin -= coin;
-            onInGameCoinChange?.Invoke(m_InGameCoin);
+            DecreaseCurrency(CurrencyType.Coin, value);
         }
 
-        public void SaveCoin()
+        [Button]
+        private void IncreaseCurrency_Hammer(int value)
         {
-            WalletManager.SetBalance(m_CoinCurrency, m_InGameCoin);
+            IncreaseCurrency(CurrencyType.Hammer, value);
         }
+
+        [Button]
+        private void DecreaseCurrency_Hammer(int value)
+        {
+            DecreaseCurrency(CurrencyType.Hammer, value);
+        }
+
+        [Button]
+        private void IncreaseCurrency_Star(int value)
+        {
+            IncreaseCurrency(CurrencyType.Star, value);
+        }
+
+        [Button]
+        private void DecreaseCurrency_Star(int value)
+        {
+            DecreaseCurrency(CurrencyType.Star, value);
+        }
+#endif
+
         #endregion
 
 

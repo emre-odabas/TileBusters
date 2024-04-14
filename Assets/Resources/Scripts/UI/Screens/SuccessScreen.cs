@@ -49,8 +49,8 @@ namespace GameCore.UI
         }
         void OnLevelFinish()
         {
-            m_CurrentCoin = (int)WalletManager.GetBalance(GameManager.Instance.m_CoinCurrency);
-            m_RewardedCoin = GameManager.Instance.m_InGameCoin - m_CurrentCoin;
+            //m_CurrentCoin = (int)WalletManager.GetBalance(GameManager.Instance.m_CoinCurrency);
+            //m_RewardedCoin = GameManager.Instance.m_InGameCoin - m_CurrentCoin;
         }
         void OnLevelComplete()
         {

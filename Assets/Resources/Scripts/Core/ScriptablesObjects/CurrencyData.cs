@@ -2,6 +2,7 @@
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Linq;
+using UnityEngine.GameFoundation;
 
 namespace GameCore.Core
 {
@@ -22,6 +23,22 @@ namespace GameCore.Core
                 Logger.LogError("CurrencyData", "Could not find currency with ID: " + currencyType);
                 
             return data;
+        }
+
+        public int GetCurrentCurrencyValue(CurrencyType currencyType)
+        {
+            Currency currency = GameFoundation.catalogs.currencyCatalog.FindItem(currencyType.ToString().ToLower());
+            return (int)WalletManager.GetBalance(currency);
+        }
+
+        #endregion
+
+        #region FUNCTIONS
+
+        public void SetCurrentCurrencyValue(CurrencyType currencyType, int value)
+        {
+            Currency currency = GameFoundation.catalogs.currencyCatalog.FindItem(currencyType.ToString().ToLower());
+            WalletManager.SetBalance(currency, value);
         }
 
         #endregion
