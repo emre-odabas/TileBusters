@@ -17505,6 +17505,7 @@ MonoBehaviour:
   m_DelayOnFinish: 0.5
   m_DelayOnComplete: 1
   m_DelayOnFail: 0
+  m_CurrencyData: {fileID: 11400000, guid: 440a642c42b6522458e2a40e37503680, type: 2}
   m_SplashScreen: {fileID: 1593423028}
 --- !u!1 &374992107555879882
 GameObject:

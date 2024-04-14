@@ -35,6 +35,31 @@ MonoBehaviour:
   m_Database: {fileID: 11400000}
   m_Items:
   - {fileID: -5491603864120282260}
+  - {fileID: -6939765201031440776}
+  - {fileID: 641586560380068720}
+--- !u!114 &-6939765201031440776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6736b79f77dc474c8bc820c305c2c2e, type: 3}
+  m_Name: Currency_hammer
+  m_EditorClassIdentifier: 
+  m_DisplayName: Hammer
+  m_Key: hammer
+  m_Tags: []
+  m_Catalog: {fileID: -8748276842837705238}
+  m_StaticPropertyKeys: []
+  m_StaticPropertyValues: []
+  m_DetailValues:
+  - {fileID: 0}
+  m_InitialBalance: 0
+  m_MaximumBalance: 0
+  m_Type: 0
 --- !u!114 &-5491603864120282260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +149,29 @@ MonoBehaviour:
   m_CurrencyCatalog: {fileID: -8748276842837705238}
   m_TransactionCatalog: {fileID: -2214141435899730243}
   m_GameParameterCatalog: {fileID: 8299239432308024168}
+--- !u!114 &641586560380068720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6736b79f77dc474c8bc820c305c2c2e, type: 3}
+  m_Name: Currency_star
+  m_EditorClassIdentifier: 
+  m_DisplayName: Star
+  m_Key: star
+  m_Tags: []
+  m_Catalog: {fileID: -8748276842837705238}
+  m_StaticPropertyKeys: []
+  m_StaticPropertyValues: []
+  m_DetailValues:
+  - {fileID: 0}
+  m_InitialBalance: 0
+  m_MaximumBalance: 0
+  m_Type: 0
 --- !u!114 &1002683156723183741
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 5806639063355824860}
   - component: {fileID: 5806639063355824859}
   m_Layer: 5
-  m_Name: CoinBar
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,14 +180,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5806639064320825081}
+  m_Children: []
   m_Father: {fileID: 5806639064337987443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -165, y: 3}
-  m_SizeDelta: {x: 96, y: 96}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 65, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5806639063355824860
 CanvasRenderer:
@@ -217,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f522305ef217284793ae553a8916c24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 186c7e04e8688da43b9fd29bd8c6964b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -239,7 +238,7 @@ GameObject:
   - component: {fileID: 5806639064320825083}
   - component: {fileID: 5806639064320825082}
   m_Layer: 5
-  m_Name: CoinText
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,17 +251,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5806639064320825080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5806639063355824858}
+  m_Father: {fileID: 5806639064337987443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -89.601, y: -5.8}
-  m_SizeDelta: {x: 179.2, y: 84.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 60, y: 4.8500032}
+  m_SizeDelta: {x: -120, y: -49.699997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5806639064320825083
 CanvasRenderer:
@@ -319,15 +318,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46
+  m_fontSize: 72
   m_fontSizeBase: 46
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -394,6 +393,7 @@ RectTransform:
   m_Children:
   - {fileID: 8054250731776865082}
   - {fileID: 5806639063355824858}
+  - {fileID: 5806639064320825081}
   m_Father: {fileID: 5806639064852420584}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 5806639064852420584}
   - component: {fileID: 1943968450147032962}
   m_Layer: 5
-  m_Name: CoinBar
+  m_Name: CurrencyBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,5 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333429f702cd264cbb6da9d473d6b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CoinText: {fileID: 5806639064320825082}
   m_UpdateDuration: 0.2
+  m_CurrencyType: 2
+  m_CurrencyText: {fileID: 5806639064320825082}
+  m_Image: {fileID: 5806639063355824859}

@@ -83,6 +83,7 @@ namespace GameCore.Managers
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFinish = 0;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnComplete = 0;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFail = 0;
+        [FoldoutGroup("Database")] public CurrencyData m_CurrencyData;
         public GameObject m_SplashScreen;
 
         #region MonoBehaviour
