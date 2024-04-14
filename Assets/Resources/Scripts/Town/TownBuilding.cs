@@ -65,6 +65,34 @@ namespace GameCore.Gameplay
             return isMaxLevel;
         }
 
+        private TownBuildingUpgradeProperty CurrentLevelProperty()
+        {
+            TownBuildingUpgradeProperty property = townBuildingProperty.m_UpgradeList[currentLevel];
+            return property;
+        }
+
+        private TownBuildingUpgradeProperty NextLevelProperty()
+        {
+            int index = currentLevel + 1;
+            if (index > townBuildingProperty.m_UpgradeList.Count - 1)
+                return null;
+
+            TownBuildingUpgradeProperty property = townBuildingProperty.m_UpgradeList[index];
+            return property;
+        }
+
+        private bool IsAvailableCost()
+        {
+            TownBuildingUpgradeProperty nextUpgrade = NextLevelProperty();
+            if (nextUpgrade != null)
+            {
+                bool availableCost = GameManager.Instance.m_CurrencyData.GetCurrentCurrencyValue(nextUpgrade.m_CostType) >= nextUpgrade.m_CostAmount;
+                return availableCost;
+            }
+
+            return false;
+        }
+
         #endregion
 
         #region FUNCTIONS
@@ -92,9 +120,10 @@ namespace GameCore.Gameplay
 
             //Image
             m_BuildingImage.enabled = currentLevel != -1;
-            if (m_BuildingImage.enabled)
-                m_BuildingImage.sprite = townBuildingProperty.m_UpgradeList[currentLevel].m_Sprite;
 
+            if (m_BuildingImage.enabled && CurrentLevelProperty() != null)
+                m_BuildingImage.sprite = CurrentLevelProperty().m_Sprite;
+            
             //Button
             for (int i = 0; i < buttonUpgradeTierList.Count; i++)
             {
@@ -134,7 +163,13 @@ namespace GameCore.Gameplay
         {
             if (isBusy) return;
             if (isMaxLevel) return;
+            if (!IsAvailableCost()) 
+            {
+                Debug.LogError("insufficient amount!!!!!!! Play Puzzle!");
+                return;
+            }
 
+            PayAndGiveReward();
             isBusy = true;
             currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
             Customize();
@@ -151,6 +186,22 @@ namespace GameCore.Gameplay
             isBusy = false;
 
             TownController.Instance.onBuildingUpgraded?.Invoke();
+        }
+
+        private void PayAndGiveReward()
+        {
+            TownBuildingUpgradeProperty nextUpgrade = NextLevelProperty();
+            if (nextUpgrade != null)
+            {
+                //Pay Cost
+                GameManager.Instance.DecreaseCurrency(nextUpgrade.m_CostType, nextUpgrade.m_CostAmount);
+
+                //Give Reward
+                if (nextUpgrade.m_GiveReward && nextUpgrade.m_RewardType != CurrencyType.None)
+                {
+                    GameManager.Instance.IncreaseCurrency(nextUpgrade.m_RewardType, nextUpgrade.m_RewardAmount);
+                }
+            }
         }
          
         #endregion

@@ -17482,7 +17482,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_State: 0
-  m_InGameCoin: 0
   m_Levels: []
   StartTownLevel: 1
   m_CurrentTownLevelIndex: 0

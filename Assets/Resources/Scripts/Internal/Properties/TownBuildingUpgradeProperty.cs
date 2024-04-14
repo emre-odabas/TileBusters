@@ -5,8 +5,8 @@ using Sirenix.OdinInspector;
 [System.Serializable]
 public class TownBuildingUpgradeProperty
 {
-    public CurrencyType m_CurrencyType = CurrencyType.Hammer;
-    public int m_Cost = 2;
+    public CurrencyType m_CostType = CurrencyType.Hammer;
+    public int m_CostAmount = 2;
     [PreviewField] public Sprite m_Sprite;
     public bool m_GiveReward = true;
     [ShowIf("m_GiveReward")] public CurrencyType m_RewardType = CurrencyType.Star;
