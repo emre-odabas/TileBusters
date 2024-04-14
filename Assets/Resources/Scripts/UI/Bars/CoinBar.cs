@@ -1,45 +1,75 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using GameCore.Managers;
-using UnityEngine.GameFoundation;
-using GameCore.Core;
+//using UnityEngine.GameFoundation;
 
 namespace GameCore.UI
 {
     public class CoinBar : MonoBehaviour
     {
-        public TextMeshProUGUI m_CoinText;
+        public CurrencyType m_CurrencyType = CurrencyType.Coin;
+        public TextMeshProUGUI m_CurrencyText;
         public float m_UpdateDuration;
-        void Start()
+
+        #region Monobehaviour
+
+        private void OnEnable()
         {
-            //gameObject.SetActive(false);
+            GameManager.Instance.onLevelSetup += OnLevelSetup;
+            GameManager.Instance.onInGameCoinChange += OnCoinChange;
         }
-        public void UpdateCoin(int _currentCoin, int _coin, bool _animate)
+
+        private void OnDisable()
+        {
+            if(GameManager.Instance != null)
+            {
+                GameManager.Instance.onLevelSetup -= OnLevelSetup;
+                GameManager.Instance.onInGameCoinChange -= OnCoinChange;
+            }
+        }
+
+        #endregion
+
+        #region Events
+
+        private void OnLevelSetup()
+        {
+            //int coin = (int)WalletManager.GetBalance(GameFoundation.catalogs.currencyCatalog.FindItem("coin"));
+            int coin = 0;
+            UpdateCurrency(coin, false);
+        }
+
+        void OnCoinChange(int _coin)
+        {
+            UpdateCurrency(_coin, true);
+        }
+
+        #endregion
+
+        #region Functions
+
+        private void UpdateCurrency(int _currentCoin, int _coin, bool _animate)
         {
             if (_animate)
             {
                 DOVirtual.Float(_currentCoin, _coin, m_UpdateDuration, (x) =>
                 {
-                    m_CoinText.text = Mathf.RoundToInt(x).ToString();
+                    m_CurrencyText.text = Mathf.RoundToInt(x).ToString();
                 });
             }
             else
             {
-                m_CoinText.text = _coin.ToString();
+                m_CurrencyText.text = _coin.ToString();
             }
         }
-        public void UpdateCoin(int _coin, bool _animate)
+
+        private void UpdateCurrency(int _coin, bool _animate)
         {
-            int _currentCoin = int.Parse(m_CoinText.text);
-            UpdateCoin(_currentCoin, _coin, _animate);
+            int _currentCoin = int.Parse(m_CurrencyText.text);
+            UpdateCurrency(_currentCoin, _coin, _animate);
         }
-        public void SetCoinText(int _coin)
-        {
-            m_CoinText.text = _coin.ToString();
-        }
+
+        #endregion
     }
 }
