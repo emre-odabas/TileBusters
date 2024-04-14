@@ -17,10 +17,6 @@ namespace GameCore.UI
 {
     public class SuccessScreen : CoreScreen<SuccessScreen>
     {
-        [FoldoutGroup("Bars")] public RewardBar m_RewardBar;
-        [FoldoutGroup("Bars")] public CoinBar m_CoinBar;
-
-
         [FoldoutGroup("Texts", expanded: true)] public TextMeshProUGUI m_RewardText;
         [FoldoutGroup("Buttons", expanded: true)] public CoreButton m_BtnNextLevel;
         [FoldoutGroup("Components")] public List<RectTransform> m_Coins;

@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 5806639064852420584}
   - component: {fileID: 1943968450147032962}
   m_Layer: 5
-  m_Name: CoinBar-Right
+  m_Name: CoinBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -3910,7 +3910,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6195123642424254966}
   - component: {fileID: 6381217732784420670}
-  - component: {fileID: 2083063496358496396}
   m_Layer: 5
   m_Name: RewardBar
   m_TagString: Untagged
@@ -3946,22 +3945,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6882949291610084626}
   m_CullTransparentMesh: 0
---- !u!114 &2083063496358496396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6882949291610084626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e0a943144080a245a0d2239b2a8e859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Keys:
-  - {fileID: 6415673562899987172}
-  - {fileID: 1498372818613843382}
-  - {fileID: 5680148164255949776}
 --- !u!1 &7025456204009246590
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,173 +5213,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1001 &91177711176146774
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5603426827273544363}
-    m_Modifications:
-    - target: {fileID: 8209723959317760959, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723959317760959, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723959317760959, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723959317760959, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 96
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -86
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -129.77875
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8209723960238827899, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-        type: 3}
-      propertyPath: m_Name
-      value: CoinBar_2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d05969f19ee7aa24888a2ddbdd85c67c, type: 3}
---- !u!224 &8119182900967366382 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8209723960347296184, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 91177711176146774}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8119182901059925538 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8209723960238827892, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 91177711176146774}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c333429f702cd264cbb6da9d473d6b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!224 &8119182901059925548 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8209723960238827898, guid: d05969f19ee7aa24888a2ddbdd85c67c,
-    type: 3}
-  m_PrefabInstance: {fileID: 91177711176146774}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1194834315883066705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5526,10 +5342,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4100809436595172503}
-    - targetCorrespondingSourceObject: {fileID: 6726047394290505722, guid: 957010284de38714e853ea1bebb9845f,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8119182901059925548}
     - targetCorrespondingSourceObject: {fileID: 468189626411792916, guid: 957010284de38714e853ea1bebb9845f,
         type: 3}
       insertIndex: -1
@@ -5572,9 +5384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_State: 1
   m_Container: {fileID: 4040565750330155495}
-  m_KeyBar: {fileID: 0}
-  m_RewardBar: {fileID: 2083063496358496396}
-  m_CoinBar: {fileID: 8119182901059925538}
   m_RewardText: {fileID: 823527451776052852}
   m_BtnNextLevel: {fileID: 1873087235885480165}
   m_Coins:
@@ -5586,7 +5395,7 @@ MonoBehaviour:
   - {fileID: 7658231362147795654}
   - {fileID: 1414630354777297661}
   - {fileID: 1745894603853555491}
-  m_CoinTarget: {fileID: 8119182900967366382}
+  m_CoinTarget: {fileID: 0}
   m_RewardTextContainer: {fileID: 8353365274044274673}
   m_RewardBoxContainer: {fileID: 2864067142098548777}
   m_CoinExplosionFeedback: {fileID: 0}

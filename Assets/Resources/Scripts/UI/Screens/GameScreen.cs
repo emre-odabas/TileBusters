@@ -18,7 +18,6 @@ namespace GameCore.UI
         [FoldoutGroup("Components/Utilities")] public Transform m_TownsPlaceholder;
         [FoldoutGroup("Components/Utilities")] public GameObject m_TempLevel;
         [FoldoutGroup("Components/Utilities", expanded: true)]public CoinBar m_CoinBar;
-        [FoldoutGroup("Components/Utilities", expanded: true)] public TextMeshProUGUI m_TxtTownName;
         
         #region MonoBehaviour
         protected override void Awake()
@@ -69,7 +68,6 @@ namespace GameCore.UI
         private void OnLevelSetup()
         {
             m_CoinBar.UpdateCoin(GameManager.Instance.m_InGameCoin,false);
-            m_TxtTownName.text = GameManager.Instance.m_CurrentTownData.m_TownName;
         }
 
         void OnCoinChange(int _coin)
