@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a352c27b3d4bfc44cb34970e2703c722, type: 3}
+  m_Name: CurrencyData
+  m_EditorClassIdentifier: 
+  m_CurrencyPropertyList:
+  - m_CurrencyType: 0
+    m_Sprite: {fileID: 0}
+  - m_CurrencyType: 1
+    m_Sprite: {fileID: 0}
+  - m_CurrencyType: 2
+    m_Sprite: {fileID: 21300000, guid: 186c7e04e8688da43b9fd29bd8c6964b, type: 3}
+  - m_CurrencyType: 3
+    m_Sprite: {fileID: 21300000, guid: 0c117876a5de3fa499d17905cd984e49, type: 3}
+  - m_CurrencyType: 4
+    m_Sprite: {fileID: 21300000, guid: 39075861e98860a45be203de6d60fd18, type: 3}
+  - m_CurrencyType: 5
+    m_Sprite: {fileID: 21300000, guid: 0ca9645f115ec3d45a6a79b74db3752a, type: 3}

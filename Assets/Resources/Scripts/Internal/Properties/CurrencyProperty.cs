@@ -3,9 +3,9 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 
 [System.Serializable]
-public class DisplayProperty
+public class CurrencyProperty
 {
-    public DisplayType m_DisplayType = DisplayType.Coin;
+    public CurrencyType m_CurrencyType = CurrencyType.Coin;
     public Sprite m_Sprite;
 
 }
