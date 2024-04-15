@@ -7,6 +7,7 @@ using System;
 using GameCore.Core;
 using GameCore.Controllers;
 using System.Collections.Generic;
+using TMPro;
 
 namespace GameCore.Gameplay
 {
@@ -24,9 +25,11 @@ namespace GameCore.Gameplay
 
         //Components
         [FoldoutGroup("Components")] 
-        [FoldoutGroup("Components/Upgrade"), SerializeField] private Image m_BuildingImage;
-        [FoldoutGroup("Components/Upgrade"), SerializeField] private Transform m_BtnTiersContainer;
-        [FoldoutGroup("Components/Upgrade"), SerializeField] private GameObject m_RefButtonUpgradeTier;
+        [FoldoutGroup("Components/Building"), SerializeField] private Image m_BuildingImage;
+        [FoldoutGroup("Components/Button"), SerializeField] private Transform m_BtnTiersContainer;
+        [FoldoutGroup("Components/Button"), SerializeField] private GameObject m_RefButtonUpgradeTier;
+        [FoldoutGroup("Components/Button"), SerializeField] private Image m_ButtonCurrencyImage;
+        [FoldoutGroup("Components/Button"), SerializeField] private TextMeshProUGUI m_ButtonCurrencyText;
         
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowButtonFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideButtonFeedbacks;
@@ -121,20 +124,22 @@ namespace GameCore.Gameplay
             //Image
             m_BuildingImage.enabled = currentLevel != -1;
 
-            if (m_BuildingImage.enabled && CurrentLevelProperty() != null)
+            if (m_BuildingImage.enabled)
                 m_BuildingImage.sprite = CurrentLevelProperty().m_Sprite;
             
             //Button
             for (int i = 0; i < buttonUpgradeTierList.Count; i++)
             {
                 if (i <= currentLevel)
-                {
                     buttonUpgradeTierList[i].Fill();
-                }
                 else
-                {
                     buttonUpgradeTierList[i].EmptyIt();
-                }
+            }
+
+            if(NextLevelProperty() != null)
+            {
+                m_ButtonCurrencyImage.sprite = GameManager.Instance.m_CurrencyData.GetCurrencyProperty(NextLevelProperty().m_CostType).m_Sprite;
+                m_ButtonCurrencyText.text = NextLevelProperty().m_CostAmount.ToString();
             }
         }
 

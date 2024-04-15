@@ -40,7 +40,7 @@ namespace GameCore.UI
 
         private void OnValidate()
         {
-            if (!Application.isPlaying)
+            if (!Application.isPlaying && GameManager.Instance != null)
             {
                 CurrencyProperty currencyProperty = GameManager.Instance.m_CurrencyData.GetCurrencyProperty(m_CurrencyType);
                 if (currencyProperty == null) return;
