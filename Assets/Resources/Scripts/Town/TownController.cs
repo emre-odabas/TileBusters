@@ -8,6 +8,7 @@ using GameCore.Gameplay;
 using System.Linq;
 using UnityEngine.Events;
 using GameCore.Core;
+using UnityEngine.Analytics;
 
 namespace GameCore.Controllers
 {
@@ -37,12 +38,12 @@ namespace GameCore.Controllers
 
         #endregion
 
-
         #region MONOBEHAVIOUR
 
         private void OnEnable()
         {
             GameManager.Instance.onLevelSetup += OnLevelSetup;
+            GameManager.Instance.onLevelComplete += OnLevelComplete;
             onBuildingUpgraded += OnBuildingUpgraded;
         }
         
@@ -51,6 +52,7 @@ namespace GameCore.Controllers
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.onLevelSetup -= OnLevelSetup;
+                GameManager.Instance.onLevelComplete -= OnLevelComplete;
             }
             onBuildingUpgraded -= OnBuildingUpgraded;
         }
@@ -69,6 +71,11 @@ namespace GameCore.Controllers
             Setup();
         }
 
+        private void OnLevelComplete()
+        {
+            DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.Clear();
+        }
+
         private void OnBuildingUpgraded()
         {
             if (IsAllBuildingsMaxLevel())
@@ -80,6 +87,18 @@ namespace GameCore.Controllers
         #endregion
 
         #region RETURN FUNCTIONS
+
+        public TownBuildingLocalData GetBuildingLocalData(string id)
+        {
+            TownBuildingLocalData townBuildingLocalData = DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.FirstOrDefault(c => c.m_Id == id);
+            if (townBuildingLocalData == null)
+            {
+                Debug.LogError("Could not find building with ID: " + id);
+                return null;
+            }
+
+            return townBuildingLocalData;
+        }
 
         private bool IsAllBuildingsMaxLevel()
         {
@@ -97,11 +116,21 @@ namespace GameCore.Controllers
 
         private void Setup()
         {
+            if (DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.Count == 0)
+            {
+                for (int i = 0; i < m_Buildings.Count; i++)
+                {
+                    string id = m_Buildings[i].m_Id;
+                    int level = -1;
+                    DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.Add(new TownBuildingLocalData() { m_Id = id, m_Level = level });
+                }
+            }
+
             m_BackgroundImage.sprite = GameManager.Instance.m_CurrentTownData.m_Background;
 
             for(int i = 0; i < m_Buildings.Count; i++)
             {
-                m_Buildings[i].Setup();
+                m_Buildings[i].Setup(GetBuildingLocalData(m_Buildings[i].m_Id));
             }
         }
 

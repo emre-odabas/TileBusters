@@ -399,7 +399,5 @@ namespace GameCore.Managers
 #endif
 
         #endregion
-
-
     }
 }

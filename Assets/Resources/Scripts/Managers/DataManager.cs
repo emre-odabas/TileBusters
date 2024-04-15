@@ -111,7 +111,7 @@ namespace GameCore.Managers
             // Check if the operation was successful.
             if (saveOperation.isFulfilled)
             {
-                Debug.Log("Saved!");
+                Debug.Log("Game Data Saved!");
             }
             else
             {

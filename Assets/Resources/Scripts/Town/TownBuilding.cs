@@ -8,6 +8,7 @@ using GameCore.Core;
 using GameCore.Controllers;
 using System.Collections.Generic;
 using TMPro;
+using System.Linq;
 
 namespace GameCore.Gameplay
 {
@@ -21,7 +22,7 @@ namespace GameCore.Gameplay
 
         //Parameters
         [FoldoutGroup("Parameters")] 
-        [FoldoutGroup("Parameters"), SerializeField] private string m_Id = "building_";
+        [FoldoutGroup("Parameters"), SerializeField] public string m_Id = "building_";
 
         //Components
         [FoldoutGroup("Components")] 
@@ -40,6 +41,7 @@ namespace GameCore.Gameplay
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool isMaxLevel = false;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private int currentLevel = 0;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private TownBuildingProperty townBuildingProperty;
+        [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private TownBuildingLocalData townBuildinglocalData;
         
         //Privates
         private bool isBusy = false;
@@ -100,9 +102,13 @@ namespace GameCore.Gameplay
 
         #region FUNCTIONS
 
-        public void Setup()
+        public void Setup(TownBuildingLocalData localData)
         {
-            currentLevel = -1;
+            townBuildinglocalData = localData;
+
+            if (townBuildinglocalData == null) return;
+
+            currentLevel = townBuildinglocalData.m_Level;
             townBuildingProperty = GameManager.Instance.m_CurrentTownData.GetBuildingData(m_Id);
 
             for (int i = 0; i < townBuildingProperty.m_UpgradeList.Count; i++)
@@ -120,6 +126,8 @@ namespace GameCore.Gameplay
         private void Customize()
         {
             if (townBuildingProperty == null) return;
+
+            isMaxLevel = currentLevel == townBuildingProperty.m_UpgradeList.Count - 1;
 
             //Image
             m_BuildingImage.enabled = currentLevel != -1;
@@ -179,10 +187,10 @@ namespace GameCore.Gameplay
             currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
             Customize();
             
-            isMaxLevel = currentLevel == townBuildingProperty.m_UpgradeList.Count - 1;
-
             MMFeedbacks upgradeFeedbacks = isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
             upgradeFeedbacks.PlayFeedbacks();
+
+            SaveLevel();
 
             /*Utilities.DelayedCall(upgradeFeedbacks.Feedbacks[0], () =>
             {
@@ -208,7 +216,15 @@ namespace GameCore.Gameplay
                 }
             }
         }
-         
+
+        public void SaveLevel()
+        {
+            if (townBuildinglocalData == null) return;
+
+            townBuildinglocalData.m_Level = currentLevel;
+            DataManager.Instance.SaveGameData();
+        }
+
         #endregion
     }
 }

@@ -1981,6 +1981,7 @@ MonoBehaviour:
   m_GameData:
     m_TownLocalData:
       m_TownLevel: 0
+      m_TownBuildingLevels: []
     m_SettingsLocalData:
       m_IsSoundON: 1
       m_IsHapticON: 1
