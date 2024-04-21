@@ -60,12 +60,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\Movement\MMAutoRotate.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\Achievements\MMAchievementDisplayer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\Camera\MMGhostCamera.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\Movement\MMAutoRotate.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\Achievements\MMAchievementDisplayer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\Camera\MMGhostCamera.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Tools\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\MoreMountains.Tools.Feedbacks.asmdef" />
+    <None Include="Assets\Plugins\MMFeedbacks\MMTools\ToolsForMMFeedbacks\Tools\MoreMountains.Tools.Feedbacks.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -397,39 +397,39 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>Assets\Tools\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>Assets\Tools\Demigiant\DOTween\DOTween.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>Assets\Tools\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">

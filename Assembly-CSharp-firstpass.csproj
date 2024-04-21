@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}</ProjectGuid>
+    <ProjectGuid>{DD441459-102D-67B4-C2E4-9BB007F8BBD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>MoreMountains.Feedbacks</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -50,7 +50,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>Legacy</UnityProjectGeneratorStyle>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2022.3.24f1</UnityVersion>
   </PropertyGroup>
@@ -60,84 +60,397 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackCameraShake.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackSpriteRenderer.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackParticles.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioSourceStereoPanShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioSourceVolume.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\ObjectPool\MMMiniPoolableObject.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackFlicker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioFilterHighPass.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackRotation.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackPause.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioFilterDistortion.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackCameraFieldOfView.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioFilterReverb.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feel\MMBlink.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackEnable.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackParticlesInstantiation.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackFeedbacks.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Sequencing\Scripts\MMSoundSequencer.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioSource.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMCameraClippingPlanesShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Sequencing\Scripts\MMSequence.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMSfxEvent.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackTimescaleModifier.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackWiggle.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Sequencing\Scripts\MMInputSequenceRecorder.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioFilterLowPass.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioFilterLowPassShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackLooper.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioSourcePitch.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMLightShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackScale.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAnimation.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackCameraClippingPlanes.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackCameraZoom.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMFeedbacksShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackRigidbody.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Sequencing\Scripts\MMFeedbacksSequencer.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackEvents.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\ObjectPool\MMMiniObjectPooler.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioSourcePitchShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Sequencing\Scripts\MMSequencer.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackLooperStart.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMWiggle.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioFilterEchoShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackMaterial.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMCameraShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioFilterDistortionShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedbacksInspectorColors.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedbacks.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackRigidbody2D.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackLight.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackInstantiateObject.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioSourceStereoPan.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackPosition.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedbacksHelpers.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackFreezeFrame.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMCameraZoom.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackHoldingPause.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMFlash.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackCameraOrthographicSize.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioFilterHighPassShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioFilterReverbShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackImage.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioSourceVolumeShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackFlash.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackAudioFilterEcho.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedbackTiming.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMTimeManager.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackSetActive.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMCameraOrthographicSizeShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Sequencing\Scripts\MMAudioSourceSequencer.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMCameraFieldOfViewShaker.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedback.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMSpriteRendererShaker.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\01 Inventory Basics\InventoryBasics.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDragCamera.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualTranslate.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXRotation.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualRotate.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainScale.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\PaintingData.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableCount.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableGraphicColor.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEButtonScript.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainToCollider.cs" />
+    <Compile Include="Assets\Plugins\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragTranslateRigidbody2D.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiSet.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSwipeEdge.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPath.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragTranslateRigidbody.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoGhost.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXLightFade.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\InternalErrorException.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualTranslateRigidbody2D.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanGestureToggle.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableSpriteRendererColor.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\SimpleExample.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanSnapshot.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPinchCamera.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPinchScale.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanTwistRotate.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragColorMesh.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerUp.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualVelocity.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectionBox.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanRoll.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanRotateToRigidbody2D.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualTranslateRigidbody.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableTime.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\HullData.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableRendererColor.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\UICanvasManager.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerDown.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\FaceList.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanChaseRigidbody2D.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerHeld.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableBehaviour.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanShape.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSpawnBetween.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoButton.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanShapeDetector.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPulseScale.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanChaseRigidbody.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableDrop.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragSelect.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanRevertTransform.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDragTranslate.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanTouch.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectablePressureScale.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainToColliders.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPlane.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMouseWheel.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\04 Wallet\WalletSample.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\VertexList.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Face.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanTwistRotateAxis.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSpawn.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanInfoText.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\00 Database And Assets (required for samples)\Animations\WaitAnimation.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\08 Store\PrefabTutorial.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerSet.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\Finger.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanGesture.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPitchYaw.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerFlick.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanReplayFinger.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanRotateToPosition.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\IDropHandler.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\ParticleEffectsLibrary.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QuickHull3DTest.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanTwistCamera.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainToDirection.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDestroy.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoBall.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerFilter.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\08 Store\StoreSample.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualSwipe.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Point3d.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPitchYawAutoRotate.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMaintainDistance.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableDial.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSwipeBase.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiPinch.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\SphereUtils.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanFinger.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableSelected.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragDeformMesh.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
+    <Compile Include="Assets\Plugins\Lean\Common\Scripts\LeanHelper.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiTap.cs" />
+    <Compile Include="Assets\Plugins\Lean\Common\Examples\Scripts\LeanCircuit.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerDownCanvas.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableDragTorque.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickSwipe.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerTapExpired.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerTap.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDropCount.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Vector3d.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\Gesture.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\00 Database And Assets (required for samples)\SamplesHelper.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\HalfEdge.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTap.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickPinch.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanAnySelected.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiSetCanvas.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSpawnWithFinger.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\TwoFingerGesture.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectable.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\06 Data Persistence\DataPersistenceSample.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
+    <Compile Include="Assets\Plugins\Lean\Common\Scripts\LeanInspector.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\Sphere.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragLine.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPongBall.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\07 Transactions\TransactionsSample.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickEnterOverExist.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableBlock.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickBase.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\HullPainter.cs" />
+    <Compile Include="Assets\Plugins\Lean\Common\Examples\Scripts\LeanDocumentation.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiTwist.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QhullTest.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanTouchEvents.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiSwipe.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerSwipe.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanScreenDepth.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDrop.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Vertex.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDragTrail.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFollow.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerOld.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
+    <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QuickHull3D.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualVelocity2D.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiPull.cs" />
+    <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\05 Properties\PropertiesSample.cs" />
+    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanStepValue2D.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanChase.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragTranslateAlong.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelect.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\EasyTouchTrigger.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSwap.cs" />
+    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\MoreMountains.Feedbacks.asmdef" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_RimOutline.shader" />
+    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\EasyTouchBundle\Readme.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_URP.txt" />
+    <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Dissolve.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline_Behind_SM2.shader" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Outline.shader" />
+    <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Outline.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Detail Texture Simple.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_PBS_Main.cginc" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_RimOutline.shader" />
+    <None Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Mobile_Specular_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Vertex Color Albedo.shader" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_MatCap.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\HSV.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Old School.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Dissolve.txt" />
+    <None Include="Assets\Plugins\Lean\Common\Examples\Fonts\OFL.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS Outline Blended (Specular).shader" />
+    <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Mobile_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS Outline (Specular).shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Sketch.shader" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Texture Blending.txt" />
+    <None Include="Assets\Plugins\Lean\Common\Examples\Shaders\Object.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_RimOutline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_ShadowHSV.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Desktop_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Water.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_Default.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Snow Accumulation.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\TCP2_OutlineOnly Blended.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_NdotL Stylization.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_RimOutline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Comic Book.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Serialization.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_CurvedWorld.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\Lean\Common\Examples\Shaders\Skybox.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_PBS_Core.cginc" />
+    <None Include="Assets\Plugins\MMFeedbacks\readme.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Mobile_Specular.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_SurfacePBS.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\!ToonyColorsPro Readme.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Desktop_Specular_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\Lean\READ ME.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Desktop_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\TCP2_OutlineOnly SM2.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Ramp Shading LWRP.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Include.cginc" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\TCP2_Desktop.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Hologram.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_RimOutline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\TCP2_OutlineOnly Blended SM2.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Realistic.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline_Include.cginc" />
+    <None Include="Assets\Plugins\MMFeedbacks\license.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_AlbedoHSV.txt" />
+    <None Include="Assets\Plugins\Epic Toon FX\ETFX Readme.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
+    <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Interactive\Interactive FX.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline_Behind.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Normal Mapping.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Blended Outline.shader" />
+    <None Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Documentation\Version 2.0.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
+    <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_VertExmotion.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_Outline.shader" />
+    <None Include="Assets\Plugins\Technie\PhysicsCreator\Readme.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Utilities.dll" />
+    <None Include="Assets\Plugins\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Subsurface Scattering.shader" />
+    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Vertical Fog.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Water WindWaker2.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Water_CurvedWorld.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Hand Painted.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline_Stencil.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Ramp Shading.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\SG2_Template_LWRP.txt" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS Outline Blended.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Sketch.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Include\TCP2_Outline_SM2.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Aura2.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Reflection.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Lava.shader" />
+    <None Include="Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Screen Space UV.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Hash Functions.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_RimOutline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Terrain.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Default_CurvedWorld.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\link.xml" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Triplanar.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_PBS.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Default\Sketch.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_PBS_ShadowMeta.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\TCP2_Mobile.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Lava Cartoon.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_RimOutline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_Rim_Outline.shader" />
+    <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\PBS\Outline Behind.shader" />
+    <None Include="Assets\Plugins\Lean\Common\Examples\Shaders\Alpha.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_HSV.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_Standard PBS (Specular).shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\Technie\PhysicsCreator\Shaders\HullPainterOverlay.shader" />
+    <None Include="Assets\Plugins\CodeStage\Package2Folder\readme.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Mobile_Outline.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Desktop_Specular_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Rim Lighting.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Utilities.dll" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Mobile_Specular_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\!JMO Assets Readme.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_Rim.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Subsurface Scattering.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_RimOutline.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_NoTile Sampling.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders PBS\TCP2_PBS_BRDF.cginc" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants Base\TCP2_Desktop_Specular.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\TCP2_OutlineOnly.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Water WindWaker.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_CustomAmbient.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Specular_Matcap_RimOutline_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Mobile_Matcap_Rim_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates\TCP2_ShaderTemplate_Default.txt" />
+    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll" />
+    <None Include="Assets\Plugins\EasyTouchBundle\EasyTouch\RealseNotes.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\Water\Poison.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Specular.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_OutlineBlending.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders Generated\Examples\SG2\Detail Texture.shader" />
+    <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shader Templates 2\Modules\Module_Reflection.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Specular_Reflection_RimOutline_Outline.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Shaders\Variants\TCP2_Desktop_Reflection_Rim_OutlineBlending.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -460,22 +773,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.Graphs">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.Android.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DemiEditor">
-      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Tracker.dll</HintPath>
       <Private>False</Private>
@@ -500,14 +797,6 @@
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="DOTweenProEditor">
-      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
@@ -530,10 +819,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="JMOAssets">
-      <HintPath>Assets\Plugins\JMO Assets\Editor\JMOAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
@@ -1040,16 +1325,204 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.GameFoundation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.DefaultCatalog.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.DefaultCatalog.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.DefaultLayers">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.DefaultLayers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Analytics">
+      <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.UI">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.DefaultCatalog">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.DefaultCatalog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.UI.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Promise">
+      <HintPath>Library\ScriptAssemblies\Unity.Promise.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="MoreMountains.Feedbacks.csproj">
+      <Project>{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}</Project>
+      <Name>MoreMountains.Feedbacks</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Feedbacks.Editor.csproj">
+      <Project>{72AB3D05-BC31-559D-20D2-C088D7DD9317}</Project>
+      <Name>MoreMountains.Tools.Feedbacks.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CodeStage.Package2Folder.csproj">
+      <Project>{B8AD7A4B-3D51-4E4C-B0E0-5952951E1E1B}</Project>
+      <Name>CodeStage.Package2Folder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
+      <Project>{0F3E32DB-2C1A-D12B-E3EB-D40A720EA44D}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Feedbacks.csproj">
+      <Project>{9A9C5594-B060-D7DA-7C27-012647416F10}</Project>
+      <Name>MoreMountains.Tools.Feedbacks</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro2.Demo.csproj">
+      <Project>{2BD1CF8F-8580-0F22-406E-78BE7FEAFA0D}</Project>
+      <Name>ToonyColorsPro2.Demo</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.MMTools.csproj">
+      <Project>{12A44FD0-A892-D126-E077-73BF96BE4705}</Project>
+      <Name>MoreMountains.Feedbacks.MMTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Cinemachine.csproj">
+      <Project>{038F494C-97D7-90EF-31A6-FE54BBDCB2CB}</Project>
+      <Name>MoreMountains.Tools.Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Runtime.csproj">
+      <Project>{5E77F42A-7C1D-BF60-972F-DEE01D961C88}</Project>
+      <Name>ToonyColorsPro.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.csproj">
+      <Project>{04F8DCF3-75FF-B5F7-B960-B0FAD7EABD9D}</Project>
+      <Name>MoreMountains.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
+      <Project>{AC0B1C77-F9B2-7801-A4BC-4CD2595E6164}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.csproj">
+      <Project>{E4E3FC3D-2ED8-09F8-6272-EEF3FD1D0E7D}</Project>
+      <Name>MoreMountains.Feedbacks.Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
+      <Project>{25D8DDB0-0E27-20DC-5678-D60415B4C2AA}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
+      <Project>{DE041C96-AF0A-2CE9-89CB-4B66A2F6D150}</Project>
+      <Name>MoreMountains.Tools.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="DOTweenPro.Scripts.csproj">
+      <Project>{887280EE-AEF1-CE00-85A5-C28B5C70DCDE}</Project>
+      <Name>DOTweenPro.Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Editor.csproj">
+      <Project>{C1D312FC-EAC4-A90C-0F5C-FD706BA9AEC9}</Project>
+      <Name>ToonyColorsPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.Editor.csproj">
+      <Project>{6B6AB84F-C0EC-26E1-276E-0069292CE6AB}</Project>
+      <Name>MoreMountains.Feedbacks.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{ABE39ABB-4695-BF57-8A76-B4B91834BF19}</Project>
+      <Name>DOTween.Modules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -60,43 +60,43 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Cat.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_View.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\SG2 Demo Assets\_Misc\TCP2_Demo_AutoRotate.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_PBS_View.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Camera.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_GammaLinear.cs" />
-    <Compile Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_PBS.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_PBS.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_GammaLinear.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\SG2 Demo Assets\_Misc\TCP2_Demo_AutoRotate.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Cat.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Scripts\TCP2_Demo_Camera.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_PBS_View.cs" />
+    <Compile Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Misc\TCP2_Demo_View.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3 Skin.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 3.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 6.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 4.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Water.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 4.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Decal.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnlitVertexColorsTransparent.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\UnityChan License.txt" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\SG Demo Assets\_Misc Assets\TCP2_Demo_3DText.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 6.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 1.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Cubemaps\Cubemaps License.txt" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors Emissive.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 5 Skin.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 4 Skin.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 1 Skin.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 6 Skin.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Ground.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors Specular.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 5.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\ToonyColorsPro.Demo.asmdef" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 1.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 5.shader" />
-    <None Include="Assets\Tools\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 2.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3 Skin.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 3.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 6.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 4.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Water.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 4.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Decal.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnlitVertexColorsTransparent.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\UnityChan License.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\SG Demo Assets\_Misc Assets\TCP2_Demo_3DText.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 6.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 1.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\TCP2 Demo Assets\Cubemaps\Cubemaps License.txt" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors Emissive.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 5 Skin.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 4 Skin.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 1 Skin.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 6 Skin.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Ground.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 3.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Vertex Colors Specular.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 5.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\ToonyColorsPro.Demo.asmdef" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 1.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\UnityChan\Style 5.shader" />
+    <None Include="Assets\Plugins\JMO Assets\Toony Colors Pro\Demo TCP2\Cat Demo Assets\Shaders\Cat Demo\Cat\Style 2.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -432,7 +432,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="DemiEditor">
-      <HintPath>Assets\Tools\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
@@ -444,47 +444,47 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>Assets\Tools\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>Assets\Tools\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenProEditor">
-      <HintPath>Assets\Tools\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>Assets\Tools\Demigiant\DOTween\DOTween.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>Assets\Tools\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -492,7 +492,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="JMOAssets">
-      <HintPath>Assets\Tools\JMO Assets\Editor\JMOAssets.dll</HintPath>
+      <HintPath>Assets\Plugins\JMO Assets\Editor\JMOAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">

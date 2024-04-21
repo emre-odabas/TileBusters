@@ -60,60 +60,60 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Maintenance\MMGroupSelection.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MMRadio\MMRadioSignalGeneratorEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\ReorderableList\ReorderableList.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MMRadio\MMPropertyPickerDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Utilities\MMScreenshotEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\AI\AIBrainEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMHiddenAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Collisions\MMMeshToPolygonCollider2D.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Utilities\MMLayerPropertyDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Movement\MMPathMovement\MMPathEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\DefineSymbols\MMToolsDefineSymbols.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Camera\MMAspectRatioSafeZonesEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMMenuHelp.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MMRadio\MMRadioSignalEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMColorAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Movement\MMPathMovement\MMPathMovementEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Maintenance\MMFindPrefabsByMono.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Particles\MMTrailRendererSortingLayerEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Utilities\MMDebugEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Vision\MMConeOfVision2DInspector.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Activation\MMTriggerAndCollisionEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Utilities\MMTransformRandomizerEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\AI\AIActionInspectorDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Achievements\MMAchievementListInspector.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\PropertyControllers\FloatControllerEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMConditionAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMDropdownAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Maintenance\MMLockInspector.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Maintenance\MMCleanEmptyFolders.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\ObjectBounds\ObjectBoundsEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\ReorderableList\ReorderableDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MMTween\MMTweenTypeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMVectorAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMBackgroundColorAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MMRadio\MMPropertyReceiverDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Maintenance\MMCleanupMissingScripts.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMMonoBehaviourDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MMRadio\MMPropertyEmitterDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Audio\Playlist\MMPlaylistEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\AI\AITransitionInspectorDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Curves\MMPlotterEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Maintenance\MMFindMissingScriptsRecursively.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Achievements\MMAchievementMenu.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMEnumConditionAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMReadOnlyAttributeDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Vision\MMConeOfVisionInspector.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Icons\ManagerIconEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Audio\AudioAnalyzer\MMAudioAnalyzerEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\Attributes\MMInformationDrawer.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\PropertyControllers\ShaderControllerEditor.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMTools\Editor\GUI\MMHealthBarEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Achievements\MMAchievementListInspector.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MMRadio\MMRadioSignalEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Vision\MMConeOfVisionInspector.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Audio\AudioAnalyzer\MMAudioAnalyzerEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\GUI\MMHealthBarEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMConditionAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMEnumConditionAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Maintenance\MMGroupSelection.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Collisions\MMMeshToPolygonCollider2D.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Maintenance\MMCleanupMissingScripts.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\AI\AIActionInspectorDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Achievements\MMAchievementMenu.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMMenuHelp.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\DefineSymbols\MMToolsDefineSymbols.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\ReorderableList\ReorderableDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Utilities\MMScreenshotEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMBackgroundColorAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Utilities\MMDebugEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Curves\MMPlotterEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Movement\MMPathMovement\MMPathMovementEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\ReorderableList\ReorderableList.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MMRadio\MMPropertyPickerDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Maintenance\MMLockInspector.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Audio\Playlist\MMPlaylistEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MMRadio\MMPropertyReceiverDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMReadOnlyAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\ObjectBounds\ObjectBoundsEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Movement\MMPathMovement\MMPathEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MMRadio\MMPropertyEmitterDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Maintenance\MMFindMissingScriptsRecursively.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Activation\MMTriggerAndCollisionEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Utilities\MMLayerPropertyDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Utilities\MMTransformRandomizerEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MMRadio\MMRadioSignalGeneratorEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMMonoBehaviourDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MMTween\MMTweenTypeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMInformationDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Maintenance\MMFindPrefabsByMono.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Camera\MMAspectRatioSafeZonesEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Vision\MMConeOfVision2DInspector.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMDropdownAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMHiddenAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMVectorAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Attributes\MMColorAttributeDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Maintenance\MMCleanEmptyFolders.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Icons\ManagerIconEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\AI\AIBrainEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\AI\AITransitionInspectorDrawer.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\PropertyControllers\ShaderControllerEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\PropertyControllers\FloatControllerEditor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\Particles\MMTrailRendererSortingLayerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Tools\MMFeedbacks\MMTools\Editor\MoreMountains.Tools.Editor.asmdef" />
+    <None Include="Assets\Plugins\MMFeedbacks\MMTools\Editor\MoreMountains.Tools.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -465,7 +465,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="DemiEditor">
-      <HintPath>Assets\Tools\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
@@ -477,47 +477,47 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>Assets\Tools\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>Assets\Tools\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenProEditor">
-      <HintPath>Assets\Tools\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>Assets\Tools\Demigiant\DOTween\DOTween.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>Assets\Tools\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -525,7 +525,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="JMOAssets">
-      <HintPath>Assets\Tools\JMO Assets\Editor\JMOAssets.dll</HintPath>
+      <HintPath>Assets\Plugins\JMO Assets\Editor\JMOAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">

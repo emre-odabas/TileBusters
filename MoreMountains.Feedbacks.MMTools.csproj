@@ -60,20 +60,20 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackBlink.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackFloatController.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackRadioSignal.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackProperty.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackCanvasGroup.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackShaderController.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackPPMovingFilter.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackBase.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackFade.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackDebugLog.cs" />
-    <Compile Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackBroadcast.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackBase.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackBroadcast.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackBlink.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackFade.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackDebugLog.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackShaderController.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackPPMovingFilter.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMFeedbackFloatController.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackProperty.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackCanvasGroup.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMFeedbackRadioSignal.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Tools\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MoreMountains.Feedbacks.MMTools.asmdef" />
+    <None Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MoreMountains.Feedbacks.MMTools.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -405,39 +405,39 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DemiLib">
-      <HintPath>Assets\Tools\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>Assets\Tools\Demigiant\DOTween\DOTween.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenPro">
-      <HintPath>Assets\Tools\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+      <HintPath>Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>Assets\Tools\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
