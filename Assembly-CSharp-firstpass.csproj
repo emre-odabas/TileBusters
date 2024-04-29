@@ -61,186 +61,80 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\01 Inventory Basics\InventoryBasics.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDragCamera.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualTranslate.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXRotation.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualRotate.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainScale.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\PaintingData.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableCount.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableGraphicColor.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEButtonScript.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainToCollider.cs" />
-    <Compile Include="Assets\Plugins\Lean\Common\Examples\Scripts\LeanLinkTo.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragTranslateRigidbody2D.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiSet.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSwipeEdge.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPath.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragTranslateRigidbody.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoGhost.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXLightFade.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\InternalErrorException.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualTranslateRigidbody2D.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanGestureToggle.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableSpriteRendererColor.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\SimpleExample.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanSnapshot.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPinchCamera.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPinchScale.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanTwistRotate.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragColorMesh.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerUp.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualVelocity.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectionBox.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanRoll.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanRotateToRigidbody2D.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualTranslateRigidbody.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableTime.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\HullData.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableRendererColor.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\UICanvasManager.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerDown.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\FaceList.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanChaseRigidbody2D.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerHeld.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectableBehaviour.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanShape.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSpawnBetween.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoButton.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanShapeDetector.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPulseScale.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanChaseRigidbody.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableDrop.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragSelect.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanRevertTransform.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDragTranslate.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanTouch.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectablePressureScale.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainToColliders.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanPlane.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMouseWheel.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\04 Wallet\WalletSample.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\VertexList.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Face.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanTwistRotateAxis.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSpawn.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanInfoText.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\00 Database And Assets (required for samples)\Animations\WaitAnimation.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\08 Store\PrefabTutorial.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerSet.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\Finger.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanGesture.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPitchYaw.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerFlick.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanReplayFinger.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanRotateToPosition.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\IDropHandler.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QuickHull3DTest.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanTwistCamera.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanConstrainToDirection.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDestroy.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoBall.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerFilter.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\08 Store\StoreSample.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualSwipe.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Point3d.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPitchYawAutoRotate.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMaintainDistance.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableDial.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSwipeBase.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiPinch.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\SphereUtils.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Scripts\LeanFinger.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableSelected.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragDeformMesh.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
-    <Compile Include="Assets\Plugins\Lean\Common\Scripts\LeanHelper.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiTap.cs" />
-    <Compile Include="Assets\Plugins\Lean\Common\Examples\Scripts\LeanCircuit.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerDownCanvas.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableDragTorque.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickSwipe.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFingerTapExpired.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerTap.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDropCount.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Vector3d.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\Gesture.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\00 Database And Assets (required for samples)\SamplesHelper.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\HalfEdge.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTap.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickPinch.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanAnySelected.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiSetCanvas.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSpawnWithFinger.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\TwoFingerGesture.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelectable.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\06 Data Persistence\DataPersistenceSample.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
-    <Compile Include="Assets\Plugins\Lean\Common\Scripts\LeanInspector.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\Sphere.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragLine.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanPongBall.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\07 Transactions\TransactionsSample.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickEnterOverExist.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSelectableBlock.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickBase.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\HullPainter.cs" />
-    <Compile Include="Assets\Plugins\Lean\Common\Examples\Scripts\LeanDocumentation.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiTwist.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QhullTest.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanTouchEvents.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiSwipe.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerSwipe.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCInput.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanScreenDepth.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDrop.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Vertex.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanDragTrail.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanFollow.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerOld.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QuickHull3D.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanManualVelocity2D.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanMultiPull.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\05 Properties\PropertiesSample.cs" />
     <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanStepValue2D.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanChase.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanDragTranslateAlong.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanSelect.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\EasyTouchTrigger.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch+\Examples\Scripts\LeanSwap.cs" />
-    <Compile Include="Assets\Plugins\Lean\Touch\Examples\Scripts\LeanFingerData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
     <None Include="Assets\Plugins\EasyTouchBundle\Readme.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
     <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Utilities.dll.backup.txt" />
@@ -248,7 +142,6 @@
     <None Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Issues in button behavior (MAC).txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll.backup.txt" />
-    <None Include="Assets\Plugins\Lean\Common\Examples\Fonts\OFL.txt" />
     <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.XML" />
     <None Include="Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll" />
@@ -256,13 +149,11 @@
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
-    <None Include="Assets\Plugins\Lean\Common\Examples\Shaders\Object.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Serialization.dll" />
-    <None Include="Assets\Plugins\Lean\Common\Examples\Shaders\Skybox.shader" />
     <None Include="Assets\Plugins\MMFeedbacks\readme.txt" />
-    <None Include="Assets\Plugins\Lean\READ ME.txt" />
+    <None Include="Assets\Plugins\CW\READ ME.txt" />
+    <None Include="Assets\Plugins\CW\Third-Party Notices.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll" />
     <None Include="Assets\Plugins\MMFeedbacks\license.txt" />
@@ -283,7 +174,6 @@
     <None Include="Assets\Plugins\Technie\PhysicsCreator\Readme.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Utilities.dll" />
     <None Include="Assets\Plugins\EasyTouchBundle\EasyTouch\How to migrate from EasyTouch 4.X.txt" />
-    <None Include="Assets\Plugins\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Plugins\Sirenix\Readme.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Utilities.dll.backup.txt" />
@@ -294,7 +184,6 @@
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
-    <None Include="Assets\Plugins\Lean\Common\Examples\Shaders\Alpha.shader" />
     <None Include="Assets\Plugins\Technie\PhysicsCreator\Shaders\HullPainterOverlay.shader" />
     <None Include="Assets\Plugins\CodeStage\Package2Folder\readme.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEmitAndNoEditor\Sirenix.Serialization.dll.backup.txt" />
@@ -1186,10 +1075,6 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.24f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.GameFoundation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Recorder.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1218,36 +1103,8 @@
       <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.GameFoundation">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Recorder.Base">
-      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Services.Core">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Analytics">
-      <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
@@ -1258,32 +1115,8 @@
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Services.Core.Environments">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.UI">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.DefaultCatalog">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.DefaultCatalog.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.GameFoundation.UI.Editor">
@@ -1292,10 +1125,6 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
@@ -1310,12 +1139,72 @@
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Promise">
       <HintPath>Library\ScriptAssemblies\Unity.Promise.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Analytics">
+      <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.UI">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.DefaultCatalog">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.DefaultCatalog.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -1323,6 +1212,42 @@
     <ProjectReference Include="MoreMountains.Feedbacks.csproj">
       <Project>{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}</Project>
       <Name>MoreMountains.Feedbacks</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTouch.csproj">
+      <Project>{D9D94E2E-96E6-0DDB-AEC1-97001EDF013C}</Project>
+      <Name>LeanTouch</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Cinemachine.csproj">
+      <Project>{038F494C-97D7-90EF-31A6-FE54BBDCB2CB}</Project>
+      <Name>MoreMountains.Tools.Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
+      <Project>{25D8DDB0-0E27-20DC-5678-D60415B4C2AA}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
+      <Project>{DE041C96-AF0A-2CE9-89CB-4B66A2F6D150}</Project>
+      <Name>MoreMountains.Tools.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.Editor.csproj">
+      <Project>{6B6AB84F-C0EC-26E1-276E-0069292CE6AB}</Project>
+      <Name>MoreMountains.Feedbacks.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTransition.csproj">
+      <Project>{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}</Project>
+      <Name>LeanTransition</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanGUIShapes.csproj">
+      <Project>{0F40B5A3-6D49-8E3A-B9B1-FEF539FE4B85}</Project>
+      <Name>LeanGUIShapes</Name>
+    </ProjectReference>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{ABE39ABB-4695-BF57-8A76-B4B91834BF19}</Project>
+      <Name>DOTween.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{CAD5010A-DB89-5366-465D-6C95561558E5}</Project>
+      <Name>LeanCommon</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Feedbacks.Editor.csproj">
       <Project>{72AB3D05-BC31-559D-20D2-C088D7DD9317}</Project>
@@ -1336,6 +1261,10 @@
       <Project>{115BAB0C-3AB8-91EB-FAED-FFFA7DC488F4}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
+    <ProjectReference Include="LeanTransition.Editor.csproj">
+      <Project>{9CD53073-D76E-B735-48D9-5C12F1C2B96A}</Project>
+      <Name>LeanTransition.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Feedbacks.csproj">
       <Project>{9A9C5594-B060-D7DA-7C27-012647416F10}</Project>
       <Name>MoreMountains.Tools.Feedbacks</Name>
@@ -1344,37 +1273,25 @@
       <Project>{12A44FD0-A892-D126-E077-73BF96BE4705}</Project>
       <Name>MoreMountains.Feedbacks.MMTools</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Cinemachine.csproj">
-      <Project>{038F494C-97D7-90EF-31A6-FE54BBDCB2CB}</Project>
-      <Name>MoreMountains.Tools.Cinemachine</Name>
-    </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.csproj">
       <Project>{04F8DCF3-75FF-B5F7-B960-B0FAD7EABD9D}</Project>
       <Name>MoreMountains.Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanGUI.csproj">
+      <Project>{4B8989C9-1CA8-EC5E-07A0-DA3DE05D1DAB}</Project>
+      <Name>LeanGUI</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.Cinemachine.csproj">
       <Project>{E4E3FC3D-2ED8-09F8-6272-EEF3FD1D0E7D}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
-      <Project>{25D8DDB0-0E27-20DC-5678-D60415B4C2AA}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
-      <Project>{DE041C96-AF0A-2CE9-89CB-4B66A2F6D150}</Project>
-      <Name>MoreMountains.Tools.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="DOTweenPro.Scripts.csproj">
       <Project>{887280EE-AEF1-CE00-85A5-C28B5C70DCDE}</Project>
       <Name>DOTweenPro.Scripts</Name>
     </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.Editor.csproj">
-      <Project>{6B6AB84F-C0EC-26E1-276E-0069292CE6AB}</Project>
-      <Name>MoreMountains.Feedbacks.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="DOTween.Modules.csproj">
-      <Project>{ABE39ABB-4695-BF57-8A76-B4B91834BF19}</Project>
-      <Name>DOTween.Modules</Name>
+    <ProjectReference Include="CW.Common.csproj">
+      <Project>{412E9B8F-71B1-AFC1-E030-409106F3C1D4}</Project>
+      <Name>CW.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
