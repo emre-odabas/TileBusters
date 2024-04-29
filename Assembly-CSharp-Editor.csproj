@@ -61,6 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\Scripts\Editor\CoreButtonEditor.cs" />
+    <Compile Include="Assets\Resources\Scripts\Editor\LevelCreator\Scripts\LevelCreator.cs" />
+    <Compile Include="Assets\Resources\Scripts\Editor\LevelCreator\Scripts\Tabs\LCTab_Town.cs" />
     <Compile Include="Assets\Resources\Scripts\Editor\ShortcutsEditor.cs" />
     <Compile Include="Assets\Resources\Scripts\Editor\MenuItems.cs" />
   </ItemGroup>
