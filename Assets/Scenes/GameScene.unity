@@ -454,7 +454,7 @@ PrefabInstance:
     - target: {fileID: 439478788086289259, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
         type: 3}
       propertyPath: m_Name
-      value: GameScreen
+      value: TownScreen
       objectReference: {fileID: 0}
     - target: {fileID: 709347848721461624, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
         type: 3}

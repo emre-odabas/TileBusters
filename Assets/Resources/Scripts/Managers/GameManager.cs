@@ -229,7 +229,7 @@ namespace GameCore.Managers
             //m_CurrentTownData.m_Platform = Instantiate(townData.m_Platform, platform);
 
             m_CurrentTownData = townData.Clone<TownData>();
-            m_CurrentPlatform = Instantiate(m_CurrentTownData.m_Platform, GameScreen.Instance.m_TownsPlaceholder);
+            m_CurrentPlatform = Instantiate(m_CurrentTownData.m_Platform, TownScreen.Instance.m_TownsPlaceholder);
 
             m_IsPlayerFirstAct = true;
             yield return new WaitForSeconds(m_DelayOnLevelSetup);

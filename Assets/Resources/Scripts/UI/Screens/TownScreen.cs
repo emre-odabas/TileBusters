@@ -12,7 +12,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.GameFoundation;
 namespace GameCore.UI
 {
-    public class GameScreen : CoreScreen<GameScreen>
+    public class TownScreen : CoreScreen<TownScreen>
     {
         [FoldoutGroup("Components")]
         [FoldoutGroup("Components/Utilities")] public Transform m_TownsPlaceholder;
