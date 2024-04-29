@@ -10,6 +10,7 @@ using Currency = UnityEngine.GameFoundation.Currency;
 using HedgehogTeam.EasyTouch;
 using GameCore.UI;
 using UnityEngine.Serialization;
+using System;
 
 namespace GameCore.Managers
 {
@@ -96,22 +97,29 @@ namespace GameCore.Managers
             Init();
         }
         
-        void Start()
+        private void Start()
         {
             Core.Logger.Log("Game Manager", "On App Start");
             onAppStart?.Invoke();
+        }
+
+        private void Update()
+        {
+#if UNITY_EDITOR
+            EditorDebugKeys();
+#endif
         }
 
         #endregion
 
         #region Initialization
 
-        void Init()
+        private void Init()
         {
             StartCoroutine(DOInitialize());
         }
 
-        IEnumerator DOInitialize()
+        private IEnumerator DOInitialize()
         {
             m_SplashScreen.SetActive(true);
             while (DataManager.Instance.m_LoadState == DataManager.LoadState.Unloaded)
@@ -133,12 +141,12 @@ namespace GameCore.Managers
             
         }
 
-        void InitializeGameFoundation()
+        private void InitializeGameFoundation()
         {
 
         }
 
-        void InitializeGame()
+        private void InitializeGame()
         {
             GameData gameData = DataManager.Instance.m_GameData;
 
@@ -178,7 +186,7 @@ namespace GameCore.Managers
         {
             m_IsPlayerAct = true;
         }
-        IEnumerator DOLevelLoop(TownData townData)
+        private IEnumerator DOLevelLoop(TownData townData)
         {
             Core.Logger.Log("Game Manager", "Level Loop Started");
             yield return StartCoroutine(DOSetup(townData));
@@ -195,7 +203,7 @@ namespace GameCore.Managers
 
             m_IsPlayerAct = false;
         }
-        IEnumerator DOSetup(TownData townData)
+        private IEnumerator DOSetup(TownData townData)
         {
             m_State = State.SettingUp;
             yield return StartCoroutine(DOClearCurrentLevel());
@@ -204,7 +212,7 @@ namespace GameCore.Managers
             onLevelReady?.Invoke();
             m_SplashScreen.SetActive(false);
         }
-        IEnumerator DOClearCurrentLevel()
+        private IEnumerator DOClearCurrentLevel()
         {
             //if (m_CurrentTownData != null)
                 //Destroy(m_CurrentTownData.m_Platform);
@@ -214,7 +222,7 @@ namespace GameCore.Managers
 
             yield return null;
         }
-        IEnumerator DOSetupLevel(TownData townData)
+        private IEnumerator DOSetupLevel(TownData townData)
         {
             //m_CurrentTownData = ScriptableObject.CreateInstance<TownData>();
             //Transform platform = GameScreen.Instance.m_TownsPlaceholder;
@@ -229,13 +237,13 @@ namespace GameCore.Managers
             yield return new WaitForSeconds(m_DelayAfterLevelSetup);
             Core.Logger.Log("Game Manager", "On Level Generator Setup");
         }
-        IEnumerator DOSetupUI(TownData townData)
+        private IEnumerator DOSetupUI(TownData townData)
         {
             onUISetup?.Invoke();
             yield return null;
             Core.Logger.Log("Game Manager", "On UI Setup");
         }
-        IEnumerator DOWaitPlayerAct(TownData townData)
+        private IEnumerator DOWaitPlayerAct(TownData townData)
         {
             onWaitPlayerAct?.Invoke();
             Core.Logger.Log("Game Manager", "On Wait Player Act");
@@ -244,7 +252,7 @@ namespace GameCore.Managers
                 yield return null;
             }
         }
-        IEnumerator DOWaitFirstPlayerAct(TownData townData)
+        private IEnumerator DOWaitFirstPlayerAct(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Wait Player First Act");
             while (m_IsPlayerFirstAct)
@@ -253,7 +261,7 @@ namespace GameCore.Managers
             }
             onPlayerFirstAct?.Invoke();
         }
-        IEnumerator DOStartPlay(TownData townData)
+        private IEnumerator DOStartPlay(TownData townData)
         {
             m_State = State.Playing;
             yield return new WaitForSeconds(m_DelayOnStartPlay);
@@ -265,14 +273,14 @@ namespace GameCore.Managers
             }
             yield return null;
         }
-        IEnumerator DOLevelFinish(TownData townData)
+        private IEnumerator DOLevelFinish(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Finish Game");
             onLevelFinish?.Invoke();
             yield return new WaitForSeconds(m_DelayOnFinish);
         }
 
-        IEnumerator DOLevelComplete(TownData townData)
+        private IEnumerator DOLevelComplete(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Complete Level");
             if (m_WinFeedback != null)
@@ -284,7 +292,7 @@ namespace GameCore.Managers
             DataManager.Instance.SaveGameData();
         }
 
-        IEnumerator DOLevelFail(TownData townData)
+        private IEnumerator DOLevelFail(TownData townData)
         {
             yield return new WaitForSeconds(m_DelayOnFail);
             Core.Logger.Log("Game Manager", "On Level Fail");
@@ -353,10 +361,17 @@ namespace GameCore.Managers
         public void DecreaseCurrency(CurrencyType currencyType, int value)
         {
             int currentCoin = m_CurrencyData.GetCurrentCurrencyValue(currencyType);
-            int increasedValue = Mathf.Clamp(currentCoin - value, 0, 999999);
+            int decreasedValue = Mathf.Clamp(currentCoin - value, 0, 999999);
 
-            m_CurrencyData.SetCurrentCurrencyValue(currencyType, increasedValue);
-            onInGameCoinChange?.Invoke(increasedValue);
+            m_CurrencyData.SetCurrentCurrencyValue(currencyType, decreasedValue);
+            onInGameCoinChange?.Invoke(decreasedValue);
+            DataManager.Instance.SaveGameData();
+        }
+
+        public void SetCurrency(CurrencyType currencyType, int value)
+        {
+            m_CurrencyData.SetCurrentCurrencyValue(currencyType, value);
+            onInGameCoinChange?.Invoke(value);
             DataManager.Instance.SaveGameData();
         }
 
@@ -398,6 +413,29 @@ namespace GameCore.Managers
         }
 #endif
 
+        #endregion
+
+        #region FUNCTIONS
+        private void EditorDebugKeys()
+        {
+            if (!m_IsDebug) return;
+
+            //Give Currencies
+            if(Input.GetKeyDown(KeyCode.G))
+            {
+                IncreaseCurrency(CurrencyType.Hammer, 10);
+                IncreaseCurrency(CurrencyType.Coin, 10);
+                IncreaseCurrency(CurrencyType.Star, 10);
+            }
+
+            //Reset Currencies
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                SetCurrency(CurrencyType.Hammer, 0);
+                SetCurrency(CurrencyType.Coin, 0);
+                SetCurrency(CurrencyType.Star, 0);
+            }
+        }
         #endregion
     }
 }

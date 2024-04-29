@@ -141,6 +141,12 @@ namespace GameCore.Managers
                 file.Delete(); 
                 Debug.Log(file + " File Deleted.");
             }
+
+#if UNITY_EDITOR
+            if (Application.isPlaying)
+                UnityEditor.EditorApplication.isPlaying = false;
+#endif
+
             Debug.Log("Game Data Reset Successfull");
         }
 
