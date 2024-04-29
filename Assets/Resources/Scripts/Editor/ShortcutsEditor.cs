@@ -16,12 +16,12 @@ using GameCore.Core;
 namespace GameCore.Editor
 {
 #if UNITY_EDITOR
-    public class LevelEditor : OdinMenuEditorWindow
+    public class ShortcutsEditor : OdinMenuEditorWindow
     {
-        [MenuItem("Tools/GameCore/Core", priority = 0)]
+        [MenuItem("Tools/GameCore/Shortcuts", priority = 0)]
         private static void OpenWindow()
         {
-            var window = GetWindow<LevelEditor>();
+            var window = GetWindow<ShortcutsEditor>();
 
             // Nifty little trick to quickly position the window in the middle of the editor.
             window.position = GUIHelper.GetEditorWindowRect().AlignCenter(1600, 700);
@@ -30,14 +30,15 @@ namespace GameCore.Editor
         {
             OdinMenuTree tree = new OdinMenuTree(supportsMultiSelect: false)
             {
-                {"Towns", new TownListEditor(), EditorIcons.List},
-                {"ProjectSettings", ProjectSettings.Instance, EditorIcons.Globe}
+                //{"Towns", new TownListEditor(), EditorIcons.List},
+                {"ProjectSettings", ProjectSettings.Instance, EditorIcons.Globe},
+                {"Town DB", TownDB.Instance, EditorIcons.Globe}
             };
             return tree;
         }
 
         #region Selections
-        [MenuItem("Tools/GameCore/DB/LevelDB", priority = 0)]
+        /*[MenuItem("Tools/GameCore/DB/LevelDB", priority = 0)]
         private static void SelectLevelDB()
         {
             if (!Application.isPlaying)
@@ -78,9 +79,10 @@ namespace GameCore.Editor
                 }
             }
             EditorUtility.FocusProjectWindow();
-        }
+        }*/
         #endregion
-        #region New Object Creating
+
+        /*#region New Object Creating
         [MenuItem("Tools/GameCore/Create/Town")]
         private static void CreateTown()
         {
@@ -97,10 +99,10 @@ namespace GameCore.Editor
                     Selection.activeObject = townData;
             }
         }
-        
-        #endregion
+        #endregion*/
     }
-    public class TownListEditor
+
+    /*public class TownListEditor
     {
         [TableList(AlwaysExpanded = true, NumberOfItemsPerPage = 25, ShowPaging = true, ShowIndexLabels = true)]
         public List<TownData> m_Towns;
@@ -108,7 +110,7 @@ namespace GameCore.Editor
         {
             m_Towns = TownDB.Instance.m_List;
         }
-    }
+    }*/
     
 #endif
 }

@@ -1,15 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using GameCore.Core.UI;
 using GameCore.Managers;
-using System;
-using TMPro;
-using DG.Tweening;
-using GameCore.Controllers;
 using Sirenix.OdinInspector;
-using UnityEngine.GameFoundation;
+
 namespace GameCore.UI
 {
     public class TownScreen : CoreScreen<TownScreen>

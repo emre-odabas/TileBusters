@@ -13,9 +13,7 @@ MonoBehaviour:
   m_Name: ProjectSettings
   m_EditorClassIdentifier: 
   m_TownsPath: Assets/Resources/Data/Town/Datas
-  m_ItemsPath: Assets/Resources/Data/Items
-  m_ThemesPath: Assets/Resources/Data/Themes
-  m_LevelDB: {fileID: 11400000, guid: 5830e5f2c25e3dd4981d40530603e42f, type: 2}
+  m_TownDB: {fileID: 11400000, guid: 5830e5f2c25e3dd4981d40530603e42f, type: 2}
   m_GameObjectWithContainer: {fileID: 7154756770770838695, guid: a2ae5e6da5bef664696d18dec27f8fc1,
     type: 3}
   m_UIObjectWithContainer: {fileID: 4553004484730972346, guid: c3b26283ea607614daed967f4527a629,
