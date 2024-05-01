@@ -25,7 +25,7 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onAppStart += Show;
+            //GameManager.Instance.onAppStart += Show;
 
             if(m_TempLevel != null)
                 Destroy(m_TempLevel);
@@ -36,7 +36,7 @@ namespace GameCore.UI
             base.OnDisable();
             if(GameManager.Instance != null)
             {
-                GameManager.Instance.onAppStart -= Show;
+                //GameManager.Instance.onAppStart -= Show;
             }
         }
 

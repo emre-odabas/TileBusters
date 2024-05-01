@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Tools", "More
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Feedbacks", "MoreMountains.Feedbacks.csproj", "{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Feedbacks.MMTools", "MoreMountains.Feedbacks.MMTools.csproj", "{12A44FD0-A892-D126-E077-73BF96BE4705}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanTransition", "LeanTransition.csproj", "{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Feedbacks.MMTools", "MoreMountains.Feedbacks.MMTools.csproj", "{12A44FD0-A892-D126-E077-73BF96BE4705}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{DD441459-102D-67B4-C2E4-9BB007F8BBD3}"
 EndProject
@@ -71,14 +71,14 @@ Global
 		{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1CAFEBE-87DD-3A8B-112C-CEB59320D6F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12A44FD0-A892-D126-E077-73BF96BE4705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12A44FD0-A892-D126-E077-73BF96BE4705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12A44FD0-A892-D126-E077-73BF96BE4705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12A44FD0-A892-D126-E077-73BF96BE4705}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A44FD0-A892-D126-E077-73BF96BE4705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A44FD0-A892-D126-E077-73BF96BE4705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A44FD0-A892-D126-E077-73BF96BE4705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A44FD0-A892-D126-E077-73BF96BE4705}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD441459-102D-67B4-C2E4-9BB007F8BBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD441459-102D-67B4-C2E4-9BB007F8BBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD441459-102D-67B4-C2E4-9BB007F8BBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU

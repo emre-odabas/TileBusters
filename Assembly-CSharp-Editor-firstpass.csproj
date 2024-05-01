@@ -70,8 +70,8 @@
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Editor\SelectionUtil.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCJoystickInspector.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Editor\EasyTouchMenu.cs" />
-    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickLongTapInspector.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Editor\EasytouchHierachyCallBack.cs" />
+    <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickLongTapInspector.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickTwistInspector.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\Editor\ETCAreaInspector.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Editor\QuickDragInspector.cs" />
@@ -450,6 +450,10 @@
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sirenix.Reflection.Editor">
+      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\Unity.Analytics.Tracker.dll</HintPath>
       <Private>False</Private>
@@ -508,10 +512,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sirenix.Reflection.Editor">
-      <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">
@@ -1038,6 +1038,10 @@
       <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.GameFoundation.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Recorder.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1066,50 +1070,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Services.Core.Environments">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.UI.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Services.Core.Analytics">
-      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Recorder">
-      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Promise">
-      <HintPath>Library\ScriptAssemblies\Unity.Promise.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.GameFoundation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
       <Private>False</Private>
@@ -1118,16 +1078,20 @@
       <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.Recorder.Base">
       <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Services.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
@@ -1138,16 +1102,28 @@
       <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.GameFoundation.UI">
-      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.dll</HintPath>
+    <Reference Include="Unity.Services.Core.Environments">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Services.Analytics">
       <HintPath>Library\ScriptAssemblies\Unity.Services.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.GameFoundation.UI">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
@@ -1162,12 +1138,36 @@
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.GameFoundation.UI.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.GameFoundation.UI.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Services.Core.Analytics">
+      <HintPath>Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Promise">
+      <HintPath>Library\ScriptAssemblies\Unity.Promise.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -1183,38 +1183,6 @@
     <ProjectReference Include="LeanTouch.csproj">
       <Project>{D9D94E2E-96E6-0DDB-AEC1-97001EDF013C}</Project>
       <Name>LeanTouch</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Cinemachine.csproj">
-      <Project>{038F494C-97D7-90EF-31A6-FE54BBDCB2CB}</Project>
-      <Name>MoreMountains.Tools.Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
-      <Project>{25D8DDB0-0E27-20DC-5678-D60415B4C2AA}</Project>
-      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
-      <Project>{DE041C96-AF0A-2CE9-89CB-4B66A2F6D150}</Project>
-      <Name>MoreMountains.Tools.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MoreMountains.Feedbacks.Editor.csproj">
-      <Project>{6B6AB84F-C0EC-26E1-276E-0069292CE6AB}</Project>
-      <Name>MoreMountains.Feedbacks.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeanTransition.csproj">
-      <Project>{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}</Project>
-      <Name>LeanTransition</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeanGUIShapes.csproj">
-      <Project>{0F40B5A3-6D49-8E3A-B9B1-FEF539FE4B85}</Project>
-      <Name>LeanGUIShapes</Name>
-    </ProjectReference>
-    <ProjectReference Include="DOTween.Modules.csproj">
-      <Project>{ABE39ABB-4695-BF57-8A76-B4B91834BF19}</Project>
-      <Name>DOTween.Modules</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeanCommon.csproj">
-      <Project>{CAD5010A-DB89-5366-465D-6C95561558E5}</Project>
-      <Name>LeanCommon</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.Feedbacks.Editor.csproj">
       <Project>{72AB3D05-BC31-559D-20D2-C088D7DD9317}</Project>
@@ -1240,6 +1208,14 @@
       <Project>{12A44FD0-A892-D126-E077-73BF96BE4705}</Project>
       <Name>MoreMountains.Feedbacks.MMTools</Name>
     </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Cinemachine.csproj">
+      <Project>{038F494C-97D7-90EF-31A6-FE54BBDCB2CB}</Project>
+      <Name>MoreMountains.Tools.Cinemachine</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.PostProcessing.csproj">
+      <Project>{25D8DDB0-0E27-20DC-5678-D60415B4C2AA}</Project>
+      <Name>MoreMountains.Feedbacks.PostProcessing</Name>
+    </ProjectReference>
     <ProjectReference Include="MoreMountains.Tools.csproj">
       <Project>{04F8DCF3-75FF-B5F7-B960-B0FAD7EABD9D}</Project>
       <Name>MoreMountains.Tools</Name>
@@ -1252,13 +1228,37 @@
       <Project>{E4E3FC3D-2ED8-09F8-6272-EEF3FD1D0E7D}</Project>
       <Name>MoreMountains.Feedbacks.Cinemachine</Name>
     </ProjectReference>
+    <ProjectReference Include="MoreMountains.Tools.Editor.csproj">
+      <Project>{DE041C96-AF0A-2CE9-89CB-4B66A2F6D150}</Project>
+      <Name>MoreMountains.Tools.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="DOTweenPro.Scripts.csproj">
       <Project>{887280EE-AEF1-CE00-85A5-C28B5C70DCDE}</Project>
       <Name>DOTweenPro.Scripts</Name>
     </ProjectReference>
+    <ProjectReference Include="LeanGUIShapes.csproj">
+      <Project>{0F40B5A3-6D49-8E3A-B9B1-FEF539FE4B85}</Project>
+      <Name>LeanGUIShapes</Name>
+    </ProjectReference>
+    <ProjectReference Include="MoreMountains.Feedbacks.Editor.csproj">
+      <Project>{6B6AB84F-C0EC-26E1-276E-0069292CE6AB}</Project>
+      <Name>MoreMountains.Feedbacks.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="CW.Common.csproj">
       <Project>{412E9B8F-71B1-AFC1-E030-409106F3C1D4}</Project>
       <Name>CW.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="DOTween.Modules.csproj">
+      <Project>{ABE39ABB-4695-BF57-8A76-B4B91834BF19}</Project>
+      <Name>DOTween.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanTransition.csproj">
+      <Project>{F3A3498F-A5AC-BFAA-4711-54B91B87E9BB}</Project>
+      <Name>LeanTransition</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{CAD5010A-DB89-5366-465D-6C95561558E5}</Project>
+      <Name>LeanCommon</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
