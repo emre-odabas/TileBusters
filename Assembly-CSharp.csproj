@@ -81,7 +81,6 @@
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\Data\ScriptableObjects\TileSpritesForEditorSO.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Enums.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Bars\CurrencyBar.cs" />
-    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\TripleTileController.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\PuzzleScreen.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\TileCollector.cs" />
     <Compile Include="Assets\Resources\Scripts\Feedbacks\MMFeedbackHaptics.cs" />
@@ -109,6 +108,7 @@
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\SingletonComponent.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\CoroutineStarter.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Properties\CurrencyProperty.cs" />
+    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\PuzzleController.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\UIController.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\Utilities.cs" />
   </ItemGroup>

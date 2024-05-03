@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System;
 
-public class TripleTileController : MonoBehaviour
+public class PuzzleController : MonoBehaviour
 {
     [SerializeField] private TileLayersSO tileLayersSO;
     [SerializeField] private TileCell tileCellPrefab;
@@ -315,12 +315,12 @@ public class TripleTileController : MonoBehaviour
         }
     }
 
-    private static TripleTileController _instance;
-    public static TripleTileController Instance
+    private static PuzzleController _instance;
+    public static PuzzleController Instance
     {
         get
         {
-            if (_instance == null) { _instance = FindObjectOfType<TripleTileController>(); }
+            if (_instance == null) { _instance = FindObjectOfType<PuzzleController>(); }
             return _instance;
         }
     }
