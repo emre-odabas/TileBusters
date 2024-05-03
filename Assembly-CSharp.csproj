@@ -77,6 +77,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\Screens\TownScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselItem.cs" />
+    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\TileCollectSlotUI.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\TownController.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\Data\ScriptableObjects\TileSpritesForEditorSO.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Enums.cs" />

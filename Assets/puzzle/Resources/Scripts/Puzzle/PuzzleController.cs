@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using System;
+using System.Linq;
 
 public class PuzzleController : MonoBehaviour
 {
@@ -11,15 +12,15 @@ public class PuzzleController : MonoBehaviour
     [SerializeField] private float tileYMargin;
 
     [Header("Tile Collector")]
-    [SerializeField] private SpriteRenderer tileCollectorSpriteRenderer;
+    //[SerializeField] private SpriteRenderer tileCollectorSpriteRenderer;
     [SerializeField] private TileCell[] collectedTiles = new TileCell[7];
-    [SerializeField] private Vector3[] collectVects = new Vector3[7];
+    //[SerializeField] private Vector3[] collectVects = new Vector3[7];
 
     [SerializeField] private Sprite[] iconSprites;  //Temp
-    
+    [SerializeField] private List<TileCollectSlotUI> m_Slots = new List<TileCollectSlotUI>();
     private void Awake()
     {
-        setTileCollector();
+        //setTileCollector();
     }
 
     private void Start() 
@@ -195,7 +196,7 @@ public class PuzzleController : MonoBehaviour
         _upCell.RemoveEvent.AddListener(_downCell.BlockCellRemove);
     }
 
-    void setTileCollector()
+    /*void setTileCollector()
     {
         var tileSpacingX = tileCollectorSpriteRenderer.sprite.bounds.extents.x * 2;
         var collectorVect = tileCollectorSpriteRenderer.transform.localPosition;
@@ -206,7 +207,7 @@ public class PuzzleController : MonoBehaviour
             float x = collectorVect.x + (index - middleNum) * tileSpacingX;
             collectVects[index] = new Vector3(x ,collectorVect.y, collectorVect.z);
         }
-    }
+    }*/
 
     void onTileClick(TileCell _cell)
     {
@@ -256,7 +257,9 @@ public class PuzzleController : MonoBehaviour
             return;
 
         _putInCell.RemoveEvent?.Invoke();
-        _putInCell.transform.localPosition = collectVects[nullIndex];
+        //_putInCell.transform.localPosition = collectVects[nullIndex];
+        GetFirstEmptySlot().Filled(_putInCell);
+
         collectedTiles[nullIndex] = _putInCell;
     }
 
@@ -315,13 +318,11 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
-    private static PuzzleController _instance;
-    public static PuzzleController Instance
+    /////////////////////////////////////////////
+    
+    private TileCollectSlotUI GetFirstEmptySlot()
     {
-        get
-        {
-            if (_instance == null) { _instance = FindObjectOfType<PuzzleController>(); }
-            return _instance;
-        }
+        TileCollectSlotUI slot = m_Slots.FirstOrDefault(c => c.IsFull() == false);
+        return slot;
     }
 }
