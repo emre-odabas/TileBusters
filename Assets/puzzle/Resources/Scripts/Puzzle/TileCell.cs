@@ -8,7 +8,7 @@ public class TileCell : MonoBehaviour
     [SerializeField] private SpriteRenderer tileSpriteRenderer;
     [SerializeField] private SpriteRenderer iconSpriteRenderer;
     [SerializeField] private BoxCollider2D boxCollider;
-    [SerializeField] private EventTrigger eventTrigger; 
+    //[SerializeField] private EventTrigger eventTrigger; 
     [SerializeField] private Tile tile;
     [SerializeField] private int blockCellCount = 0;
     private Action<TileCell> onClickCallback;
@@ -42,7 +42,7 @@ public class TileCell : MonoBehaviour
         TriggerEnable(!block);
     }
 
-    public void OnPointerDown()
+    /*public void OnPointerDown()
     {
         Debug.Log("ON Pointer Down " + this.gameObject.name);
         //TODO 放大動畫
@@ -58,6 +58,12 @@ public class TileCell : MonoBehaviour
     {
         Debug.Log("ON Pointer Click " + this.gameObject.name);
         //TODO 移至插槽
+        onClickCallback?.Invoke(this);
+    }*/
+
+    void OnMouseDown()
+    {
+        Debug.Log("OnMouseDown " + this.gameObject.name);
         onClickCallback?.Invoke(this);
     }
 

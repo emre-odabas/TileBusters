@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4117159840669240661}
   - component: {fileID: -2048029295506196930}
   - component: {fileID: 7300330576525324634}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TileCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,38 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4117159840669240661}
-          m_TargetAssemblyTypeName: TileCell, Assembly-CSharp
-          m_MethodName: OnPointerDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4117159840669240661}
-          m_TargetAssemblyTypeName: TileCell, Assembly-CSharp
-          m_MethodName: OnPointerUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -176,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238413599706473104}
   - component: {fileID: 7820524797480504934}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tile_Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7409160358558529658}
   - component: {fileID: 245109266003246937}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tile_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
