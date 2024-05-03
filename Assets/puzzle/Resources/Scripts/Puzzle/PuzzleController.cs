@@ -60,8 +60,10 @@ public class PuzzleController : MonoBehaviour
     {
         var tileLayers = tileLayersSO.TileLayers;
         var tileSpriteRenderer = tileCellPrefab.TileSpriteRenderer;
-        var tileSpacingX = tileSpriteRenderer.sprite.bounds.extents.x;
-        var tileSpacingY = tileSpriteRenderer.sprite.bounds.extents.y;
+        //var tileSpacingX = tileSpriteRenderer.sprite.bounds.extents.x;
+        var tileSpacingX = 130/2;
+        //var tileSpacingY = tileSpriteRenderer.sprite.bounds.extents.y;
+        var tileSpacingY = 130/2;
         float posX;
         float posY;
         Vector3 tilePos = Vector3.zero;

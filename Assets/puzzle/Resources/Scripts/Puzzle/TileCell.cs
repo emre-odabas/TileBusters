@@ -2,25 +2,26 @@ using UnityEngine;
 using System;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TileCell : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer tileSpriteRenderer;
-    [SerializeField] private SpriteRenderer iconSpriteRenderer;
+    [SerializeField] private Image tileSpriteRenderer;
+    [SerializeField] private Image iconSpriteRenderer;
     [SerializeField] private BoxCollider2D boxCollider;
     //[SerializeField] private EventTrigger eventTrigger; 
     [SerializeField] private Tile tile;
     [SerializeField] private int blockCellCount = 0;
     private Action<TileCell> onClickCallback;
-    public SpriteRenderer TileSpriteRenderer => tileSpriteRenderer;
+    public Image TileSpriteRenderer => tileSpriteRenderer;
     public ushort Id => tile.Id;
     public UnityEvent RemoveEvent;
 
     public void SetData(Tile _tile, int _order, Action<TileCell> _callback)
     {
         tile = _tile;
-        tileSpriteRenderer.sortingOrder = _order;
-        iconSpriteRenderer.sortingOrder = _order;
+        //tileSpriteRenderer.sortingOrder = _order;
+        //iconSpriteRenderer.sortingOrder = _order;
         onClickCallback = _callback;
     }
 
