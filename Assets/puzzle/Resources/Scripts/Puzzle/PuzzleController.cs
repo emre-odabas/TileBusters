@@ -3,23 +3,34 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System;
 using System.Linq;
+using MoreMountains.Feedbacks;
+using Sirenix.OdinInspector;
 
 public class PuzzleController : MonoBehaviour
 {
-    [SerializeField] private TileLayersSO tileLayersSO;
-    [SerializeField] private TileCell tileCellPrefab;
-    [SerializeField] private Transform tileInstantiateTrans;
-    [SerializeField] private float tileYMargin;
+    #region FIELDS
 
-    [Header("Tile Collector")]
-    //[SerializeField] private SpriteRenderer tileCollectorSpriteRenderer;
-    //[SerializeField] private Vector3[] collectVects = new Vector3[7];
+    //Parameters
+    [FoldoutGroup("Parameters"), SerializeField] private float tileYMargin;
 
-    [SerializeField] private Sprite[] iconSprites;  //Temp
-    [SerializeField] private List<TileSlot> m_Slots = new List<TileSlot>();
+    //Components
+    [FoldoutGroup("Components")]
+    //[FoldoutGroup("Components/Utilities"), SerializeField] private SpriteRenderer tileCollectorSpriteRenderer;
+    //[FoldoutGroup("Components/Utilities"), SerializeField] private Vector3[] collectVects = new Vector3[7];
+    [FoldoutGroup("Components/Utilities"), SerializeField] private TileLayersSO tileLayersSO;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private TileCell tileCellPrefab;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private Transform tileInstantiateTrans;
+    [FoldoutGroup("Components/Lists"), SerializeField] private Sprite[] iconSprites;  //Temp
+    [FoldoutGroup("Components/Lists"), SerializeField] private List<TileSlot> m_Slots = new List<TileSlot>();
+
+    //Indicator
+    //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
 
     //Privates
     private TileCell[] collectedTiles;
+
+    #endregion
+
 
     private void Awake()
     {
@@ -139,10 +150,10 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
-    private void setTilesCellData(Dictionary<(int, int, int), TileCell> _tileCellPairs)  //判斷是否被遮擋
+    private void setTilesCellData(Dictionary<(int, int, int), TileCell> _tileCellPairs)
     {
         var tileLayers = tileLayersSO.TileLayers;
-        for(short layerIndex = 1; layerIndex < tileLayers.Length; layerIndex++)  //最底層不用判斷
+        for(short layerIndex = 1; layerIndex < tileLayers.Length; layerIndex++)
         {
             var tilesLayerUp = tileLayers[layerIndex];
 
