@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd7b1004ab576b4b84715d702441ddc, type: 3}
+  m_Name: PuzzleTileList
+  m_EditorClassIdentifier: 
+  m_TileDataList:
+  - {fileID: 11400000, guid: 3ddcb4a3b624e98468dd5a933f21fa0d, type: 2}
+  - {fileID: 11400000, guid: 06d66227617e0b14d8319503f490287e, type: 2}
+  - {fileID: 11400000, guid: 52f199418e73f224aa2a2ca37d128ddc, type: 2}
+  - {fileID: 11400000, guid: d4f8ca7810a5a0f4cb4d96957fdae291, type: 2}
+  - {fileID: 11400000, guid: 1d7112bcee929cf42a52237cf307fc9f, type: 2}
+  - {fileID: 11400000, guid: 8206f4a99f40a61448e89def751250cf, type: 2}
+  - {fileID: 11400000, guid: 2097ca8be4021ed4e8df7d96fd6e81bb, type: 2}
+  - {fileID: 11400000, guid: dadee34fd8891534fb6114e3eca54a43, type: 2}
+  - {fileID: 11400000, guid: 1030ace0d23cffe4c9e438a47dce89aa, type: 2}
+  - {fileID: 11400000, guid: 0079cf3753a4ac94fb9bdd503759d56f, type: 2}
