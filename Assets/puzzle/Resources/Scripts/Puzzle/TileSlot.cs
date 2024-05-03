@@ -1,16 +1,8 @@
-using GameCore.Core;
-using GameCore.Gameplay;
-using GameCore.Managers;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
-public class TileCollectSlotUI : MonoBehaviour
+public class TileSlot : MonoBehaviour
 {
     #region UTILITIES
 

@@ -13,11 +13,14 @@ public class PuzzleController : MonoBehaviour
 
     [Header("Tile Collector")]
     //[SerializeField] private SpriteRenderer tileCollectorSpriteRenderer;
-    [SerializeField] private TileCell[] collectedTiles = new TileCell[7];
     //[SerializeField] private Vector3[] collectVects = new Vector3[7];
 
     [SerializeField] private Sprite[] iconSprites;  //Temp
-    [SerializeField] private List<TileCollectSlotUI> m_Slots = new List<TileCollectSlotUI>();
+    [SerializeField] private List<TileSlot> m_Slots = new List<TileSlot>();
+
+    //Privates
+    private TileCell[] collectedTiles;
+
     private void Awake()
     {
         //setTileCollector();
@@ -25,6 +28,8 @@ public class PuzzleController : MonoBehaviour
 
     private void Start() 
     {
+        collectedTiles = new TileCell[m_Slots.Count];
+
         /*#if UNITY_EDITOR
         var mediator = UnityEditor.AssetDatabase.LoadAssetAtPath<TripleTileGameDesginEditorMediatorSO>("Assets/Resources/Data/Puzzle/TripleTileGameDesginEditorMediator.asset");
         if(mediator.PlayDemo)
@@ -34,7 +39,7 @@ public class PuzzleController : MonoBehaviour
         }
         #endif*/
 
-        if(tileLayersSO != null && tileLayersSO.TileLayers != null)
+        if (tileLayersSO != null && tileLayersSO.TileLayers != null)
         {
            createTiles();
         }    
@@ -320,9 +325,9 @@ public class PuzzleController : MonoBehaviour
 
     /////////////////////////////////////////////
     
-    private TileCollectSlotUI GetFirstEmptySlot()
+    private TileSlot GetFirstEmptySlot()
     {
-        TileCollectSlotUI slot = m_Slots.FirstOrDefault(c => c.IsFull() == false);
+        TileSlot slot = m_Slots.FirstOrDefault(c => c.IsFull() == false);
         return slot;
     }
 }

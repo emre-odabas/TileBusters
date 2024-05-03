@@ -77,7 +77,6 @@
     <Compile Include="Assets\Resources\Scripts\UI\Screens\TownScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselItem.cs" />
-    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\TileCollectSlotUI.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\TownController.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\Data\ScriptableObjects\TileSpritesForEditorSO.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Enums.cs" />
@@ -112,6 +111,7 @@
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\PuzzleController.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\UIController.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\Utilities.cs" />
+    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\TileSlot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\TripleTileGameDesginEditorWindowUXML.uxml" />
