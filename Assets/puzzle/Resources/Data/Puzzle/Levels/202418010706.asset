@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93288622cb15448aeb76c8a36f891f5f, type: 3}
+  m_Name: 202418010706
+  m_EditorClassIdentifier: 
+  TileLayers:
+  - Tiles:
+    - Id: 4
+      RowY: 0
+      ColX: 0
+    - Id: 3
+      RowY: 1
+      ColX: 0
+    - Id: 2
+      RowY: 2
+      ColX: 0
+    - Id: 1
+      RowY: 2
+      ColX: 1
+    - Id: 5
+      RowY: 1
+      ColX: 1
+    - Id: 8
+      RowY: 0
+      ColX: 1
+    - Id: 6
+      RowY: 0
+      ColX: 2
+    - Id: 3
+      RowY: 1
+      ColX: 2
+    - Id: 4
+      RowY: 2
+      ColX: 2
+    - Id: 6
+      RowY: 2
+      ColX: 3
+    - Id: 8
+      RowY: 1
+      ColX: 3
+    - Id: 2
+      RowY: 0
+      ColX: 3
+    ColCountX: 4
+    RowCountY: 3
+  - Tiles:
+    - Id: 2
+      RowY: 0
+      ColX: 0
+    - Id: 4
+      RowY: 0
+      ColX: 1
+    - Id: 3
+      RowY: 0
+      ColX: 2
+    - Id: 8
+      RowY: 1
+      ColX: 2
+    - Id: 6
+      RowY: 1
+      ColX: 1
+    - Id: 9
+      RowY: 1
+      ColX: 0
+    ColCountX: 3
+    RowCountY: 2
+  - Tiles:
+    - Id: 9
+      RowY: 0
+      ColX: 0
+    - Id: 5
+      RowY: 0
+      ColX: 1
+    ColCountX: 2
+    RowCountY: 1
+  - Tiles:
+    - Id: 7
+      RowY: 0
+      ColX: 0
+    ColCountX: 1
+    RowCountY: 1
+  DifferentIdCount: 3

@@ -88,7 +88,9 @@ namespace GameCore.UI
 
         public void BtnPlay()
         {
-            GameManager.Instance.StartPlay();
+            MainScreen.Instance.Hide();
+            TownScreen.Instance.Hide();
+            PuzzleScreen.Instance.Show();
         }
 
         #endregion
