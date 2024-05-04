@@ -84,17 +84,17 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMControls\MMTouchJoystick.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMTween\MMAnimationCurveGenerator.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Activation\MMPlatformActivation.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMDebugMenu\Scripts\Tabs\MMDebugMenuTab.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\ReorderableList\ReorderableArray.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMDebugMenu\Scripts\Tabs\MMDebugMenuTab.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Physics\MMRigidbodyCenterOfMass.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\GUI\MMProgressBar.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Animation\MMStopMotionAnimation.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMHelpers\MMGUI.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyLink\MMPropertyLinkQuaternion.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Activation\MMTimedActivation.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\GUI\MMGetFocusOnEnable.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Audio\Playlist\MMPlaylist.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAttributes\MMHiddenAttribute.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\GUI\MMGetFocusOnEnable.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMControls\MMTouchRepositionableJoystick.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\GUI\MMCursorVisible.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Movement\MMPathMovement\MMPathMovement.cs" />
@@ -113,8 +113,8 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyLink\MMPropertyLinkFloat.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\PropertyControllers\LightController.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAchievements\Scripts\MMAchievementEvent.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Vision\MMConeOfVision2D.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMHelpers\MMMovement.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Vision\MMConeOfVision2D.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMExtensions\MMBoundsExtensions.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMHelpers\MMHelpers.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Time\MMCountdown.cs" />
@@ -139,8 +139,8 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMHelpers\MMColors.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyLink\MMPropertyLinkBool.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAttributes\MMReadOnlyAttribute.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\ReorderableList\Attributes\ReorderableAttribute.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Animation\MMAnimationModifier.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\ReorderableList\Attributes\ReorderableAttribute.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMExtensions\MMRendererExtensions.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMSaveLoad\MMSaveLoadManagerMethods.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Activation\MMParentingOnStart.cs" />
@@ -188,8 +188,8 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAchievements\Scripts\SerializedMMAchievementManager.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMDebugMenu\Scripts\MMDebugMenuItems\MMDebugMenuItemValue.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyLink\MMPropertyLinkVector3.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMDebugMenu\Demo\MMDebugMenuTestClass.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyLink\MMPropertyLinkColor.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMDebugMenu\Demo\MMDebugMenuTestClass.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMHelpers\MMString.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Particles\MMChangeFogColor.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMDebugMenu\Scripts\Commands\MMDebugMenuCommands.cs" />
@@ -248,8 +248,8 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\ObjectPool\MMMultipleObjectPooler.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMSaveLoad\MMSaveLoadManager.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAttributes\MMBackgroundColorAttribute.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMTween\MMTween.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMHelpers\MMInput.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMTween\MMTween.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\AI\AIState.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAttributes\MMDebugLogCommandArgumentCountAttribute.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAttributes\MMEnumConditionAttribute.cs" />
@@ -274,11 +274,11 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMRadioSignal\MMRadioSignal.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyPicker\MMPropertyEmitter.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Utilities\MMDebugController.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMTween\MMSignal.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMExtensions\MMColorExtensions.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMTween\MMSignal.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\GUI\SelectionBase.cs" />
-    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMSingletons\MMSingleton.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMRadio\MMProperty\MMPropertyPicker\MMPropertyReceiver.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMSingletons\MMSingleton.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMExtensions\MMFloatExtensions.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\Particles\MMAutoDestroyParticleSystem.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMTools\Tools\MMAttributes\MMConditionAttribute.cs" />
@@ -642,6 +642,10 @@
       <HintPath>Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sirenix.Reflection.Editor">
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll</HintPath>
       <Private>False</Private>
@@ -678,6 +682,10 @@
       <HintPath>Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
       <HintPath>Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
       <Private>False</Private>
@@ -688,6 +696,10 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DOTweenPro">
@@ -702,24 +714,12 @@
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.YamlDotNet">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.IonicZip">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">
