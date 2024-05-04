@@ -24,8 +24,8 @@ public class TileCell : MonoBehaviour
 
     //Components
     [FoldoutGroup("Components")]
-    [FoldoutGroup("Components/Utilities"), SerializeField] private Image tileSpriteRenderer;
-    [FoldoutGroup("Components/Utilities"), SerializeField] private Image iconSpriteRenderer;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_ItemImage;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private GameObject m_BlockedImage;
     [FoldoutGroup("Components/Utilities"), SerializeField] private BoxCollider2D boxCollider;
     [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_CollectFeedbacks;
     [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_MatchFeedbacks;
@@ -36,7 +36,6 @@ public class TileCell : MonoBehaviour
 
     //Privates
     private Action<TileCell> onClickCallback;
-    public Image TileSpriteRenderer => tileSpriteRenderer;
     [HideInInspector] public string m_Id => tile.Id;
     
     #endregion
@@ -62,14 +61,15 @@ public class TileCell : MonoBehaviour
     public void SetCustomize(PuzzleTileData tileData)
     {
         tile.Id = tileData.m_Id;
-        iconSpriteRenderer.sprite = tileData.m_TileSprite;
+        m_ItemImage.sprite = tileData.m_TileSprite;
     }
 
     public void SetBlockState()
     {
         bool block = blockCellCount > 0;
-        tileSpriteRenderer.color = block ? Color.gray: Color.white;
-        iconSpriteRenderer.color = block ? Color.gray: Color.white;
+        //tileSpriteRenderer.color = block ? Color.gray: Color.white;
+        //m_ItemImage.color = block ? Color.gray: Color.white;
+        m_BlockedImage.SetActive(block);
         TriggerEnable(!block);
     }
 
@@ -90,8 +90,9 @@ public class TileCell : MonoBehaviour
         if(blockCellCount <= 0)
         {
             TriggerEnable(true);
-            tileSpriteRenderer.color = Color.white;
-            iconSpriteRenderer.color = Color.white;
+            m_BlockedImage.SetActive(false);
+            //tileSpriteRenderer.color = Color.white;
+            //m_ItemImage.color = Color.white;
         }
     }
 

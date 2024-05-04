@@ -345,7 +345,6 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     void createTiles()
     {
         TileLayer[] tileLayers = tileLayersSO.TileLayers;
-        Image tileSpriteRenderer = tileCellPrefab.TileSpriteRenderer;
         int tileSpacingX = 130 / 2;
         int tileSpacingY = 130 / 2;
         float posX;
@@ -373,18 +372,6 @@ public class PuzzleController : SingletonComponent<PuzzleController>
                 newTileCell.transform.localPosition = tilePos;
                 newTileCell.SetData(tile, baseOrder + tile.RowY, onTileClick);
 
-                /*if (tile.Id > 0)
-                {
-                    newTileCell.SetIcon(iconSprites[tile.Id - 1]);
-                    if (!idCountPairs.ContainsKey(tile.Id))
-                        idCountPairs.Add(tile.Id, 0);
-                    idCountPairs[tile.Id] += 1;
-                }
-                else
-                {
-                    unsetIdTile.Add(newTileCell);
-                }*/
-
                 PuzzleTileData puzzleTileData = PuzzleTileDataList.Instance.GetPuzzleTileData(tile.Id);
                 if (puzzleTileData == null)
                 {
@@ -410,50 +397,7 @@ public class PuzzleController : SingletonComponent<PuzzleController>
             return;
         }
 
-        //var putInCellId = _putInCell.Id;
-        short nullIndex = -1;
-        short matchIndex = -1;
-        bool lose = true;
-
-        /*for (short index = 0; index < collectedTiles.Length; index++)
-        {
-            var cell = collectedTiles[index];
-            if (cell != null)
-            {
-                if (cell.Id == putInCellId)
-                {
-                    if (matchIndex < 0)
-                        matchIndex = index;
-                    else
-                    {
-                        //Match
-                        _putInCell.onRemoveTile?.Invoke();
-                        _putInCell.OnMatch();
-                        collectedTiles[matchIndex].OnMatch();
-                        collectedTiles[matchIndex] = null;
-                        cell.OnMatch();
-                        collectedTiles[index] = null;
-                        return;
-                    }
-                }
-            }
-            else
-            {
-                if (nullIndex < 0)
-                    nullIndex = index;
-                else
-                    lose = false;
-            }
-        }
-
-        if (nullIndex == -1)
-            return;*/
-
         _putInCell.onRemoveTile?.Invoke();
-        //_putInCell.transform.localPosition = collectVects[nullIndex];
-        //PuzzleSlotController.Instance.GetFirstEmptySlot().Filled(_putInCell);
-        //_putInCell.OnCollect();
         onTileCollect?.Invoke(_putInCell);
-        //collectedTiles[nullIndex] = _putInCell;
     }
 }

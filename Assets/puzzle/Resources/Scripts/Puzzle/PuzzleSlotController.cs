@@ -77,6 +77,11 @@ public class PuzzleSlotController : SingletonComponent<PuzzleSlotController>
         tileCell.OnCollect();
 
         CheckMatch();
+
+        if (AllSlotsFull())
+        {
+            Debug.LogError("Puzzle game over!");
+        }
     }
 
     #endregion

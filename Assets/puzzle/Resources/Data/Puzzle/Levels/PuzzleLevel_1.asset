@@ -83,7 +83,7 @@ MonoBehaviour:
     ColCountX: 2
     RowCountY: 1
   - Tiles:
-    - Id: _puzzleTile_8
+    - Id: _puzzleTile_7
       RowY: 0
       ColX: 0
     ColCountX: 1
