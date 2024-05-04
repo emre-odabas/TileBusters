@@ -20,7 +20,7 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     #region FIELDS
 
     //Parameters
-    [FoldoutGroup("Parameters"), SerializeField] private float tileYMargin;
+    [FoldoutGroup("Parameters"), SerializeField] private Vector2 m_TilePlacementMargin = Vector2.zero;
 
     //Components
     [FoldoutGroup("Components")]
@@ -34,7 +34,6 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     //Privates
 
     #endregion
-
 
     private void Awake()
     {
@@ -133,7 +132,6 @@ public class PuzzleController : SingletonComponent<PuzzleController>
 
     private List<(int, int)> getTileBlockIndex((ushort, ushort) buildTileRowCol, (ushort, ushort) upLayerRowCol, (ushort, ushort) downLayerRowCol)
     {
-        //TODO 這部分運算可以抽出來
         int normalizeDiffX = downLayerRowCol.Item1 - upLayerRowCol.Item1;
         bool coverTwoTileX = normalizeDiffX % 2 > 0;
         int normalizeDiffY = downLayerRowCol.Item2 - upLayerRowCol.Item2;
@@ -195,8 +193,8 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     void createTiles()
     {
         TileLayer[] tileLayers = m_PuzzleLevelData.TileLayers;
-        int tileSpacingX = 130 / 2;
-        int tileSpacingY = 130 / 2;
+        int tileWidth = (int)tileCellPrefab.GetComponent<RectTransform>().rect.width;
+        int tileHeight = (int)tileCellPrefab.GetComponent<RectTransform>().rect.height;
         float posX;
         float posY;
         Vector3 tilePos = Vector3.zero;
@@ -214,8 +212,8 @@ public class PuzzleController : SingletonComponent<PuzzleController>
             for (ushort tileIndex = 0; tileIndex < tiles.Length; tileIndex++)  //tile process
             {
                 Tile tile = tiles[tileIndex];
-                posX = (tile.ColX - centerX) * tileSpacingX * 2;
-                posY = (tile.RowY - centerY) * (tileSpacingY * -2 + tileYMargin);
+                posX = (tile.ColX - centerX) * tileWidth + m_TilePlacementMargin.x;
+                posY = (tile.RowY - centerY) * (tileHeight + m_TilePlacementMargin.y);
                 tilePos.x = posX;
                 tilePos.y = posY;
                 TileCell newTileCell = Instantiate(tileCellPrefab, tileInstantiateTrans);
