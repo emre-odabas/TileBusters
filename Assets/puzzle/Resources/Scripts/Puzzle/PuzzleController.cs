@@ -24,19 +24,14 @@ public class PuzzleController : SingletonComponent<PuzzleController>
 
     //Components
     [FoldoutGroup("Components")]
-    //[FoldoutGroup("Components/Utilities"), SerializeField] private SpriteRenderer tileCollectorSpriteRenderer;
-    //[FoldoutGroup("Components/Utilities"), SerializeField] private Vector3[] collectVects = new Vector3[7];
-    [FoldoutGroup("Components/Utilities"), SerializeField] private TileLayersSO tileLayersSO;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private PuzzleLevelData m_PuzzleLevelData;
     [FoldoutGroup("Components/Utilities"), SerializeField] private TileCell tileCellPrefab;
     [FoldoutGroup("Components/Utilities"), SerializeField] private Transform tileInstantiateTrans;
-    //[FoldoutGroup("Components/Lists"), SerializeField] private Sprite[] iconSprites;  //Temp
-    //[FoldoutGroup("Components/Lists"), SerializeField] private List<TileSlot> m_Slots = new List<TileSlot>();
 
     //Indicator
     //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
 
     //Privates
-    //private TileCell[] collectedTiles;
 
     #endregion
 
@@ -49,111 +44,15 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     private void Start() 
     {
         //collectedTiles = new TileCell[PuzzleSlotController.Instance.SlotCount()];
-        if (tileLayersSO != null && tileLayersSO.TileLayers != null)
+        if (m_PuzzleLevelData != null && m_PuzzleLevelData.TileLayers != null)
         {
            createTiles();
         }    
     }
 
-    /*void createTiles()
-    {
-        var tileLayers = tileLayersSO.TileLayers;
-        var tileSpriteRenderer = tileCellPrefab.TileSpriteRenderer;
-        //var tileSpacingX = tileSpriteRenderer.sprite.bounds.extents.x;
-        var tileSpacingX = 130/2;
-        //var tileSpacingY = tileSpriteRenderer.sprite.bounds.extents.y;
-        var tileSpacingY = 130/2;
-        float posX;
-        float posY;
-        Vector3 tilePos = Vector3.zero;
-        var layerCount = tileLayers.Length;
-        var tileCellPairs = new Dictionary<(int, int, int), TileCell>();
-        List<TileCell> unsetIdTile = new List<TileCell>();
-        var idCountPairs = new Dictionary<int, int>();
-
-        for(short layerIndex = 0; layerIndex < layerCount; layerIndex++)  //layer process
-        {
-            var tileLayer = tileLayers[layerIndex];
-            var tiles = tileLayer.Tiles;
-            var centerX = (float)(tileLayer.ColCountX - 1) / 2;
-            var centerY = (float)(tileLayer.RowCountY - 1) / 2;
-            var baseOrder = (layerIndex + 1) * 10;
-
-            for(ushort tileIndex = 0; tileIndex < tiles.Length; tileIndex++)  //tile process
-            {
-                var tile = tiles[tileIndex];  
-                posX = (tile.ColX - centerX) * tileSpacingX * 2;
-                posY = (tile.RowY - centerY) * (tileSpacingY * -2 + tileYMargin); 
-                tilePos.x = posX;
-                tilePos.y = posY;
-                var newTileCell = Instantiate(tileCellPrefab, tileInstantiateTrans);
-                newTileCell.transform.localPosition = tilePos;
-                newTileCell.SetData(tile, baseOrder + tile.RowY, onTileClick);
-
-                if(tile.Id > 0)
-                {
-                    newTileCell.SetIcon(iconSprites[tile.Id - 1]);
-                    if(!idCountPairs.ContainsKey(tile.Id))
-                        idCountPairs.Add(tile.Id, 0);
-                    idCountPairs[tile.Id] += 1;
-                }
-                else
-                {
-                    unsetIdTile.Add(newTileCell);
-                }
-
-                tileCellPairs.Add((layerIndex, tile.RowY, tile.ColX), newTileCell);
-
-            #if UNITY_EDITOR
-                var stringBuilder = new System.Text.StringBuilder();
-                stringBuilder.Append(layerIndex);
-                stringBuilder.Append(tile.RowY);
-                stringBuilder.Append(tile.ColX);
-                stringBuilder.Append(baseOrder + tile.ColX);
-                newTileCell.gameObject.name = stringBuilder.ToString();
-            #endif    
-            }
-        }
-
-        if(tileCellPairs.Count > 0)
-        {
-            setTilesCellData(tileCellPairs);
-        }
-
-        if(unsetIdTile.Count > 0)
-        {
-            setTileId(unsetIdTile, idCountPairs);
-        }
-    }*/
-
-    /*void setTileId(List<TileCell> _cellList, Dictionary<int, int> _idCountPairs)
-    {
-        Shuffle(_cellList);
-        int needIdCount = _cellList.Count;
-        List<int> unusedId = new List<int>();
-
-        foreach(var pairs in _idCountPairs)
-        {
-            if(pairs.Value / tileLayersSO.DifferentIdCount < 1)
-            {
-                var leftCount = pairs.Value % tileLayersSO.DifferentIdCount;
-                for(int index = 0; index < leftCount; index++)
-                {
-                    unusedId.Add(pairs.Key);
-                }
-            }
-        }
-        
-        for(int index = 0; index > _cellList.Count; index++)
-        {
-            _cellList[index].SetId((ushort)unusedId[index]);
-            _cellList[index].SetIcon(iconSprites[unusedId[index] - 1]);
-        }
-    }*/
-
     private void setTilesCellData(Dictionary<(int, int, int), TileCell> _tileCellPairs)
     {
-        var tileLayers = tileLayersSO.TileLayers;
+        var tileLayers = m_PuzzleLevelData.TileLayers;
         for(short layerIndex = 1; layerIndex < tileLayers.Length; layerIndex++)
         {
             var tilesLayerUp = tileLayers[layerIndex];
@@ -232,55 +131,6 @@ public class PuzzleController : SingletonComponent<PuzzleController>
         putIntoCollect(_cell);
     }
 
-    /*void putIntoCollect(TileCell _putInCell)
-    {
-        var putInCellId = _putInCell.Id;
-        short nullIndex = -1;
-        short matchIndex = -1;
-        bool lose = true;
-
-        for(short index = 0; index < collectedTiles.Length; index++)
-        {
-            var cell = collectedTiles[index];
-            if(cell != null)
-            {
-                if(cell.Id == putInCellId)
-                {
-                    if(matchIndex < 0)
-                        matchIndex = index;
-                    else
-                    {
-                        //Match
-                        _putInCell.onRemoveTile?.Invoke();
-                        _putInCell.OnMatch();
-                        collectedTiles[matchIndex].OnMatch();
-                        collectedTiles[matchIndex] = null;
-                        cell.OnMatch();
-                        collectedTiles[index] = null;
-                        return;
-                    }
-                }
-            }
-            else
-            {
-                if(nullIndex < 0)
-                    nullIndex = index;
-                else
-                    lose = false;
-            }
-        }
-
-        if(nullIndex == -1)
-            return;
-
-        _putInCell.onRemoveTile?.Invoke();
-        //_putInCell.transform.localPosition = collectVects[nullIndex];
-        GetFirstEmptySlot().Filled(_putInCell);
-        _putInCell.OnCollect();
-
-        collectedTiles[nullIndex] = _putInCell;
-    }*/
-
     private List<(int, int)> getTileBlockIndex((ushort, ushort) buildTileRowCol, (ushort, ushort) upLayerRowCol, (ushort, ushort) downLayerRowCol)
     {
         //TODO 這部分運算可以抽出來
@@ -344,7 +194,7 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     //Functions
     void createTiles()
     {
-        TileLayer[] tileLayers = tileLayersSO.TileLayers;
+        TileLayer[] tileLayers = m_PuzzleLevelData.TileLayers;
         int tileSpacingX = 130 / 2;
         int tileSpacingY = 130 / 2;
         float posX;

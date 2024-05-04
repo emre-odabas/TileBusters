@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PuzzleLevelData", menuName = "GameCore/Create/PuzzleLevelData")]
-public class TileLayersSO : ScriptableObject
+public class PuzzleLevelData : ScriptableObject
 {
     public TileLayer[] TileLayers;
     public ushort DifferentIdCount;
