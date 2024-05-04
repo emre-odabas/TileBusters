@@ -71,7 +71,6 @@
     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Databases\TownDB.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\TownBuilding.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreScreen.cs" />
-    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\Data\ScriptableObjects\TripleTileGameDesginEditorMediatorSO.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\ButtonUpgradeTier.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\CurrencyData.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\TownScreen.cs" />
@@ -113,14 +112,6 @@
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\Utilities.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\Data\ScriptableObjects\PuzzleTileData.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\TileSlot.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\TripleTileGameDesginEditorWindowUXML.uxml" />
-    <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\TileButtonGroup.uxml" />
-    <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\DragAndDropWindow.uss" />
-    <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\DragAndDropWindow.uxml" />
-    <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\TripleTileGameDesginEditorWindowUSS.uss" />
-    <None Include="Assets\puzzle\Resources\Data\Puzzle\StyleSheets\ListViewElement.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
