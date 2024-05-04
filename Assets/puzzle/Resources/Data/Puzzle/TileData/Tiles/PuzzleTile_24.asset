@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bdd3e5b41ccf4845bd1ae60b0dec4d0, type: 3}
-  m_Name: PuzzleTile_DragonFruit
+  m_Name: PuzzleTile_24
   m_EditorClassIdentifier: 
-  m_Id: _dragonFruit
-  m_TileSprite: {fileID: 21300000, guid: 14b562bdf0d59421996ea9605c124d9f, type: 3}
+  m_Id: _puzzleTile_24
+  m_TileSprite: {fileID: 21300000, guid: 3935afe84b4bcc84a85f88099c003e4d, type: 3}

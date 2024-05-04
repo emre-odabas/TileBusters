@@ -20,7 +20,7 @@ public class TileSlot : MonoBehaviour
     [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_EmptyItFeedbacks;
 
     //Indicator
-    [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool m_isFull;
+    [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private TileCell m_TileCell;
 
     //Privates
 
@@ -45,24 +45,36 @@ public class TileSlot : MonoBehaviour
 
     #region RETURN FUNCTIONS
 
-    public bool IsFull() => m_isFull;
+    public TileCell GetTile()
+    {
+        return m_TileCell;
+    }
 
     #endregion
 
     #region FUNCTIONS
 
-    private void EmptyIt()
+    public void EmptyIt()
     {
-        m_isFull = false;
+        m_TileCell = null;
         m_EmptyItFeedbacks.PlayFeedbacks();
     }
 
     public void Filled(TileCell tile)
     {
-        m_isFull = true;
+        m_TileCell = tile;
         tile.transform.SetParent(m_ItemContainer);
-        tile.transform.localPosition = Vector3.zero;
+        tile.onMatch += OnChildTileMatch;
         m_FilledFeedbacks.PlayFeedbacks();
+    }
+
+    #endregion
+
+    #region CALLBACKS
+
+    private void OnChildTileMatch()
+    {
+        EmptyIt();
     }
 
     #endregion

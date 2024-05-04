@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bdd3e5b41ccf4845bd1ae60b0dec4d0, type: 3}
-  m_Name: PuzzleTile_Banana
+  m_Name: PuzzleTile_5
   m_EditorClassIdentifier: 
-  m_Id: _banana
-  m_TileSprite: {fileID: 21300000, guid: 3166ec1d4bed644b397fa6b666535305, type: 3}
+  m_Id: _puzzleTile_5
+  m_TileSprite: {fileID: 21300000, guid: 86754b910b5093048a884574a5430458, type: 3}

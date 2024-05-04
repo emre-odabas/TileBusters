@@ -5,9 +5,18 @@ using System;
 using System.Linq;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using GameCore.Core;
 
-public class PuzzleController : MonoBehaviour
+public class PuzzleController : SingletonComponent<PuzzleController>
 {
+    #region UTILITIES
+
+    public UnityAction<TileCell> onTileCollect;
+
+    #endregion
+
     #region FIELDS
 
     //Parameters
@@ -20,14 +29,14 @@ public class PuzzleController : MonoBehaviour
     [FoldoutGroup("Components/Utilities"), SerializeField] private TileLayersSO tileLayersSO;
     [FoldoutGroup("Components/Utilities"), SerializeField] private TileCell tileCellPrefab;
     [FoldoutGroup("Components/Utilities"), SerializeField] private Transform tileInstantiateTrans;
-    [FoldoutGroup("Components/Lists"), SerializeField] private Sprite[] iconSprites;  //Temp
-    [FoldoutGroup("Components/Lists"), SerializeField] private List<TileSlot> m_Slots = new List<TileSlot>();
+    //[FoldoutGroup("Components/Lists"), SerializeField] private Sprite[] iconSprites;  //Temp
+    //[FoldoutGroup("Components/Lists"), SerializeField] private List<TileSlot> m_Slots = new List<TileSlot>();
 
     //Indicator
     //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
 
     //Privates
-    private TileCell[] collectedTiles;
+    //private TileCell[] collectedTiles;
 
     #endregion
 
@@ -39,24 +48,14 @@ public class PuzzleController : MonoBehaviour
 
     private void Start() 
     {
-        collectedTiles = new TileCell[m_Slots.Count];
-
-        /*#if UNITY_EDITOR
-        var mediator = UnityEditor.AssetDatabase.LoadAssetAtPath<TripleTileGameDesginEditorMediatorSO>("Assets/Resources/Data/Puzzle/TripleTileGameDesginEditorMediator.asset");
-        if(mediator.PlayDemo)
-        {
-            tileLayersSO = UnityEditor.AssetDatabase.LoadAssetAtPath<TileLayersSO>(mediator.DemoDataPath);
-            mediator.PlayDemo = false;
-        }
-        #endif*/
-
+        //collectedTiles = new TileCell[PuzzleSlotController.Instance.SlotCount()];
         if (tileLayersSO != null && tileLayersSO.TileLayers != null)
         {
            createTiles();
         }    
     }
 
-    void createTiles()
+    /*void createTiles()
     {
         var tileLayers = tileLayersSO.TileLayers;
         var tileSpriteRenderer = tileCellPrefab.TileSpriteRenderer;
@@ -125,9 +124,9 @@ public class PuzzleController : MonoBehaviour
         {
             setTileId(unsetIdTile, idCountPairs);
         }
-    }
+    }*/
 
-    void setTileId(List<TileCell> _cellList, Dictionary<int, int> _idCountPairs)
+    /*void setTileId(List<TileCell> _cellList, Dictionary<int, int> _idCountPairs)
     {
         Shuffle(_cellList);
         int needIdCount = _cellList.Count;
@@ -150,7 +149,7 @@ public class PuzzleController : MonoBehaviour
             _cellList[index].SetId((ushort)unusedId[index]);
             _cellList[index].SetIcon(iconSprites[unusedId[index] - 1]);
         }
-    }
+    }*/
 
     private void setTilesCellData(Dictionary<(int, int, int), TileCell> _tileCellPairs)
     {
@@ -211,7 +210,7 @@ public class PuzzleController : MonoBehaviour
     private void registerEvent(TileCell _upCell, TileCell _downCell)
     {
         _downCell.AddBlockCount();
-        _upCell.RemoveEvent.AddListener(_downCell.BlockCellRemove);
+        _upCell.onRemoveTile.AddListener(_downCell.BlockCellRemove);
     }
 
     /*void setTileCollector()
@@ -233,7 +232,7 @@ public class PuzzleController : MonoBehaviour
         putIntoCollect(_cell);
     }
 
-    void putIntoCollect(TileCell _putInCell)
+    /*void putIntoCollect(TileCell _putInCell)
     {
         var putInCellId = _putInCell.Id;
         short nullIndex = -1;
@@ -252,7 +251,7 @@ public class PuzzleController : MonoBehaviour
                     else
                     {
                         //Match
-                        _putInCell.RemoveEvent?.Invoke();
+                        _putInCell.onRemoveTile?.Invoke();
                         _putInCell.OnMatch();
                         collectedTiles[matchIndex].OnMatch();
                         collectedTiles[matchIndex] = null;
@@ -274,12 +273,13 @@ public class PuzzleController : MonoBehaviour
         if(nullIndex == -1)
             return;
 
-        _putInCell.RemoveEvent?.Invoke();
+        _putInCell.onRemoveTile?.Invoke();
         //_putInCell.transform.localPosition = collectVects[nullIndex];
         GetFirstEmptySlot().Filled(_putInCell);
+        _putInCell.OnCollect();
 
         collectedTiles[nullIndex] = _putInCell;
-    }
+    }*/
 
     private List<(int, int)> getTileBlockIndex((ushort, ushort) buildTileRowCol, (ushort, ushort) upLayerRowCol, (ushort, ushort) downLayerRowCol)
     {
@@ -338,9 +338,122 @@ public class PuzzleController : MonoBehaviour
 
     /////////////////////////////////////////////
     
-    private TileSlot GetFirstEmptySlot()
+    //Return Functions
+    
+
+    //Functions
+    void createTiles()
     {
-        TileSlot slot = m_Slots.FirstOrDefault(c => c.IsFull() == false);
-        return slot;
+        TileLayer[] tileLayers = tileLayersSO.TileLayers;
+        Image tileSpriteRenderer = tileCellPrefab.TileSpriteRenderer;
+        int tileSpacingX = 130 / 2;
+        int tileSpacingY = 130 / 2;
+        float posX;
+        float posY;
+        Vector3 tilePos = Vector3.zero;
+        int layerCount = tileLayers.Length;
+        Dictionary<(int, int, int), TileCell> tileCellPairs = new Dictionary<(int, int, int), TileCell>();
+
+        for (short layerIndex = 0; layerIndex < layerCount; layerIndex++)  //layer process
+        {
+            TileLayer tileLayer = tileLayers[layerIndex];
+            Tile[] tiles = tileLayer.Tiles;
+            float centerX = (float)(tileLayer.ColCountX - 1) / 2;
+            float centerY = (float)(tileLayer.RowCountY - 1) / 2;
+            int baseOrder = (layerIndex + 1) * 10;
+
+            for (ushort tileIndex = 0; tileIndex < tiles.Length; tileIndex++)  //tile process
+            {
+                Tile tile = tiles[tileIndex];
+                posX = (tile.ColX - centerX) * tileSpacingX * 2;
+                posY = (tile.RowY - centerY) * (tileSpacingY * -2 + tileYMargin);
+                tilePos.x = posX;
+                tilePos.y = posY;
+                TileCell newTileCell = Instantiate(tileCellPrefab, tileInstantiateTrans);
+                newTileCell.transform.localPosition = tilePos;
+                newTileCell.SetData(tile, baseOrder + tile.RowY, onTileClick);
+
+                /*if (tile.Id > 0)
+                {
+                    newTileCell.SetIcon(iconSprites[tile.Id - 1]);
+                    if (!idCountPairs.ContainsKey(tile.Id))
+                        idCountPairs.Add(tile.Id, 0);
+                    idCountPairs[tile.Id] += 1;
+                }
+                else
+                {
+                    unsetIdTile.Add(newTileCell);
+                }*/
+
+                PuzzleTileData puzzleTileData = PuzzleTileDataList.Instance.GetPuzzleTileData(tile.Id);
+                if (puzzleTileData == null)
+                {
+                    Debug.LogError($"PuzzleTileData not found. Id: {tile.Id}");
+                }
+
+                newTileCell.SetCustomize(puzzleTileData);
+                tileCellPairs.Add((layerIndex, tile.RowY, tile.ColX), newTileCell);
+            }
+        }
+
+        if (tileCellPairs.Count > 0)
+        {
+            setTilesCellData(tileCellPairs);
+        }
+    }
+
+    void putIntoCollect(TileCell _putInCell)
+    {
+        if(PuzzleSlotController.Instance.AllSlotsFull())
+        {
+            Debug.LogError ("All slots full");
+            return;
+        }
+
+        //var putInCellId = _putInCell.Id;
+        short nullIndex = -1;
+        short matchIndex = -1;
+        bool lose = true;
+
+        /*for (short index = 0; index < collectedTiles.Length; index++)
+        {
+            var cell = collectedTiles[index];
+            if (cell != null)
+            {
+                if (cell.Id == putInCellId)
+                {
+                    if (matchIndex < 0)
+                        matchIndex = index;
+                    else
+                    {
+                        //Match
+                        _putInCell.onRemoveTile?.Invoke();
+                        _putInCell.OnMatch();
+                        collectedTiles[matchIndex].OnMatch();
+                        collectedTiles[matchIndex] = null;
+                        cell.OnMatch();
+                        collectedTiles[index] = null;
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                if (nullIndex < 0)
+                    nullIndex = index;
+                else
+                    lose = false;
+            }
+        }
+
+        if (nullIndex == -1)
+            return;*/
+
+        _putInCell.onRemoveTile?.Invoke();
+        //_putInCell.transform.localPosition = collectVects[nullIndex];
+        //PuzzleSlotController.Instance.GetFirstEmptySlot().Filled(_putInCell);
+        //_putInCell.OnCollect();
+        onTileCollect?.Invoke(_putInCell);
+        //collectedTiles[nullIndex] = _putInCell;
     }
 }

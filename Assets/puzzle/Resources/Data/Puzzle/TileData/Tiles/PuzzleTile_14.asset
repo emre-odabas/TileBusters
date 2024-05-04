@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bdd3e5b41ccf4845bd1ae60b0dec4d0, type: 3}
-  m_Name: PuzzleTile_Mango
+  m_Name: PuzzleTile_14
   m_EditorClassIdentifier: 
-  m_Id: _mango
-  m_TileSprite: {fileID: 21300000, guid: 655649fe8aa3c4cb58286709a7f6e263, type: 3}
+  m_Id: _puzzleTile_14
+  m_TileSprite: {fileID: 21300000, guid: 2d6dd9625aba5d3498594c1bf20277a1, type: 3}

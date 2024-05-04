@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "TripleTile", menuName = "Create Triple Tile Stage Data")]
+[CreateAssetMenu(fileName = "PuzzleLevelData", menuName = "GameCore/Create/PuzzleLevelData")]
 public class TileLayersSO : ScriptableObject
 {
     public TileLayer[] TileLayers;
@@ -18,7 +18,7 @@ public class TileLayer
 [System.Serializable]
 public class Tile
 {
-    public ushort Id;
+    public string Id;
     public ushort RowY;
     public ushort ColX;
 }

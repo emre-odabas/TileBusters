@@ -78,6 +78,7 @@
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselItem.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\TownController.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Enums.cs" />
+    <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\PuzzleSlotController.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Bars\CurrencyBar.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\PuzzleScreen.cs" />
     <Compile Include="Assets\puzzle\Resources\Scripts\Puzzle\Data\ScriptableObjects\PuzzleTileDataList.cs" />

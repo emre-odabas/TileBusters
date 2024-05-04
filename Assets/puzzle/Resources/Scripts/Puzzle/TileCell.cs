@@ -3,19 +3,43 @@ using System;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
+using System.Collections.Generic;
+using MoreMountains.Feedbacks;
+using System.Security.Cryptography;
 
 public class TileCell : MonoBehaviour
 {
-    [SerializeField] private Image tileSpriteRenderer;
-    [SerializeField] private Image iconSpriteRenderer;
-    [SerializeField] private BoxCollider2D boxCollider;
-    //[SerializeField] private EventTrigger eventTrigger; 
-    [SerializeField] private Tile tile;
-    [SerializeField] private int blockCellCount = 0;
+    #region UTILITIES
+
+    public UnityEvent onRemoveTile;
+    public UnityAction onMatch;
+
+    #endregion
+
+    #region FIELDS
+
+    //Parameters
+    //[FoldoutGroup("Parameters"), SerializeField] private 
+
+    //Components
+    [FoldoutGroup("Components")]
+    [FoldoutGroup("Components/Utilities"), SerializeField] private Image tileSpriteRenderer;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private Image iconSpriteRenderer;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private BoxCollider2D boxCollider;
+    [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_CollectFeedbacks;
+    [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_MatchFeedbacks;
+
+    //Indicator
+    [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private int blockCellCount = 0;
+    [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private Tile tile;
+
+    //Privates
     private Action<TileCell> onClickCallback;
     public Image TileSpriteRenderer => tileSpriteRenderer;
-    public ushort Id => tile.Id;
-    public UnityEvent RemoveEvent;
+    [HideInInspector] public string m_Id => tile.Id;
+    
+    #endregion
 
     public void SetData(Tile _tile, int _order, Action<TileCell> _callback)
     {
@@ -25,14 +49,20 @@ public class TileCell : MonoBehaviour
         onClickCallback = _callback;
     }
 
-    public void SetIcon(Sprite _sprite)
+    /*public void SetIcon(Sprite _sprite)
     {
         iconSpriteRenderer.sprite = _sprite;
     }
 
-    public void SetId(ushort _id)
+    public void SetId(string _id)
     {
         tile.Id = _id;
+    }*/
+
+    public void SetCustomize(PuzzleTileData tileData)
+    {
+        tile.Id = tileData.m_Id;
+        iconSpriteRenderer.sprite = tileData.m_TileSprite;
     }
 
     public void SetBlockState()
@@ -42,25 +72,6 @@ public class TileCell : MonoBehaviour
         iconSpriteRenderer.color = block ? Color.gray: Color.white;
         TriggerEnable(!block);
     }
-
-    /*public void OnPointerDown()
-    {
-        Debug.Log("ON Pointer Down " + this.gameObject.name);
-        //TODO 放大動畫
-    }
-
-    public void OnPointerUp()
-    {
-        Debug.Log("ON Pointer Up " + this.gameObject.name);
-        //TODO 縮小
-    }
-
-    public void OnPointerClick()
-    {
-        Debug.Log("ON Pointer Click " + this.gameObject.name);
-        //TODO 移至插槽
-        onClickCallback?.Invoke(this);
-    }*/
 
     void OnMouseDown()
     {
@@ -84,10 +95,17 @@ public class TileCell : MonoBehaviour
         }
     }
 
+    public void OnCollect()
+    {
+        m_CollectFeedbacks.PlayFeedbacks();
+    }
+
     public void OnMatch()
     {
-        this.gameObject.SetActive(false);
-        RemoveEvent.RemoveAllListeners();
+        //this.gameObject.SetActive(false);
+        m_MatchFeedbacks.PlayFeedbacks();
+        onRemoveTile.RemoveAllListeners();
+        onMatch?.Invoke();
     }
 
     public void AddBlockCount()
@@ -97,15 +115,15 @@ public class TileCell : MonoBehaviour
 
     private void OnDestroy() 
     {
-        RemoveEvent.RemoveAllListeners();
+        onRemoveTile.RemoveAllListeners();
     }
 
-    void OnDrawGizmos() 
+    /*void OnDrawGizmos() 
     {
         if(tileSpriteRenderer.color == Color.white)
         {
             GUI.color = Color.red;
             UnityEditor.Handles.Label(this.transform.position, Id.ToString());
         }
-    }
+    }*/
 }
