@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using System.Security.Cryptography;
+using GameCore.Core;
 
 public class TileCell : MonoBehaviour
 {
@@ -33,12 +34,39 @@ public class TileCell : MonoBehaviour
     //Indicator
     [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private int blockCellCount = 0;
     [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private Tile tile;
+    [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool m_isMatched = false;
 
     //Privates
     private Action<TileCell> onClickCallback;
     [HideInInspector] public string m_Id => tile.Id;
-    
+
     #endregion
+
+    #region MONOBEHAVIOUR
+
+    void OnMouseDown()
+    {
+        Debug.Log("OnMouseDown " + this.gameObject.name);
+        onClickCallback?.Invoke(this);
+    }
+
+    private void OnDestroy()
+    {
+        onRemoveTile.RemoveAllListeners();
+    }
+
+    #endregion
+
+    #region RECALL FUNCTIONS
+
+    public bool isMatched()
+    {
+        return m_isMatched;
+    }
+
+    #endregion
+
+    #region FUNCTIONS
 
     public void SetData(Tile _tile, int _order, Action<TileCell> _callback)
     {
@@ -73,12 +101,6 @@ public class TileCell : MonoBehaviour
         TriggerEnable(!block);
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log("OnMouseDown " + this.gameObject.name);
-        onClickCallback?.Invoke(this);
-    }
-
     public void TriggerEnable(bool _enable)
     {
         boxCollider.enabled = _enable;
@@ -87,7 +109,7 @@ public class TileCell : MonoBehaviour
     public void BlockCellRemove()
     {
         blockCellCount -= 1;
-        if(blockCellCount <= 0)
+        if (blockCellCount <= 0)
         {
             TriggerEnable(true);
             m_BlockedImage.SetActive(false);
@@ -103,10 +125,13 @@ public class TileCell : MonoBehaviour
 
     public void OnMatch()
     {
-        //this.gameObject.SetActive(false);
-        m_MatchFeedbacks.PlayFeedbacks();
+        m_isMatched = true;
         onRemoveTile.RemoveAllListeners();
         onMatch?.Invoke();
+        Utilities.DelayedCall(0.25f, () =>
+        {
+            m_MatchFeedbacks.PlayFeedbacks();    
+        });
     }
 
     public void AddBlockCount()
@@ -114,17 +139,5 @@ public class TileCell : MonoBehaviour
         blockCellCount += 1;
     }
 
-    private void OnDestroy() 
-    {
-        onRemoveTile.RemoveAllListeners();
-    }
-
-    /*void OnDrawGizmos() 
-    {
-        if(tileSpriteRenderer.color == Color.white)
-        {
-            GUI.color = Color.red;
-            UnityEditor.Handles.Label(this.transform.position, Id.ToString());
-        }
-    }*/
+    #endregion
 }

@@ -17,19 +17,30 @@ namespace GameCore.UI
         public TextMeshProUGUI m_MatchSliderRateText;
         public Slider m_MatchSlider;
         public Slider m_WolrdAvarageSlider;
-        protected override void Awake()
+
+        protected override void OnEnable()
         {
-            base.Awake();
-        }
-        protected override void Start()
-        {
+            base.OnEnable();
             GameManager.Instance.onAppStart += Hide;
             GameManager.Instance.onLevelFail += Show;
             GameManager.Instance.onRestartLevel += Hide;
         }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.onAppStart -= Hide;
+                GameManager.Instance.onLevelFail -= Show;
+                GameManager.Instance.onRestartLevel -= Hide;
+            }
+        }
+
         public override void Show()
         {
             base.Show();
+            Debug.LogError("dsadasdas");
         }
         
     }

@@ -83,12 +83,13 @@ namespace GameCore.UI
 
         public void BtnTown()
         {
-            GameManager.Instance.StartPlay();
+            GameManager.Instance.StartPlay_Town();
         }
 
         public void BtnPlay()
         {
-            MainScreen.Instance.Hide();
+            GameManager.Instance.StartPlay_Puzzle();
+
             TownScreen.Instance.Hide();
             PuzzleScreen.Instance.Show();
         }

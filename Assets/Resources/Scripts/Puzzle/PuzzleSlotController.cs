@@ -75,13 +75,8 @@ public class PuzzleSlotController : SingletonComponent<PuzzleSlotController>
     {
         GetFirstEmptySlot().Filled(tileCell);
         tileCell.OnCollect();
-
         CheckMatch();
-
-        if (AllSlotsFull())
-        {
-            Debug.LogError("Puzzle game over!");
-        }
+        CheckWinLose();
     }
 
     #endregion
@@ -114,6 +109,24 @@ public class PuzzleSlotController : SingletonComponent<PuzzleSlotController>
                     tileCell.OnMatch();
             }
             tempTileList.Clear();
+        }
+    }
+
+    private void CheckWinLose()
+    {
+        if (AllSlotsFull())
+        {
+            Debug.LogError("Puzzle game over!");
+            GameManager.Instance.FailLevel();
+            return;
+        }
+
+        if (PuzzleController.Instance.GetIsSolved())
+        {
+            Debug.LogError("Puzzle solved!");
+            GameManager.Instance.IncreaseCurrency(CurrencyType.Hammer, 2);
+            GameManager.Instance.CompleteLevel();
+            return;
         }
     }
 

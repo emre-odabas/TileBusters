@@ -185,10 +185,19 @@ namespace GameCore.Managers
         {
             StartCoroutine(DOLevelLoop(GetCurrentLevel()));
         }
-        public void StartPlay()
+
+
+        public void StartPlay_Town()
         {
             m_IsPlayerAct = true;
         }
+
+        public void StartPlay_Puzzle()
+        {
+            m_IsPlayerAct = true;
+        }
+
+
         private IEnumerator DOLevelLoop(TownData townData)
         {
             Core.Logger.Log("Game Manager", "Level Loop Started");

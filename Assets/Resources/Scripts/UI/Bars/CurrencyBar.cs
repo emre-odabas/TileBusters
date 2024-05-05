@@ -91,7 +91,7 @@ namespace GameCore.UI
             }
         }
 
-        private void UpdateCurrency(bool animate)
+        public void UpdateCurrency(bool animate)
         {
             int currentCoin = int.Parse(m_CurrencyText.text);
             int targetCoin = GameManager.Instance.m_CurrencyData.GetCurrentCurrencyValue(m_CurrencyType);

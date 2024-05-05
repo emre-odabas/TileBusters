@@ -25,13 +25,14 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     //Components
     [FoldoutGroup("Components")]
     [FoldoutGroup("Components/Utilities"), SerializeField] private PuzzleLevelData m_PuzzleLevelData;
-    [FoldoutGroup("Components/Utilities"), SerializeField] private TileCell tileCellPrefab;
-    [FoldoutGroup("Components/Utilities"), SerializeField] private Transform tileInstantiateTrans;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private TileCell m_RefTileCell;
+    [FoldoutGroup("Components/Utilities"), SerializeField] private Transform m_TilesContainer;
 
     //Indicator
     //[FoldoutGroup("Indicator"), SerializeField, ReadOnly] private
 
     //Privates
+    private List<TileCell> m_TileCellList = new List<TileCell>();
 
     #endregion
 
@@ -187,14 +188,25 @@ public class PuzzleController : SingletonComponent<PuzzleController>
     /////////////////////////////////////////////
     
     //Return Functions
-    
+    public bool GetIsSolved()
+    {
+        for (int i = 0; i < m_TileCellList.Count; i++)
+        {
+            if (!m_TileCellList[i].isMatched())
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     //Functions
     void createTiles()
     {
         TileLayer[] tileLayers = m_PuzzleLevelData.TileLayers;
-        int tileWidth = (int)tileCellPrefab.GetComponent<RectTransform>().rect.width;
-        int tileHeight = (int)tileCellPrefab.GetComponent<RectTransform>().rect.height;
+        int tileWidth = (int)m_RefTileCell.GetComponent<RectTransform>().rect.width;
+        int tileHeight = (int)m_RefTileCell.GetComponent<RectTransform>().rect.height;
         float posX;
         float posY;
         Vector3 tilePos = Vector3.zero;
@@ -216,7 +228,7 @@ public class PuzzleController : SingletonComponent<PuzzleController>
                 posY = (tile.RowY - centerY) * (tileHeight + m_TilePlacementMargin.y);
                 tilePos.x = posX;
                 tilePos.y = posY;
-                TileCell newTileCell = Instantiate(tileCellPrefab, tileInstantiateTrans);
+                TileCell newTileCell = Instantiate(m_RefTileCell, m_TilesContainer);
                 newTileCell.transform.localPosition = tilePos;
                 newTileCell.SetData(tile, baseOrder + tile.RowY, onTileClick);
 
@@ -228,6 +240,7 @@ public class PuzzleController : SingletonComponent<PuzzleController>
 
                 newTileCell.SetCustomize(puzzleTileData);
                 tileCellPairs.Add((layerIndex, tile.RowY, tile.ColX), newTileCell);
+                m_TileCellList.Add(newTileCell);
             }
         }
 

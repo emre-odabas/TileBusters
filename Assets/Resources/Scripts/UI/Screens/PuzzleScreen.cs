@@ -41,6 +41,12 @@ namespace GameCore.UI
         {
             base.Show();
             m_Background.sprite = GameManager.Instance.m_CurrentTownData.m_Background;
+
+            //Temp
+            foreach (var item in GetComponentsInChildren<CurrencyBar>())
+            {
+                item.UpdateCurrency(false);
+            }
         }
 
         #endregion
