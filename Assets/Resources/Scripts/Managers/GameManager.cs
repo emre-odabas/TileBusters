@@ -125,6 +125,10 @@ namespace GameCore.Managers
         private IEnumerator DOInitialize()
         {
             m_SplashScreen.SetActive(true);
+            if (!m_IsDebug)
+            {
+                yield return new WaitForSeconds(4);
+            }
             while (DataManager.Instance.m_LoadState == DataManager.LoadState.Unloaded)
             {
                 yield return null;
