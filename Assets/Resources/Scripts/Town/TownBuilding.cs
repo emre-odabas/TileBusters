@@ -153,7 +153,7 @@ namespace GameCore.Gameplay
 
         private void CheckButtonToggle()
         {
-            bool value = (GameManager.Instance.m_State == GameManager.State.Playing && !isMaxLevel);
+            bool value = (GameManager.Instance.m_State == GameManager.State.PlayingTown && !isMaxLevel);
             ButtonToggle(value);
         }
 

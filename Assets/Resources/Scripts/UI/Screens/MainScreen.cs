@@ -36,7 +36,7 @@ namespace GameCore.UI
         {
             base.OnEnable();
             GameManager.Instance.onWaitPlayerAct += Show;
-            GameManager.Instance.onStartPlay += Hide;
+            GameManager.Instance.onStartPlayTown += Hide;
             //WalletManager.balanceChanged += OnCurrencyBalanceChanged;
         }
 
@@ -47,7 +47,7 @@ namespace GameCore.UI
             if(GameManager.Instance != null)
             {
                 GameManager.Instance.onWaitPlayerAct -= Show;
-                GameManager.Instance.onStartPlay -= Hide;
+                GameManager.Instance.onStartPlayTown -= Hide;
             }
             //WalletManager.balanceChanged -= OnCurrencyBalanceChanged;
         }

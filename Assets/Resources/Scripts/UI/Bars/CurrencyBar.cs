@@ -26,7 +26,7 @@ namespace GameCore.UI
         private void OnEnable()
         {
             GameManager.Instance.onLevelSetup += OnLevelSetup;
-            GameManager.Instance.onInGameCoinChange += OnCoinChange;
+            GameManager.Instance.onCoinChange += OnCoinChange;
         }
 
         private void OnDisable()
@@ -34,7 +34,7 @@ namespace GameCore.UI
             if(GameManager.Instance != null)
             {
                 GameManager.Instance.onLevelSetup -= OnLevelSetup;
-                GameManager.Instance.onInGameCoinChange -= OnCoinChange;
+                GameManager.Instance.onCoinChange -= OnCoinChange;
             }
         }
 

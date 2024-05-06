@@ -16878,14 +16878,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_State: 0
-  m_Levels: []
-  StartTownLevel: 1
+  m_DegubStartTownLevel: 1
   m_CurrentTownLevelIndex: 0
   m_CurrentTownData: {fileID: 0}
-  m_CurrentPlatform: {fileID: 0}
+  m_CurrentTownPlatform: {fileID: 0}
   m_IsPlayerAct: 0
   m_IsPlayerFirstAct: 1
-  m_IsDebug: 1
+  m_IsDebug: 0
   m_UICamera: {fileID: 1333086554}
   m_WinFeedback: {fileID: 0}
   m_FailFeedback: {fileID: 0}
