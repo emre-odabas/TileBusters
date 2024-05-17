@@ -34,6 +34,7 @@ namespace GameCore.Gameplay
         
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowButtonFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideButtonFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_FirstUpgradeFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_UpgradeFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_MaxUpgradeFeedbacks;
         
@@ -186,8 +187,22 @@ namespace GameCore.Gameplay
             isBusy = true;
             currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
             Customize();
-            
-            MMFeedbacks upgradeFeedbacks = isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
+
+            //MMFeedbacks upgradeFeedbacks = isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
+            MMFeedbacks upgradeFeedbacks;
+            if (currentLevel == 0)
+            {
+                upgradeFeedbacks = m_FirstUpgradeFeedbacks;
+            }
+            else if (isMaxLevel)
+            {
+                upgradeFeedbacks = m_MaxUpgradeFeedbacks;
+            }
+            else
+            {
+                upgradeFeedbacks = m_UpgradeFeedbacks;
+            }
+
             upgradeFeedbacks.PlayFeedbacks();
 
             SaveLevel();

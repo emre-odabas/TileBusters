@@ -62,49 +62,38 @@
   <ItemGroup>
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\01 Inventory Basics\InventoryBasics.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Component\ETCSetDirectActionTransform.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXRotation.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCBase.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\PaintingData.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEButtonScript.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCArea.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTwist.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCTouchPad.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXMouseOrbit.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoGhost.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXLightFade.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\InternalErrorException.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\SimpleExample.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCButton.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCDPad.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\HullData.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\UICanvasManager.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickDrag.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\FaceList.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXFireProjectile.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoButton.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\ECamera.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\04 Wallet\WalletSample.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\VertexList.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\PEDestoryTimed.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Face.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\00 Database And Assets (required for samples)\Animations\WaitAnimation.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouch.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\08 Store\PrefabTutorial.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\Finger.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickLongTap.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\ParticleEffectsShowcase\Scripts\ParticleEffectsLibrary.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QuickHull3DTest.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ComponentExtensions.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\Demos\MMFeedbacksDemo\Scripts\DemoBall.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\08 Store\StoreSample.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Point3d.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXSceneManager.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\BaseFinger.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Scripts\ETFXPitchRandomizer.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\SphereUtils.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCAxis.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\Plugins\ETCJoystick.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXLoopScript.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickSwipe.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\Vector3d.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\Gesture.cs" />
@@ -115,7 +104,6 @@
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickTouch.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\TwoFingerGesture.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\06 Data Persistence\DataPersistenceSample.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXButtonScript.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\Sphere.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\07 Transactions\TransactionsSample.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\QuickEnterOverExist.cs" />
@@ -127,15 +115,12 @@
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Engine\EasyTouchInput.cs" />
     <Compile Include="Assets\Plugins\Technie\PhysicsCreator\Scripts\QHull\QuickHull3D.cs" />
     <Compile Include="Assets\Plugins\GameFoundation\0.6.0-preview.2\05 Properties\PropertiesSample.cs" />
-    <Compile Include="Assets\Plugins\Epic Toon FX\Demo\Scripts\ETFXProjectileScript.cs" />
     <Compile Include="Assets\Plugins\EasyTouchBundle\EasyTouch\Plugins\Components\EasyTouchTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\EasyTouchBundle\Readme.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Environment\Environment FX.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Combat\Combat FX.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Reflection.Editor.dll" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Utilities.dll.backup.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -150,17 +135,17 @@
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Plugins\AssetKits\ParticleImage\Demo\Materials\Additive.shader" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\NoEditor\Sirenix.Serialization.dll" />
     <None Include="Assets\Plugins\MMFeedbacks\readme.txt" />
     <None Include="Assets\Plugins\CW\READ ME.txt" />
+    <None Include="Assets\Plugins\AssetKits\ParticleImage\Runtime\ParticleImage.dll" />
     <None Include="Assets\Plugins\CW\Third-Party Notices.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll" />
     <None Include="Assets\Plugins\MMFeedbacks\license.txt" />
-    <None Include="Assets\Plugins\Epic Toon FX\ETFX Readme.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Plugins\EasyTouchBundle\EasyTouchControls\ReleaseNotes.txt" />
-    <None Include="Assets\Plugins\Epic Toon FX\Prefabs\Interactive\Interactive FX.txt" />
     <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll" />
@@ -577,6 +562,10 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ParticleImage">
+      <HintPath>Assets\Plugins\AssetKits\ParticleImage\Runtime\ParticleImage.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

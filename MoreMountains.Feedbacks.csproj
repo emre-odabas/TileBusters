@@ -109,6 +109,7 @@
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Shakers\MMAudioFilterDistortionShaker.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedbacksInspectorColors.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Core\MMFeedbacks.cs" />
+    <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackParticleImages.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackRigidbody2D.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackLight.cs" />
     <Compile Include="Assets\Plugins\MMFeedbacks\MMFeedbacks\MMFeedbacks\Feedbacks\MMFeedbackInstantiateObject.cs" />
@@ -554,6 +555,18 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ParticleImageEditor">
+      <HintPath>Assets\Plugins\AssetKits\ParticleImage\Editor\ParticleImageEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ParticleImage">
+      <HintPath>Assets\Plugins\AssetKits\ParticleImage\Runtime\ParticleImage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JMOAssets">
+      <HintPath>Assets\Plugins\Fx\Fx\JMO Assets\Editor\JMOAssets.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

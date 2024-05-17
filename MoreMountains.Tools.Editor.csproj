@@ -548,6 +548,18 @@
       <HintPath>Library\PackageCache\com.unity.analytics@3.8.1\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ParticleImageEditor">
+      <HintPath>Assets\Plugins\AssetKits\ParticleImage\Editor\ParticleImageEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ParticleImage">
+      <HintPath>Assets\Plugins\AssetKits\ParticleImage\Runtime\ParticleImage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JMOAssets">
+      <HintPath>Assets\Plugins\Fx\Fx\JMO Assets\Editor\JMOAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
       <Private>False</Private>
