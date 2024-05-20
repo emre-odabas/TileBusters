@@ -332,6 +332,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: TownScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 727841210832135389, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407764843920200775, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849184263643044772, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7148745218017760050, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -355,6 +370,16 @@ PrefabInstance:
     - target: {fileID: 7148745218017760050, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626241957153922392, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9003502883700519880, guid: 3ecb76acb8da7614a9efef6ef4353bf5,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

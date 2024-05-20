@@ -131,11 +131,21 @@ namespace GameCore.Gameplay
             isMaxLevel = currentLevel == townBuildingProperty.m_UpgradeList.Count - 1;
 
             //Image
-            m_BuildingImage.enabled = currentLevel != -1;
-
+            /*m_BuildingImage.enabled = currentLevel != -1;
             if (m_BuildingImage.enabled)
+                m_BuildingImage.sprite = CurrentLevelProperty().m_Sprite;*/
+
+            //m_BuildingImage.rectTransform.localScale = Vector3.one * Math.Sign(currentLevel);
+
+            if (currentLevel == -1)
+            {
+                m_BuildingImage.rectTransform.localScale = Vector3.zero;
+            }
+            else
+            {
                 m_BuildingImage.sprite = CurrentLevelProperty().m_Sprite;
-            
+            }
+
             //Button
             for (int i = 0; i < buttonUpgradeTierList.Count; i++)
             {
@@ -186,7 +196,7 @@ namespace GameCore.Gameplay
             PayAndGiveReward();
             isBusy = true;
             currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
-            Customize();
+            //Customize();
 
             //MMFeedbacks upgradeFeedbacks = isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
             MMFeedbacks upgradeFeedbacks;
@@ -204,6 +214,11 @@ namespace GameCore.Gameplay
             }
 
             upgradeFeedbacks.PlayFeedbacks();
+
+            Utilities.DelayedCall(1, () =>
+            {
+                Customize();
+            });
 
             SaveLevel();
 
