@@ -196,9 +196,12 @@ namespace GameCore.Gameplay
                 return;
             }
 
-            PayAndGiveReward();
+            TownBuildingUpgradeProperty upgradeProperty = NextLevelProperty();
+            PayCost(upgradeProperty);
+
+            //PayAndGiveReward();
             isBusy = true;
-            currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
+            //currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
             //Customize();
 
             //MMFeedbacks upgradeFeedbacks = isMaxLevel ? m_MaxUpgradeFeedbacks : m_UpgradeFeedbacks;
@@ -220,21 +223,40 @@ namespace GameCore.Gameplay
 
             Utilities.DelayedCall(1, () =>
             {
+                GiveReward(upgradeProperty);
+                currentLevel = Mathf.Clamp(currentLevel + 1, 0, townBuildingProperty.m_UpgradeList.Count - 1);
                 Customize();
+                SaveLevel();
+                isBusy = false;
+                TownController.Instance.onBuildingUpgraded?.Invoke();
             });
-
-            SaveLevel();
-
-            /*Utilities.DelayedCall(upgradeFeedbacks.Feedbacks[0], () =>
-            {
-                m_isBusy = false;
-            });*/
-            isBusy = false;
-
-            TownController.Instance.onBuildingUpgraded?.Invoke();
         }
 
-        private void PayAndGiveReward()
+        private void PayCost(TownBuildingUpgradeProperty upgradeProperty)
+        {
+            if (upgradeProperty == null) return;
+
+            //Pay Cost
+            GameManager.Instance.DecreaseCurrency(upgradeProperty.m_CostType, upgradeProperty.m_CostAmount);
+        }
+
+        private void GiveReward(TownBuildingUpgradeProperty upgradeProperty)
+        {
+            if (upgradeProperty == null) return;
+
+            //Give Reward
+            if (upgradeProperty.m_GiveReward && upgradeProperty.m_RewardType != CurrencyType.None)
+            {
+                Image rewardImagee = TownScreen.Instance.GetBarImage(upgradeProperty.m_RewardType);
+                m_PfxComet.texture = rewardImagee.sprite.texture;
+                m_PfxComet.attractorTarget = rewardImagee.rectTransform;     
+                m_PfxComet.onLastParticleFinish.RemoveAllListeners();
+                m_PfxComet.onLastParticleFinish.AddListener(() => GameManager.Instance.IncreaseCurrency(upgradeProperty.m_RewardType, upgradeProperty.m_RewardAmount));
+                m_PfxComet.Play();
+            }
+        }
+
+        /*private void PayAndGiveReward()
         {
             TownBuildingUpgradeProperty nextUpgrade = NextLevelProperty();
             if (nextUpgrade != null)
@@ -254,7 +276,7 @@ namespace GameCore.Gameplay
                     m_PfxComet.Play();
                 }
             }
-        }
+        }*/
 
         public void SaveLevel()
         {
