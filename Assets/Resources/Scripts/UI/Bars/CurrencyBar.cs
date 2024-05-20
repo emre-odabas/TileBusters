@@ -15,9 +15,9 @@ namespace GameCore.UI
 
         //Components
         [FoldoutGroup("Components", expanded: true)]
-        [FoldoutGroup("Components/Utilities"), SerializeField] private CurrencyType m_CurrencyType = CurrencyType.Coin;
+        [FoldoutGroup("Components/Utilities"), SerializeField] public CurrencyType m_CurrencyType = CurrencyType.Coin;
         [FoldoutGroup("Components/Utilities"), SerializeField] private TextMeshProUGUI m_CurrencyText;
-        [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Image;
+        [FoldoutGroup("Components/Utilities"), SerializeField] public Image m_Image;
 
         //Privates
 

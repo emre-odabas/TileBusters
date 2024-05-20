@@ -2,6 +2,9 @@
 using GameCore.Core.UI;
 using GameCore.Managers;
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using System.Linq;
 
 namespace GameCore.UI
 {
@@ -10,7 +13,8 @@ namespace GameCore.UI
         [FoldoutGroup("Components")]
         [FoldoutGroup("Components/Utilities")] public Transform m_TownsPlaceholder;
         [FoldoutGroup("Components/Utilities")] public GameObject m_TempLevel;
-        
+        [FoldoutGroup("Components/Bars"), SerializeField] private List<CurrencyBar> m_CurrencyBarList = new List<CurrencyBar>();
+
         #region MonoBehaviour
         protected override void Awake()
         {
@@ -38,6 +42,22 @@ namespace GameCore.UI
             {
                 //GameManager.Instance.onAppStart -= Show;
             }
+        }
+
+        #endregion
+
+        #region RECALL FUNCTIONS
+
+        public Image GetBarImage(CurrencyType currencyType)
+        {
+            CurrencyBar bar = m_CurrencyBarList.FirstOrDefault(x => x.m_CurrencyType == currencyType);
+            if (bar == null)
+            {
+                Debug.LogError("Currency Bar not exist!");
+                return null; 
+            }
+
+            return bar.m_Image;
         }
 
         #endregion

@@ -9,6 +9,8 @@ using GameCore.Controllers;
 using System.Collections.Generic;
 using TMPro;
 using System.Linq;
+using AssetKits.ParticleImage;
+using GameCore.UI;
 
 namespace GameCore.Gameplay
 {
@@ -31,6 +33,7 @@ namespace GameCore.Gameplay
         [FoldoutGroup("Components/Button"), SerializeField] private GameObject m_RefButtonUpgradeTier;
         [FoldoutGroup("Components/Button"), SerializeField] private Image m_ButtonCurrencyImage;
         [FoldoutGroup("Components/Button"), SerializeField] private TextMeshProUGUI m_ButtonCurrencyText;
+        [FoldoutGroup("Components/FX"), SerializeField] private ParticleImage m_PfxComet;
         
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowButtonFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideButtonFeedbacks;
@@ -243,6 +246,12 @@ namespace GameCore.Gameplay
                 if (nextUpgrade.m_GiveReward && nextUpgrade.m_RewardType != CurrencyType.None)
                 {
                     GameManager.Instance.IncreaseCurrency(nextUpgrade.m_RewardType, nextUpgrade.m_RewardAmount);
+
+                    //Particle
+                    Image rewardImagee = TownScreen.Instance.GetBarImage(nextUpgrade.m_RewardType);
+                    m_PfxComet.texture = rewardImagee.sprite.texture;
+                    m_PfxComet.attractorTarget = rewardImagee.rectTransform;
+                    m_PfxComet.Play();
                 }
             }
         }
