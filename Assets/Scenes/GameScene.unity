@@ -17296,8 +17296,8 @@ MonoBehaviour:
   m_DelayOnStartPlay: 0
   m_DelayOnLevelSetup: 0.2
   m_DelayAfterLevelSetup: 0.2
-  m_DelayOnFinish: 0.5
-  m_DelayOnComplete: 4
+  m_DelayOnFinish: 1.5
+  m_DelayOnComplete: 2
   m_DelayOnFail: 1
   m_CurrencyData: {fileID: 11400000, guid: 440a642c42b6522458e2a40e37503680, type: 2}
   m_TileDataList: {fileID: 11400000, guid: 05741535cfd0b6a4ea0457e1f9f65eb2, type: 2}
