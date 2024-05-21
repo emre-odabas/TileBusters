@@ -478,7 +478,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_ConstantMin: 1
-    m_ConstantMax: 20
+    m_ConstantMax: 15
   _colorOverLifetime:
     m_Mode: 1
     m_GradientMin:
