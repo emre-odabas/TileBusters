@@ -1530,9 +1530,9 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.6860008
-        inSlope: -0.6860008
-        outSlope: -0.6860008
+        value: 0.5
+        inSlope: -0.5
+        outSlope: -0.5
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
@@ -1540,8 +1540,8 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: -0.6860008
-        outSlope: -0.6860008
+        inSlope: -0.5
+        outSlope: -0.5
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
@@ -1551,7 +1551,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_ConstantMin: 0
     m_ConstantMax: 1
-  _trailLifetime: 0.2
+  _trailLifetime: 0.5
   _minimumVertexDistance: 10
   _trailColorOverLifetime:
     m_Mode: 0
@@ -1616,7 +1616,7 @@ MonoBehaviour:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     m_ColorMin: {r: 0, g: 0, b: 0, a: 1}
-    m_ColorMax: {r: 1, g: 0.8219493, b: 0.0141509175, a: 0.48235294}
+    m_ColorMax: {r: 1, g: 0.82071716, b: 0, a: 0.5803922}
   _trailColorOverTrail:
     m_Mode: 1
     m_GradientMin:

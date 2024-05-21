@@ -42,7 +42,7 @@ namespace GameCore.Managers
         public UnityAction onLevelFail;
         public UnityAction onNextLevel;
         public UnityAction onRestartLevel;
-        public UnityAction<int> onCoinChange;
+        public UnityAction<int, CurrencyType, bool> onCurrencyChange;
         
         #endregion
 
@@ -342,7 +342,7 @@ namespace GameCore.Managers
             int increasedValue = currentValue + value;
 
             m_CurrencyData.SetCurrentCurrencyValue(currencyType, increasedValue);
-            onCoinChange?.Invoke(increasedValue);
+            onCurrencyChange?.Invoke(increasedValue, currencyType, true);
             DataManager.Instance.SaveGameData();
         }
 
@@ -352,14 +352,14 @@ namespace GameCore.Managers
             int decreasedValue = Mathf.Clamp(currentCoin - value, 0, 999999);
 
             m_CurrencyData.SetCurrentCurrencyValue(currencyType, decreasedValue);
-            onCoinChange?.Invoke(decreasedValue);
+            onCurrencyChange?.Invoke(decreasedValue, currencyType, false);
             DataManager.Instance.SaveGameData();
         }
 
         public void SetCurrency(CurrencyType currencyType, int value)
         {
             m_CurrencyData.SetCurrentCurrencyValue(currencyType, value);
-            onCoinChange?.Invoke(value);
+            onCurrencyChange?.Invoke(value, currencyType, false);
             DataManager.Instance.SaveGameData();
         }
 

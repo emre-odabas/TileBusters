@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab0879648acbf440a07d52e6b85d073, type: 3}
   m_Name: Town_1
   m_EditorClassIdentifier: 
-  m_TownName: New Town 1
-  m_Background: {fileID: 21300000, guid: e2ae1e5812e6303408e081e04bac92fc, type: 3}
+  m_TownName: 1. San Francisco
+  m_Background: {fileID: 21300000, guid: bc1b3262d7a56b6478803994c282b02f, type: 3}
   m_TownBuildingProperties:
   - m_Id: building_1
     m_UpgradeList:

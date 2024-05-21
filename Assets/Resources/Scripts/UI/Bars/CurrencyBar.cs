@@ -5,6 +5,7 @@ using GameCore.Managers;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using UnityEngine.GameFoundation;
+using MoreMountains.Feedbacks;
 
 namespace GameCore.UI
 {
@@ -18,6 +19,7 @@ namespace GameCore.UI
         [FoldoutGroup("Components/Utilities"), SerializeField] public CurrencyType m_CurrencyType = CurrencyType.Coin;
         [FoldoutGroup("Components/Utilities"), SerializeField] private TextMeshProUGUI m_CurrencyText;
         [FoldoutGroup("Components/Utilities"), SerializeField] public Image m_Image;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ValueChangedFeedbacks;
 
         //Privates
 
@@ -26,7 +28,7 @@ namespace GameCore.UI
         private void OnEnable()
         {
             GameManager.Instance.onLevelSetup += OnLevelSetup;
-            GameManager.Instance.onCoinChange += OnCoinChange;
+            GameManager.Instance.onCurrencyChange += OnCoinChange;
         }
 
         private void OnDisable()
@@ -34,7 +36,7 @@ namespace GameCore.UI
             if(GameManager.Instance != null)
             {
                 GameManager.Instance.onLevelSetup -= OnLevelSetup;
-                GameManager.Instance.onCoinChange -= OnCoinChange;
+                GameManager.Instance.onCurrencyChange -= OnCoinChange;
             }
         }
 
@@ -59,9 +61,14 @@ namespace GameCore.UI
             UpdateCurrency(false);
         }
 
-        void OnCoinChange(int _coin)
+        void OnCoinChange(int coin, CurrencyType currencyType, bool isIncrease)
         {
+            if (m_CurrencyType != currencyType) return;
+
             UpdateCurrency(true);
+
+            if (isIncrease)
+                m_ValueChangedFeedbacks.PlayFeedbacks();
         }
 
         #endregion
