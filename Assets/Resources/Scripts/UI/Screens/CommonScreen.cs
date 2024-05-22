@@ -30,11 +30,16 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
+            GameManager.Instance.onLevelReady += Show;
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.onLevelReady -= Show;
+            }
         }
 
         #endregion
@@ -60,12 +65,12 @@ namespace GameCore.UI
         public override void Show()
         {
             base.Show();
+
             m_Background.sprite = GameManager.Instance.m_CurrentTownData.m_Background;
 
-            //Temp
-            foreach (var item in GetComponentsInChildren<CurrencyBar>())
+            for(int i = 0; i < m_CurrencyBarList.Count; i++)
             {
-                item.UpdateCurrency(false);
+                m_CurrencyBarList[i].UpdateCurrency(false);
             }
         }
 

@@ -189,10 +189,6 @@ MonoBehaviour:
   m_Container: {fileID: 4040565750330155495}
   m_TownsPlaceholder: {fileID: 1133081787700229571}
   m_TempLevel: {fileID: 4982765791875410761}
-  m_CurrencyBarList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!224 &4040565750330155495 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2920054800485831862, guid: 957010284de38714e853ea1bebb9845f,
@@ -313,10 +309,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5858226168422368518, guid: b3e216151df25674ca30941e2d9b0880,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8150657440306648119, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: m_Name
       value: _BaseTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 8265080919660539242, guid: b3e216151df25674ca30941e2d9b0880,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8454017010526036617, guid: b3e216151df25674ca30941e2d9b0880,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
