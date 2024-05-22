@@ -20,4 +20,4 @@ MonoBehaviour:
   - m_CurrencyType: 2
     m_Sprite: {fileID: 21300000, guid: 9050d0e6316255f4fb91bcbe21e65c2a, type: 3}
   - m_CurrencyType: 3
-    m_Sprite: {fileID: 21300000, guid: 717ac17e6fa6abf488f4993beff141cc, type: 3}
+    m_Sprite: {fileID: 21300000, guid: e1f06caf90ce4ef4f8d4f5365e2c27b3, type: 3}
