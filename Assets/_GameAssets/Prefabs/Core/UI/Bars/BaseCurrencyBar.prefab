@@ -720,9 +720,9 @@ MonoBehaviour:
   targetIsSelf: 1
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
-  delay: 0
-  duration: 0.7
-  easeType: 30
+  delay: 0.5
+  duration: 0.25
+  easeType: 1
   easeCurve:
     serializedVersion: 2
     m_Curve:
@@ -763,7 +763,7 @@ MonoBehaviour:
   autoPlay: 0
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 200, y: 0, z: 0}
+  endValueV3: {x: 0, y: 200, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -2140,7 +2140,7 @@ MonoBehaviour:
   _bursts:
   - time: 0
     count: 50
-    used: 1
+    used: 0
   _trailRenderer: {fileID: 0}
   _trailModule:
     enabled: 0

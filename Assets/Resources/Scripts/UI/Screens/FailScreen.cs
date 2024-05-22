@@ -42,7 +42,16 @@ namespace GameCore.UI
             base.Show();
             Debug.LogError("dsadasdas");
         }
-        
+
+        #region BUTTONS
+
+        public void OnClickRestart()
+        {
+            GameManager.Instance.RestartLevel();
+        }
+
+        #endregion
+
     }
 
 }

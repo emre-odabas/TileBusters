@@ -111,5 +111,14 @@ namespace GameCore.UI
                 _coin.localScale = Vector3.zero;
             }
         }
+
+        #region BUTTONS
+
+        public void OnClickNext()
+        {
+            GameManager.Instance.NextLevel();
+        }
+
+        #endregion
     }
 }

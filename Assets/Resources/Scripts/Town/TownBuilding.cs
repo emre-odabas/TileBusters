@@ -247,7 +247,7 @@ namespace GameCore.Gameplay
             //Give Reward
             if (upgradeProperty.m_GiveReward && upgradeProperty.m_RewardType != CurrencyType.None)
             {
-                Image rewardImagee = TownScreen.Instance.GetBarImage(upgradeProperty.m_RewardType);
+                Image rewardImagee = CommonScreen.Instance.GetBarImage(upgradeProperty.m_RewardType);
                 m_PfxComet.texture = rewardImagee.sprite.texture;
                 m_PfxComet.attractorTarget = rewardImagee.rectTransform;     
                 m_PfxComet.onLastParticleFinish.RemoveAllListeners();

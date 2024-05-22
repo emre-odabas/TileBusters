@@ -97,6 +97,7 @@
     <Compile Include="Assets\Resources\Scripts\Feedbacks\MMFeedbackSound.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Data\TutorialStep.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\SingletonScriptableObject.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Screens\CommonScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\FailScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreButtonToggle.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselPaginationItem.cs" />
