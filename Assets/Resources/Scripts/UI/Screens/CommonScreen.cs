@@ -6,12 +6,15 @@ using UnityEngine.UI;
 using GameCore.Controllers;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 
 namespace GameCore.UI
 {
     public class CommonScreen : CoreScreen<CommonScreen>
     {
         [FoldoutGroup("Components")]
+        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtButtonTownTitle;
+        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtButtonPuzzleTitle;
         [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Background;
         [FoldoutGroup("Components/Bars"), SerializeField] private List<CurrencyBar> m_CurrencyBarList = new List<CurrencyBar>();
 
@@ -44,7 +47,7 @@ namespace GameCore.UI
 
         #endregion
 
-        #region RECALL FUNCTIONS
+        #region RETURN FUNCTIONS
 
         public Image GetBarImage(CurrencyType currencyType)
         {
@@ -66,12 +69,29 @@ namespace GameCore.UI
         {
             base.Show();
 
+            m_TxtButtonTownTitle.text = "Town " + (TownDataList.Instance.GetCurrentTownLevel()).ToString();
+            m_TxtButtonPuzzleTitle.text = "1";
+
             m_Background.sprite = TownDataList.Instance.GetCurrentTownData().m_Background;
 
             for(int i = 0; i < m_CurrencyBarList.Count; i++)
             {
                 m_CurrencyBarList[i].UpdateCurrency(false);
             }
+        }
+
+        #endregion
+
+        #region BUTTONS
+
+        public void BtnPlayTown()
+        {
+            GameManager.Instance.StartPlay_Town();
+        }
+
+        public void BtnPlayPuzzle()
+        {
+            GameManager.Instance.StartPlay_Puzzle();
         }
 
         #endregion

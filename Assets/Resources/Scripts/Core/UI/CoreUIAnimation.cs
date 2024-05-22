@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using GameCore.Managers;
 namespace GameCore.Core.UI
 {
     [RequireComponent(typeof(DOTweenAnimation))]
     [RequireComponent(typeof(DOTweenVisualManager))]
     public class CoreUIAnimation : MonoBehaviour
     {
+        //public GameManager.State m_TriggerState;
+        public List<string> m_ShowEvents = new List<string>();
+        public List<string> m_HideEvents = new List<string>();
+
         DOTweenAnimation[] m_DGAnimations;
         private void Awake()
         {
@@ -18,6 +23,8 @@ namespace GameCore.Core.UI
         private void OnEnable()
         {
             PlayAnimations();
+
+            Utilities.DelayedCall(7, ()=> RewindAnimations());
         }
 
         private void OnDisable()

@@ -54,6 +54,7 @@ namespace GameCore.Managers
         public UnityAction onWaitPlayerAct;
         public UnityAction onStartPlay;
         public UnityAction<int, CurrencyType, bool> onCurrencyChange;
+        public UnityAction onStateChange;
 
         //Town
         public UnityAction onStartPlayTown;
@@ -162,9 +163,8 @@ namespace GameCore.Managers
         {
             yield return new WaitForSeconds(m_DelayOnSplashScreen);
             m_SplashScreen.SetActive(false);
-            m_State = State.Home;
             onGameSetup?.Invoke();
-            yield return null;
+            GoHome();
         }
 
         private IEnumerator DOWaitPlayerAct()
@@ -358,9 +358,10 @@ namespace GameCore.Managers
 
         #region Level Loop Controls
 
-        public void BackHome()
+        public void GoHome()
         {
-
+            m_State = State.Home;
+            onStateChange?.Invoke();
         }
 
         //Town
@@ -368,6 +369,7 @@ namespace GameCore.Managers
         {
             m_IsPlayerAct = true;
             m_State = State.PlayingTown;
+            onStateChange?.Invoke();
         }
         public void TownComplete()
         {
@@ -382,6 +384,7 @@ namespace GameCore.Managers
         {
             m_IsPlayerAct = true;
             m_State = State.PlayingPuzzle;
+            onStateChange?.Invoke();
         }
         public void PuzzleComplete()
         {

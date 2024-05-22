@@ -10,39 +10,54 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
+      propertyPath: m_HideEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
       propertyPath: m_ShowEvents.Array.size
-      value: 3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_HideEvents.Array.data[0]
+      value: PlayingTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_HideEvents.Array.data[1]
+      value: PlayingPuzzle
       objectReference: {fileID: 0}
     - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: Home
       objectReference: {fileID: 0}
-    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
-        type: 3}
-      propertyPath: m_ShowEvents.Array.data[1]
-      value: PlayingTown
-      objectReference: {fileID: 0}
-    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
-        type: 3}
-      propertyPath: m_ShowEvents.Array.data[2]
-      value: PlayingPuzzle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943968450147032962, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
-        type: 3}
-      propertyPath: m_CurrencyType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5806639063355824859, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 261601a798d1c9a4cb3dc8a6aa8dd90c,
+      objectReference: {fileID: 21300000, guid: caae4ff82eb066049a3676b622e18deb,
         type: 3}
+    - target: {fileID: 5806639064320825082, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_text
+      value: FULL
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806639064320825082, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 48.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806639064320825082, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 48.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5806639064852420583, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
       propertyPath: m_Name
-      value: CurrencyBarCoin
+      value: CurrencyBarHeart
       objectReference: {fileID: 0}
     - target: {fileID: 5806639064852420584, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
@@ -114,12 +129,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7221295434063627883, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
-        type: 3}
-      propertyPath: _bursts.Array.data[0].used
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1943968450147032962, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

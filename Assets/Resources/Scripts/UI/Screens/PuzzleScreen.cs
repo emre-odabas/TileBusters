@@ -26,11 +26,16 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
+            GameManager.Instance.onStartPlayPuzzle += Show;
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.onStartPlayPuzzle -= Show;
+            }
         }
 
         #endregion
@@ -56,7 +61,7 @@ namespace GameCore.UI
 
         public void OnClickBack()
         {
-            GameManager.Instance.BackHome();
+            GameManager.Instance.GoHome();
         }
 
         #endregion

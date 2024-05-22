@@ -77,7 +77,7 @@ namespace GameCore.UI
         
         public void OnClickBack()
         {
-            GameManager.Instance.BackHome();
+            GameManager.Instance.GoHome();
         }
         
         #endregion

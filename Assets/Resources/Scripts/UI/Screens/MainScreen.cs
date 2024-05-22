@@ -6,17 +6,26 @@ using GameCore.Managers;
 using TMPro;
 using Sirenix.OdinInspector;
 using UnityEngine.GameFoundation;
+using UnityEngine.UI;
+using System.Linq;
 
 
 namespace GameCore.UI
 {
     public class MainScreen : CoreScreen<MainScreen>
     {
-        [FoldoutGroup("Components", expanded: true)]
-        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtTownTitle;
-        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtPuzzleTitle;
+        #region FIELDS
 
-        #region MonoBehavour
+        //Components
+        [FoldoutGroup("Components", expanded: true)]
+        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtButtonTownTitle;
+        [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtButtonPuzzleTitle;
+        [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Background;
+        [FoldoutGroup("Components/Bars"), SerializeField] private List<CurrencyBar> m_CurrencyBarList = new List<CurrencyBar>();
+
+        #endregion
+
+        #region MONOBEHAVIOUR
 
         protected override void Awake()
         {
@@ -35,9 +44,8 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onWaitPlayerAct += Show;
-            GameManager.Instance.onStartPlayTown += Hide;
-            //WalletManager.balanceChanged += OnCurrencyBalanceChanged;
+            GameManager.Instance.onGameSetup += Show;
+            //GameManager.Instance.onStartPlayTown += Hide;
         }
 
         protected override void OnDisable()
@@ -46,48 +54,62 @@ namespace GameCore.UI
             
             if(GameManager.Instance != null)
             {
-                GameManager.Instance.onWaitPlayerAct -= Show;
-                GameManager.Instance.onStartPlayTown -= Hide;
+                GameManager.Instance.onGameSetup -= Show;
+                //GameManager.Instance.onStartPlayTown -= Hide;
             }
-            //WalletManager.balanceChanged -= OnCurrencyBalanceChanged;
         }
 
         #endregion
 
-        #region Controls
+        #region OVERRIDES
 
         public override void Show()
         {
             base.Show();
-            
 
-            m_TxtTownTitle.text = "Town " + (TownDataList.Instance.GetCurrentTownLevel()).ToString();
-            m_TxtPuzzleTitle.text = "1";
-            //m_CoinBar.UpdateCoin((int)WalletManager.GetBalance(GameManager.Instance.m_CoinCurrency), false);
+            m_TxtButtonTownTitle.text = "Town " + (TownDataList.Instance.GetCurrentTownLevel()).ToString();
+            m_TxtButtonPuzzleTitle.text = "1";
+
+            m_Background.sprite = TownDataList.Instance.GetCurrentTownData().m_Background;
+
+            for (int i = 0; i < m_CurrencyBarList.Count; i++)
+            {
+                m_CurrencyBarList[i].UpdateCurrency(false);
+            }
         }
-        
+
         #endregion
 
-        #region Events
+        #region CALLBACK FUNCTIONS
 
-        /*private void OnCurrencyBalanceChanged(BalanceChangedEventArgs _args)
+
+
+        #endregion
+
+        #region RETURN FUNCTIONS
+
+        public Image GetBarImage(CurrencyType currencyType)
         {
-            Debug.Log("Balance Changed :" + _args.currency.key);
-            Debug.Log("Balance Changed :" + _args.newBalance);
-            if (_args.currency.key == GameManager.Instance.m_CoinCurrency.key)
-                m_CoinBar.UpdateCoin((int)_args.newBalance, false);
-        }*/
+            CurrencyBar bar = m_CurrencyBarList.FirstOrDefault(x => x.m_CurrencyType == currencyType);
+            if (bar == null)
+            {
+                Debug.LogError("Currency Bar not exist!");
+                return null;
+            }
+
+            return bar.m_Image;
+        }
 
         #endregion
 
-        #region Buttons
+        #region BUTTONS
 
-        public void BtnTown()
+        public void BtnPlayTown()
         {
             GameManager.Instance.StartPlay_Town();
         }
 
-        public void BtnPlay()
+        public void BtnPlayPuzzle()
         {
             GameManager.Instance.StartPlay_Puzzle();
 

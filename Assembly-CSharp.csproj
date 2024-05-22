@@ -95,6 +95,7 @@
     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Databases\ProjectSettings.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\Popup.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\PuzzleController.cs" />
+    <Compile Include="Assets\Resources\Scripts\Core\UI\UIElementController.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\SettingsManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Feedbacks\MMFeedbackSound.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Data\TutorialStep.cs" />

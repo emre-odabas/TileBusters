@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowEvents.Array.data[0]
+      value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowEvents.Array.data[1]
+      value: PlayingTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowEvents.Array.data[2]
+      value: PlayingPuzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 1943968450147032962, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
       propertyPath: m_CurrencyType
@@ -17,7 +37,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 717ac17e6fa6abf488f4993beff141cc,
+      objectReference: {fileID: 21300000, guid: e1f06caf90ce4ef4f8d4f5365e2c27b3,
         type: 3}
     - target: {fileID: 5806639064852420583, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
