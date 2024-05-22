@@ -10,6 +10,7 @@ using UnityEngine.GameFoundation;
 using UnityEngine.GameFoundation.DefaultLayers;
 using UnityEngine.GameFoundation.DefaultLayers.Persistence;
 using UnityEngine.Promise;
+
 namespace GameCore.Managers
 {
     public class DataManager : SingletonComponent<DataManager>
@@ -19,6 +20,7 @@ namespace GameCore.Managers
             Loaded = 1,
             Unloaded = 2
         }
+
         [ReadOnly]
         public LoadState m_LoadState = LoadState.Unloaded;
 
@@ -32,7 +34,9 @@ namespace GameCore.Managers
 
         public GameParameter m_PlayerData; 
         public GameParameter m_SettingsData; 
+
         #region MonoBehaviour
+
         protected override void Awake()
         {
             base.Awake();
@@ -48,13 +52,17 @@ namespace GameCore.Managers
             GameFoundation.Initialize(m_DataLayer, OnGameFoundationInitialized, Debug.LogError);
             LoadGameData();
         } 
+
         #endregion
+
         void OnGameFoundationInitialized()
         {
             m_PlayerData = GameFoundation.catalogs.gameParameterCatalog.FindItem("PlayerData");
             m_SettingsData = GameFoundation.catalogs.gameParameterCatalog.FindItem("SettingsData");
         }
+
         #region Save / Load / Initialize Games
+
         public void LoadGameData()
         {
             string filePath = Application.persistentDataPath + "/" + m_SavedGamesFileName;
@@ -78,6 +86,7 @@ namespace GameCore.Managers
             m_LoadState = LoadState.Loaded;
             onDataLoad?.Invoke(m_GameData);
         }
+
         public void SaveGameData()
         {
             string dataAsJson = JsonUtility.ToJson(m_GameData);
@@ -118,6 +127,7 @@ namespace GameCore.Managers
                 Debug.LogError($"Save failed! Error: {saveOperation.error}");
             }
         }
+
         #endregion
 
         private void OnTransactionSucceeded(BaseTransaction transaction, TransactionResult result)
@@ -129,11 +139,6 @@ namespace GameCore.Managers
         [Button]
         private void ResetLocalData()
         {
-            /*string jsonFile = Application.persistentDataPath + "/" + m_SavedGamesFileName;
-            File.Delete(jsonFile);
-            Debug.Log("Game Data Deleted: " + jsonFile);*/
-
-
             string rootFolder = Application.persistentDataPath;
             System.IO.DirectoryInfo di = new DirectoryInfo(rootFolder);
             foreach (FileInfo file in di.GetFiles())
@@ -149,7 +154,5 @@ namespace GameCore.Managers
 
             Debug.Log("Game Data Reset Successfull");
         }
-
     }
-
 }

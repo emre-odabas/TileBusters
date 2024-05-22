@@ -11,10 +11,11 @@ namespace GameCore.UI
     public class TownScreen : CoreScreen<TownScreen>
     {
         [FoldoutGroup("Components")]
-        [FoldoutGroup("Components/Utilities")] public Transform m_TownsPlaceholder;
-        [FoldoutGroup("Components/Utilities")] public GameObject m_TempLevel;
+        [FoldoutGroup("Components/Utilities"), SerializeField] private Transform m_TownsPlaceholder;
+        [FoldoutGroup("Components/Utilities"), SerializeField] private GameObject m_CurrentTownPlatform;
         
         #region MonoBehaviour
+
         protected override void Awake()
         {
             base.Awake();
@@ -28,10 +29,8 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onStartPlayTown += Show;
-
-            if(m_TempLevel != null)
-                Destroy(m_TempLevel);
+            GameManager.Instance.onAppStart += Show;
+            //GameManager.Instance.onNextLevel += InitTown;
         }
 
         protected override void OnDisable()
@@ -39,7 +38,8 @@ namespace GameCore.UI
             base.OnDisable();
             if(GameManager.Instance != null)
             {
-                GameManager.Instance.onStartPlayTown -= Show;
+                GameManager.Instance.onAppStart -= Show;
+                //GameManager.Instance.onNextLevel -= InitTown;
             }
         }
 
@@ -49,18 +49,25 @@ namespace GameCore.UI
 
         #endregion
 
-        #region Controls
+        #region OVERRIDES
 
         public override void Show()
         {
             base.Show();
+            InitTown();
         }
 
         #endregion
 
-        #region Events
+        #region FUNCTIONS
 
-        
+        private void InitTown()
+        {
+            if (m_CurrentTownPlatform != null)
+                Destroy(m_CurrentTownPlatform);
+
+            m_CurrentTownPlatform = Instantiate(TownDataList.Instance.GetCurrentTownData().m_Platform, m_TownsPlaceholder);
+        }
 
         #endregion
     }

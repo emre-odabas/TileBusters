@@ -22,7 +22,7 @@ namespace GameCore.Managers
             Failed = 5
         }
 
-        #region Events
+        #region EVENTS
 
         public UnityAction onAppStart;
         public UnityAction onLevelSetup;
@@ -42,15 +42,13 @@ namespace GameCore.Managers
         
         #endregion
 
-        #region Variables
+        #region FIELDS
         
         [ReadOnly] public State m_State = State.Awaiting;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
-        
-        #endregion
-        
         [FoldoutGroup("Components")] public Camera m_UICamera;
+        [FoldoutGroup("Components")] public GameObject m_SplashScreen;
         [FoldoutGroup("Feedbacks", expanded: true)] public MMFeedbacks m_WinFeedback;
         [FoldoutGroup("Feedbacks")] public MMFeedbacks m_FailFeedback;
         [FoldoutGroup("Loop Delay Settings", expanded: true)] public float m_DelayOnStartPlay = 0;
@@ -59,17 +57,15 @@ namespace GameCore.Managers
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFinish = 0;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnComplete = 0;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFail = 0;
-
         [FoldoutGroup("Database"), HideLabel] public CurrencyData m_CurrencyData;
         [FoldoutGroup("Database"), HideLabel] public PuzzleTileDataList m_TileDataList;
         [FoldoutGroup("Database"), HideLabel] public TownDataList m_TownDataList;
 
-        public GameObject m_SplashScreen;
-
         //Privates
-        private GameObject _currentTownPlatform;
 
-        #region MonoBehaviour
+        #endregion
+
+        #region MONOBEHAVIOUR
 
         protected override void Awake()
         {
@@ -95,7 +91,7 @@ namespace GameCore.Managers
 
         #endregion
 
-        #region Initialization
+        #region INIT
 
         private void Init()
         {
@@ -124,7 +120,7 @@ namespace GameCore.Managers
 
         #endregion
 
-        #region Level Loop
+        #region LOOP
 
         public void StartLevelLoop()
         {
@@ -169,19 +165,18 @@ namespace GameCore.Managers
             onLevelReady?.Invoke();
             m_SplashScreen.SetActive(false);
         }
+
         private IEnumerator DOClearCurrentLevel()
         {
-            //if (m_CurrentTownData != null)
-                //Destroy(m_CurrentTownData.m_Platform);
-
-            if (_currentTownPlatform != null)
-                Destroy(_currentTownPlatform); 
+            /*if (_currentTownPlatform != null)
+                Destroy(_currentTownPlatform); */
 
             yield return null;
         }
+
         private IEnumerator DOSetupLevel()
         {
-            _currentTownPlatform = Instantiate(TownDataList.Instance.GetCurrentTownData().m_Platform, TownScreen.Instance.m_TownsPlaceholder);
+            //_currentTownPlatform = Instantiate(TownDataList.Instance.GetCurrentTownData().m_Platform, TownScreen.Instance.m_TownsPlaceholder);
 
             m_IsPlayerFirstAct = true;
             yield return new WaitForSeconds(m_DelayOnLevelSetup);
@@ -189,6 +184,7 @@ namespace GameCore.Managers
             yield return new WaitForSeconds(m_DelayAfterLevelSetup);
             Core.Logger.Log("Game Manager", "On Level Generator Setup");
         }
+
         private IEnumerator DOSetupUI()
         {
             onUISetup?.Invoke();
@@ -241,7 +237,6 @@ namespace GameCore.Managers
                 m_WinFeedback.PlayFeedbacks();
             onLevelComplete?.Invoke();
             yield return new WaitForSeconds(m_DelayOnComplete);
-            //SaveCoin();
             DataManager.Instance.m_GameData.m_TownLocalData.m_TownLevel++;
             DataManager.Instance.SaveGameData();
         }
@@ -289,7 +284,7 @@ namespace GameCore.Managers
 
         #endregion
 
-        #region Currency
+        #region CURRENCY
 
         public void IncreaseCurrency(CurrencyType currencyType, int value)
         {

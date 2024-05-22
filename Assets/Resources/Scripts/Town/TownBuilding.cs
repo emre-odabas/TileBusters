@@ -252,9 +252,6 @@ namespace GameCore.Gameplay
                 m_PfxComet.attractorTarget = rewardImagee.rectTransform;     
                 m_PfxComet.onLastParticleFinish.RemoveAllListeners();
                 m_PfxComet.onLastParticleFinish.AddListener(() => GameManager.Instance.IncreaseCurrency(upgradeProperty.m_RewardType, upgradeProperty.m_RewardAmount));
-
-                m_PfxComet.onStart.RemoveAllListeners();
-                m_PfxComet.onStart.AddListener(() => Debug.LogError("Start fx"));
                 m_PfxComet.Play();
             }
         }
