@@ -113,7 +113,7 @@ namespace GameCore.Gameplay
             if (townBuildinglocalData == null) return;
 
             currentLevel = townBuildinglocalData.m_Level;
-            townBuildingProperty = GameManager.Instance.GetCurrentTownData().GetBuildingData(m_Id);
+            townBuildingProperty = TownDataList.Instance.GetCurrentTownData().GetBuildingData(m_Id);
 
             for (int i = 0; i < townBuildingProperty.m_UpgradeList.Count; i++)
             {

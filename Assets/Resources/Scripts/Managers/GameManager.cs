@@ -45,22 +45,8 @@ namespace GameCore.Managers
         #region Variables
         
         [ReadOnly] public State m_State = State.Awaiting;
-        [FoldoutGroup("Level"), SerializeField, Range(1, 100)] private int m_DegubStartTownLevel;
-        public int StartTownLevel
-        {
-            get
-            {
-                return m_DegubStartTownLevel - 1;
-            }
-            set
-            {
-                m_DegubStartTownLevel = value;
-            }
-        }
-        [FoldoutGroup("Level"), ReadOnly] public int m_CurrentTownLevelIndex = 0;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
-        [FoldoutGroup("Level")] public bool m_IsDebug = true;
         
         #endregion
         
@@ -132,20 +118,8 @@ namespace GameCore.Managers
             }
             Core.Logger.Log("Game Manager", "On Foundation Loaded");
             Core.Logger.Log("Game Manager", JsonUtility.ToJson(DataManager.Instance.m_DataLayer));
-            InitializeGame();
-            onInitialize?.Invoke();
-        }
-
-        private void InitializeGame()
-        {
-            GameData gameData = DataManager.Instance.m_GameData;
-
-            if (!m_IsDebug)
-                m_CurrentTownLevelIndex = gameData.m_TownLocalData.m_TownLevel;
-            else
-                m_CurrentTownLevelIndex = StartTownLevel;
-
             StartLevelLoop();
+            onInitialize?.Invoke();
         }
 
         #endregion
@@ -207,7 +181,7 @@ namespace GameCore.Managers
         }
         private IEnumerator DOSetupLevel()
         {
-            _currentTownPlatform = Instantiate(GetCurrentTownData().m_Platform, TownScreen.Instance.m_TownsPlaceholder);
+            _currentTownPlatform = Instantiate(TownDataList.Instance.GetCurrentTownData().m_Platform, TownScreen.Instance.m_TownsPlaceholder);
 
             m_IsPlayerFirstAct = true;
             yield return new WaitForSeconds(m_DelayOnLevelSetup);
@@ -301,7 +275,6 @@ namespace GameCore.Managers
 
         public void NextLevel()
         {
-            m_CurrentTownLevelIndex++;
             StartLevelLoop();
             onNextLevel?.Invoke();
         }
@@ -312,15 +285,6 @@ namespace GameCore.Managers
             onRestartLevel?.Invoke();
         }
 
-        public TownData GetCurrentTownData()
-        {
-            //We prevent it from giving an error when it reaches the last town.
-            if (m_CurrentTownLevelIndex > TownDataList.Instance.m_List.Count - 1)
-                return TownDataList.Instance.m_List[0];
-
-            return TownDataList.Instance.m_List[m_CurrentTownLevelIndex];
-        }
-        
         #endregion
 
         #endregion

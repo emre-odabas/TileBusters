@@ -60,7 +60,8 @@ namespace GameCore.UI
         {
             base.Show();
             
-            m_TxtTownTitle.text = "Town " + (GameManager.Instance.m_CurrentTownLevelIndex + 1).ToString();
+
+            m_TxtTownTitle.text = "Town " + (TownDataList.Instance.GetCurrentTownLevel()).ToString();
             m_TxtPuzzleTitle.text = "1";
             //m_CoinBar.UpdateCoin((int)WalletManager.GetBalance(GameManager.Instance.m_CoinCurrency), false);
         }

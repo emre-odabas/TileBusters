@@ -66,7 +66,7 @@ namespace GameCore.UI
         {
             base.Show();
 
-            m_Background.sprite = GameManager.Instance.GetCurrentTownData().m_Background;
+            m_Background.sprite = TownDataList.Instance.GetCurrentTownData().m_Background;
 
             for(int i = 0; i < m_CurrencyBarList.Count; i++)
             {

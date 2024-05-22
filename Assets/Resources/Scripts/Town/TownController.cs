@@ -126,7 +126,7 @@ namespace GameCore.Controllers
                 }
             }
 
-            m_BackgroundImage.sprite = GameManager.Instance.GetCurrentTownData().m_Background;
+            m_BackgroundImage.sprite = TownDataList.Instance.GetCurrentTownData().m_Background;
 
             for(int i = 0; i < m_Buildings.Count; i++)
             {

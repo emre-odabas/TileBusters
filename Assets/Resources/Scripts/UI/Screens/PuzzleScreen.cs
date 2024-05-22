@@ -40,7 +40,7 @@ namespace GameCore.UI
         public override void Show()
         {
             base.Show();
-            m_Background.sprite = GameManager.Instance.GetCurrentTownData().m_Background;
+            m_Background.sprite = TownDataList.Instance.GetCurrentTownData().m_Background;
 
             //Temp
             foreach (var item in GetComponentsInChildren<CurrencyBar>())
