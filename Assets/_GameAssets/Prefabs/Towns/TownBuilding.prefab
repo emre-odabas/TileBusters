@@ -548,7 +548,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
       m_ConstantMin: 0
-      m_ConstantMax: 100
+      m_ConstantMax: 150
     xCurve:
       m_Mode: 0
       m_CurveMultiplier: 0
@@ -1734,7 +1734,7 @@ MonoBehaviour:
   _bursts:
   - time: 0
     count: 1
-    used: 0
+    used: 1
   _trailRenderer: {fileID: 5104457840142420347}
   _trailModule:
     enabled: 1

@@ -12,7 +12,7 @@ namespace GameCore.UI
         [FoldoutGroup("Components")]
         [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Background; 
         
-        #region MonoBehaviour
+        #region MONOBEHAVIOUR
         protected override void Awake()
         {
             base.Awake();
@@ -35,7 +35,7 @@ namespace GameCore.UI
 
         #endregion
 
-        #region Controls
+        #region OVERRIDES
 
         public override void Show()
         {
@@ -51,9 +51,13 @@ namespace GameCore.UI
 
         #endregion
 
-        #region Events
 
-        
+        #region BUTTONS
+
+        public void OnClickBack()
+        {
+            GameManager.Instance.BackHome();
+        }
 
         #endregion
     }

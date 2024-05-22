@@ -358,6 +358,11 @@ namespace GameCore.Managers
 
         #region Level Loop Controls
 
+        public void BackHome()
+        {
+
+        }
+
         //Town
         public void StartPlay_Town()
         {

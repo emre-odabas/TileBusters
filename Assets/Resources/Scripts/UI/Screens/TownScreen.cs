@@ -72,5 +72,14 @@ namespace GameCore.UI
         }
 
         #endregion
+
+        #region BUTTONS
+        
+        public void OnClickBack()
+        {
+            GameManager.Instance.BackHome();
+        }
+        
+        #endregion
     }
 }
