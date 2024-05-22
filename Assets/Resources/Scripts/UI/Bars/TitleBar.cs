@@ -29,7 +29,7 @@ namespace GameCore.UI
 
         private void OnLevelSetup()
         {
-            m_TxtTitle.text = GameManager.Instance.m_CurrentTownData.m_TownName;
+            m_TxtTitle.text = GameManager.Instance.GetCurrentTownData().m_TownName;
         }
     }
 }

@@ -32,7 +32,7 @@ namespace GameCore.Editor
             {
                 //{"Towns", new TownListEditor(), EditorIcons.List},
                 {"ProjectSettings", ProjectSettings.Instance, EditorIcons.Globe},
-                {"Town DB", TownDB.Instance, EditorIcons.Globe}
+                {"Town DB", TownDataList.Instance, EditorIcons.Globe}
             };
             return tree;
         }

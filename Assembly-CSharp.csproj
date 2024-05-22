@@ -68,13 +68,13 @@
     <Compile Include="Assets\Resources\Scripts\UI\Buttons\SoundButtonToggle.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreButton.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Properties\TownBuildingUpgradeProperty.cs" />
-    <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Databases\TownDB.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\TownBuilding.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\Data\ScriptableObjects\PuzzleTileData.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\TileCell.cs" />
     <Compile Include="Assets\Resources\Scripts\Town\ButtonUpgradeTier.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\CurrencyData.cs" />
+    <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\Databases\TownDataList.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\TownScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\LevelManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\TileSlot.cs" />

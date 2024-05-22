@@ -10,7 +10,7 @@ namespace GameCore.Core
 	public class ProjectSettings : SingletonScriptableObject<ProjectSettings>
 	{
 		[FoldoutGroup("Paths", expanded: true), FolderPath]public string m_TownsPath;
-		[FoldoutGroup("Databases", expanded: true)] public TownDB m_TownDB;
+		[FoldoutGroup("Databases", expanded: true)] public TownDataList m_TownDB;
 		[FoldoutGroup("Object ShortCuts", expanded: true)] public GameObject m_GameObjectWithContainer;
 		[FoldoutGroup("Object ShortCuts")] public GameObject m_UIObjectWithContainer;
 		[FoldoutGroup("Object ShortCuts")] public GameObject m_UIObjectWithAnimatedContainer;

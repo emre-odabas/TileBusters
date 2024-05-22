@@ -16,7 +16,7 @@ namespace Hyperlab.Gameplay.Editor
         {
             //common tab
             m_TownName = "New Town";
-            m_BackgroundImage = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/_GameAssets/Sprites/Towns/Town_{(TownDB.Instance.m_List.Count + 1)}/town_{(TownDB.Instance.m_List.Count + 1)}_bg.jpg");
+            m_BackgroundImage = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/_GameAssets/Sprites/Towns/Town_{(TownDataList.Instance.m_List.Count + 1)}/town_{(TownDataList.Instance.m_List.Count + 1)}_bg.jpg");
             m_basePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(basePrefabPath + "/" + "_BaseTown.prefab");
 
             //building upgrades tab
@@ -30,7 +30,7 @@ namespace Hyperlab.Gameplay.Editor
                     TownBuildingUpgradeProperty upgradeProperty = new TownBuildingUpgradeProperty();
                     upgradeProperty.m_CostType = CurrencyType.Hammer;
                     upgradeProperty.m_CostAmount = 2;
-                    upgradeProperty.m_Sprite = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/_GameAssets/Sprites/Towns/Town_{TownDB.Instance.m_List.Count + 1}/Buildings/Building_{(i + 1)}/building_{(i + 1)}_level_{(j + 1)}.png");
+                    upgradeProperty.m_Sprite = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/_GameAssets/Sprites/Towns/Town_{TownDataList.Instance.m_List.Count + 1}/Buildings/Building_{(i + 1)}/building_{(i + 1)}_level_{(j + 1)}.png");
                     upgradeProperty.m_GiveReward = true;
                     upgradeProperty.m_RewardType = CurrencyType.Star;
                     upgradeProperty.m_RewardAmount = 1;

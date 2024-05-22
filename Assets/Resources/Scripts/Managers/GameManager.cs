@@ -5,11 +5,7 @@ using GameCore.Core;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
 using MoreMountains.Feedbacks;
-using UnityEngine.GameFoundation;
-using Currency = UnityEngine.GameFoundation.Currency;
-using HedgehogTeam.EasyTouch;
 using GameCore.UI;
-using UnityEngine.Serialization;
 using System;
 
 namespace GameCore.Managers
@@ -23,11 +19,11 @@ namespace GameCore.Managers
             PlayingTown = 2,
             Finished = 3,
             Completed = 4,
-            Failed = 5,
-            Paused = 6
+            Failed = 5
         }
 
         #region Events
+
         public UnityAction onAppStart;
         public UnityAction onLevelSetup;
         public UnityAction onUISetup;
@@ -62,8 +58,6 @@ namespace GameCore.Managers
             }
         }
         [FoldoutGroup("Level"), ReadOnly] public int m_CurrentTownLevelIndex = 0;
-        [FoldoutGroup("Level"), ReadOnly] public TownData m_CurrentTownData;
-        [FoldoutGroup("Level"), ReadOnly] public GameObject m_CurrentTownPlatform;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
         [FoldoutGroup("Level")] public bool m_IsDebug = true;
@@ -82,8 +76,12 @@ namespace GameCore.Managers
 
         [FoldoutGroup("Database"), HideLabel] public CurrencyData m_CurrencyData;
         [FoldoutGroup("Database"), HideLabel] public PuzzleTileDataList m_TileDataList;
+        [FoldoutGroup("Database"), HideLabel] public TownDataList m_TownDataList;
 
         public GameObject m_SplashScreen;
+
+        //Privates
+        private GameObject _currentTownPlatform;
 
         #region MonoBehaviour
 
@@ -134,15 +132,8 @@ namespace GameCore.Managers
             }
             Core.Logger.Log("Game Manager", "On Foundation Loaded");
             Core.Logger.Log("Game Manager", JsonUtility.ToJson(DataManager.Instance.m_DataLayer));
-            InitializeGameFoundation();
             InitializeGame();
             onInitialize?.Invoke();
-            
-        }
-
-        private void InitializeGameFoundation()
-        {
-
         }
 
         private void InitializeGame()
@@ -166,7 +157,6 @@ namespace GameCore.Managers
             StartCoroutine(DOLevelLoop());
         }
 
-
         public void StartPlay_Town()
         {
             m_IsPlayerAct = true;
@@ -176,7 +166,6 @@ namespace GameCore.Managers
         {
             m_IsPlayerAct = true;
         }
-
 
         private IEnumerator DOLevelLoop()
         {
@@ -211,19 +200,14 @@ namespace GameCore.Managers
             //if (m_CurrentTownData != null)
                 //Destroy(m_CurrentTownData.m_Platform);
 
-            if (m_CurrentTownPlatform != null)
-                Destroy(m_CurrentTownPlatform); 
+            if (_currentTownPlatform != null)
+                Destroy(_currentTownPlatform); 
 
             yield return null;
         }
         private IEnumerator DOSetupLevel()
         {
-            //m_CurrentTownData = ScriptableObject.CreateInstance<TownData>();
-            //Transform platform = GameScreen.Instance.m_TownsPlaceholder;
-            //m_CurrentTownData.m_Platform = Instantiate(townData.m_Platform, platform);
-
-            m_CurrentTownData = GetCurrentTownData().Clone<TownData>();
-            m_CurrentTownPlatform = Instantiate(m_CurrentTownData.m_Platform, TownScreen.Instance.m_TownsPlaceholder);
+            _currentTownPlatform = Instantiate(GetCurrentTownData().m_Platform, TownScreen.Instance.m_TownsPlaceholder);
 
             m_IsPlayerFirstAct = true;
             yield return new WaitForSeconds(m_DelayOnLevelSetup);
@@ -246,6 +230,7 @@ namespace GameCore.Managers
                 yield return null;
             }
         }
+
         /*private IEnumerator DOWaitFirstPlayerAct(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Wait Player First Act");
@@ -255,6 +240,7 @@ namespace GameCore.Managers
             }
             onPlayerFirstAct?.Invoke();
         }*/
+
         private IEnumerator DOStartPlay()
         {
             m_State = State.PlayingTown;
@@ -302,20 +288,24 @@ namespace GameCore.Managers
         {
             m_State = State.Failed;
         }
+
         public void FinishLevel()
         {
             m_State = State.Finished;
         }
+
         public void CompleteLevel()
         {
             m_State = State.Completed;
         }
+
         public void NextLevel()
         {
             m_CurrentTownLevelIndex++;
             StartLevelLoop();
             onNextLevel?.Invoke();
         }
+
         public void RestartLevel()
         {
             StartLevelLoop();
@@ -325,13 +315,14 @@ namespace GameCore.Managers
         public TownData GetCurrentTownData()
         {
             //We prevent it from giving an error when it reaches the last town.
-            if (m_CurrentTownLevelIndex > TownDB.Instance.m_List.Count - 1)
-                return TownDB.Instance.m_List[0];
+            if (m_CurrentTownLevelIndex > TownDataList.Instance.m_List.Count - 1)
+                return TownDataList.Instance.m_List[0];
 
-            return TownDB.Instance.m_List[m_CurrentTownLevelIndex];
+            return TownDataList.Instance.m_List[m_CurrentTownLevelIndex];
         }
         
         #endregion
+
         #endregion
 
         #region Currency

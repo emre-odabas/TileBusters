@@ -40,7 +40,6 @@ namespace GameCore.UI
         public override void Show()
         {
             base.Show();
-            Debug.LogError("dsadasdas");
         }
 
         #region BUTTONS
