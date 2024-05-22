@@ -192,7 +192,7 @@ namespace GameCore.Gameplay
             if (isMaxLevel) return;
             if (!IsAvailableCost()) 
             {
-                Debug.LogError("insufficient amount!!!!!!! Play Puzzle!");
+                GetHammerPopup.Instance.Show();
                 return;
             }
 

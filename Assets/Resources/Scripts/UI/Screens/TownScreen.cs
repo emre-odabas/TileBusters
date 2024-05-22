@@ -14,7 +14,7 @@ namespace GameCore.UI
         [FoldoutGroup("Components/Utilities"), SerializeField] private Transform m_TownsPlaceholder;
         [FoldoutGroup("Components/Utilities"), SerializeField] private GameObject m_CurrentTownPlatform;
         
-        #region MonoBehaviour
+        #region MONOBEHAVIOUR
 
         protected override void Awake()
         {
