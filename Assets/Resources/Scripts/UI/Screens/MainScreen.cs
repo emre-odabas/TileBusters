@@ -112,9 +112,11 @@ namespace GameCore.UI
         public void BtnPlayPuzzle()
         {
             GameManager.Instance.StartPlay_Puzzle();
+        }
 
-            TownScreen.Instance.Hide();
-            PuzzleScreen.Instance.Show();
+        public void OnClickBack()
+        {
+            GameManager.Instance.GoHome();
         }
 
         #endregion

@@ -27,34 +27,34 @@ public class UIElementController : MonoBehaviour
 
     private void Start()
     {
-        _isShowing = true;
-        OnStateChange();
+
     }
 
     private void OnEnable()
     {
+        _isShowing = true;
         GameManager.Instance.onStateChange += OnStateChange;
     }
     private void OnDisable()
     {
         if (GameManager.Instance == null) return;
-        GameManager.Instance.onStateChange += OnStateChange;
+        GameManager.Instance.onStateChange -= OnStateChange;
     }
 
     #endregion
 
     #region FUNCTIONS
 
-    private void Show()
+    private void Show(bool force = false)
     {
-        if (_isShowing) return;
+        if (!force && _isShowing) return;
         _isShowing = true;
         m_ShowFeedbacks.PlayFeedbacks();
     }
 
-    private void Hide()
+    private void Hide(bool force = false)
     {
-        if (!_isShowing) return;
+        if (!force && !_isShowing) return;
         _isShowing = false;
         m_HideFeedbacks.PlayFeedbacks();
     }

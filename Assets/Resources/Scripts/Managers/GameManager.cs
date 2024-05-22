@@ -169,8 +169,8 @@ namespace GameCore.Managers
 
         private IEnumerator DOWaitPlayerAct()
         {
-            onWaitPlayerAct?.Invoke();
             Core.Logger.Log("Game Manager", "On Wait Player Act");
+            onWaitPlayerAct?.Invoke();
             while (!m_IsPlayerAct)
             {
                 yield return null;
