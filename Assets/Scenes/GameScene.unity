@@ -16860,7 +16860,7 @@ MonoBehaviour:
   m_SplashScreen: {fileID: 1593423028}
   m_WinFeedback: {fileID: 0}
   m_FailFeedback: {fileID: 0}
-  m_DelayOnSplashScreen: 1.5
+  m_DelayOnSplashScreen: 0
   m_DelayOnStartPlay: 0
   m_DelayOnLevelSetup: 0.2
   m_CurrencyData: {fileID: 11400000, guid: 440a642c42b6522458e2a40e37503680, type: 2}

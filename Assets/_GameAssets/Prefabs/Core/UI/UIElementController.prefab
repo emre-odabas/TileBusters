@@ -526,6 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b58b0285da4ce4fbf8ded2b105a939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowEvents: []
+  m_ShowStates: 
   m_ShowFeedbacks: {fileID: 7478159758803543467}
   m_HideFeedbacks: {fileID: 1824540065409999178}

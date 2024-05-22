@@ -711,6 +711,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3462273283553582150, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
         type: 3}
+      propertyPath: Timing.InitialDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462273283553582150, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
+        type: 3}
       propertyPath: AnimatePositionTarget
       value: 
       objectReference: {fileID: 5922817647554680075}
@@ -721,8 +726,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4188644278338421523, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
         type: 3}
+      propertyPath: m_ShowStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188644278338421523, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
+        type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: PlayingTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188644278338421523, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5695602711287506423, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
         type: 3}

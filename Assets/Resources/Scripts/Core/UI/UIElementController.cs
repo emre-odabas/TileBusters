@@ -11,7 +11,7 @@ public class UIElementController : MonoBehaviour
     #region FIELDS
 
     //Parameters
-    [FoldoutGroup("Parameters"), SerializeField] private List<string> m_ShowEvents = new List<string>();
+    [FoldoutGroup("Parameters"), SerializeField] private List<GameManager.State> m_ShowStates = new List<GameManager.State>();
 
     //Components
     [FoldoutGroup("Components")]
@@ -27,7 +27,7 @@ public class UIElementController : MonoBehaviour
 
     private void Start()
     {
-
+        OnStateChange();
     }
 
     private void OnEnable()
@@ -65,7 +65,7 @@ public class UIElementController : MonoBehaviour
 
     private void OnStateChange()
     {
-        if (m_ShowEvents.Contains(GameManager.Instance.m_State.ToString()))
+        if (m_ShowStates.Contains(GameManager.Instance.m_State))
         {
             Show();
         }

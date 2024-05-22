@@ -15,6 +15,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
+      propertyPath: m_ShowStates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: Home
       objectReference: {fileID: 0}
@@ -27,6 +32,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShowEvents.Array.data[2]
       value: PlayingPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408338587785155102, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[2]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1943968450147032962, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
@@ -117,7 +137,7 @@ PrefabInstance:
     - target: {fileID: 7221295434063627883, guid: 8c420cb19bdb0c54a94c7b3d8fc5b6e1,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

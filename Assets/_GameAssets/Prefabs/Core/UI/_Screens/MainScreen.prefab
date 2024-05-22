@@ -730,6 +730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
+      propertyPath: m_ShowStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
       propertyPath: m_HideEvents.Array.data[0]
       value: Awaiting
       objectReference: {fileID: 0}
@@ -747,6 +752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -793,6 +803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameCore.UI.MainScreen, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396647781472344112, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 5900389099971089176, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
@@ -911,6 +926,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
+      propertyPath: m_ShowStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
       propertyPath: m_HideEvents.Array.data[0]
       value: Awaiting
       objectReference: {fileID: 0}
@@ -928,6 +948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: Home
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1594,8 +1619,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
+      propertyPath: m_ShowStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: PlayingPuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[0]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7662800363856160303, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
@@ -1868,8 +1903,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
+      propertyPath: m_ShowStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
       propertyPath: m_ShowEvents.Array.data[0]
       value: PlayingTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572250528194882863, guid: 28e936984767d3846a5fa23ea981e3dd,
+        type: 3}
+      propertyPath: m_ShowStates.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7662800363856160303, guid: 28e936984767d3846a5fa23ea981e3dd,
         type: 3}
