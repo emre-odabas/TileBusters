@@ -30,7 +30,7 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onLevelReady += Show;
+            GameManager.Instance.onGameSetup += Show;
         }
 
         protected override void OnDisable()
@@ -38,7 +38,7 @@ namespace GameCore.UI
             base.OnDisable();
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.onLevelReady -= Show;
+                GameManager.Instance.onGameSetup -= Show;
             }
         }
 

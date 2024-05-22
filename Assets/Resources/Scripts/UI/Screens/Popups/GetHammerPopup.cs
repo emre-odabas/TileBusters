@@ -3,7 +3,7 @@ using GameCore.Core.UI;
 
 namespace GameCore.UI
 {
-    public class GetHammerPopup : CoreScreen<GetHammerPopup>
+    public class GetHammerPopup : CoreScreen<GetHammerPopup>, IPopup
     {
         #region FIELDS
 

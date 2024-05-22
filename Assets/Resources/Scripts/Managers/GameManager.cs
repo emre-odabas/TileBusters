@@ -12,7 +12,7 @@ namespace GameCore.Managers
 {
     public class GameManager : SingletonComponent<GameManager>
     {
-        public enum State
+        /*public enum State
         {
             Awaiting = 0,
             SettingUp = 1,
@@ -20,11 +20,19 @@ namespace GameCore.Managers
             Finished = 3,
             Completed = 4,
             Failed = 5
+        }*/
+
+        public enum State
+        {
+            Awaiting = 0,
+            Home = 1,
+            PlayingTown = 2,
+            PlayingPuzzle = 3
         }
 
         #region EVENTS
 
-        public UnityAction onAppStart;
+        /*public UnityAction onAppStart;
         public UnityAction onLevelSetup;
         public UnityAction onUISetup;
         public UnityAction onLevelReady;
@@ -38,12 +46,28 @@ namespace GameCore.Managers
         public UnityAction onLevelFail;
         public UnityAction onNextLevel;
         public UnityAction onRestartLevel;
+        public UnityAction<int, CurrencyType, bool> onCurrencyChange;*/
+
+        public UnityAction onAppStart;
+        public UnityAction onGameSetup;
+        public UnityAction onInitialize;
+        public UnityAction onWaitPlayerAct;
+        public UnityAction onStartPlay;
         public UnityAction<int, CurrencyType, bool> onCurrencyChange;
-        
+
+        //Town
+        public UnityAction onStartPlayTown;
+        public UnityAction onTownComplete;
+
+        //Puzzle
+        public UnityAction onStartPlayPuzzle;
+        public UnityAction onPuzzleComplete;
+        public UnityAction onPuzzleFail;
+
         #endregion
 
         #region FIELDS
-        
+
         [ReadOnly] public State m_State = State.Awaiting;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
         [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
@@ -51,12 +75,13 @@ namespace GameCore.Managers
         [FoldoutGroup("Components")] public GameObject m_SplashScreen;
         [FoldoutGroup("Feedbacks", expanded: true)] public MMFeedbacks m_WinFeedback;
         [FoldoutGroup("Feedbacks")] public MMFeedbacks m_FailFeedback;
-        [FoldoutGroup("Loop Delay Settings", expanded: true)] public float m_DelayOnStartPlay = 0;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnSplashScreen = 1.5f;
+        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnStartPlay = 0;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnLevelSetup = 0;
-        [FoldoutGroup("Loop Delay Settings")] public float m_DelayAfterLevelSetup = 0;
-        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFinish = 0;
-        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnComplete = 0;
-        [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFail = 0;
+        //[FoldoutGroup("Loop Delay Settings")] public float m_DelayAfterLevelSetup = 0;
+        //[FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFinish = 0;
+        //[FoldoutGroup("Loop Delay Settings")] public float m_DelayOnComplete = 0;
+        //[FoldoutGroup("Loop Delay Settings")] public float m_DelayOnFail = 0;
         [FoldoutGroup("Database"), HideLabel] public CurrencyData m_CurrencyData;
         [FoldoutGroup("Database"), HideLabel] public PuzzleTileDataList m_TileDataList;
         [FoldoutGroup("Database"), HideLabel] public TownDataList m_TownDataList;
@@ -114,33 +139,88 @@ namespace GameCore.Managers
             }
             Core.Logger.Log("Game Manager", "On Foundation Loaded");
             Core.Logger.Log("Game Manager", JsonUtility.ToJson(DataManager.Instance.m_DataLayer));
-            StartLevelLoop();
+            StartCoroutine(DOGameLoop());
             onInitialize?.Invoke();
         }
 
         #endregion
 
-        #region LOOP
+        #region GAME LOOP
 
-        public void StartLevelLoop()
+        private IEnumerator DOGameLoop()
         {
-            StartCoroutine(DOLevelLoop());
+            Core.Logger.Log("Game Manager", "Game Loop Started");
+            yield return StartCoroutine(DOSetup());
+            if (!m_IsPlayerAct)
+                yield return StartCoroutine(DOWaitPlayerAct());
+
+            yield return StartCoroutine(DOStartPlay());
+            m_IsPlayerAct = false;
         }
 
-        public void StartPlay_Town()
+        private IEnumerator DOSetup()
         {
-            m_IsPlayerAct = true;
+            m_State = State.Home;
+            onGameSetup?.Invoke();
+            yield return new WaitForSeconds(m_DelayOnSplashScreen);
+            m_SplashScreen.SetActive(false);
+            yield return null;
         }
 
-        public void StartPlay_Puzzle()
+        private IEnumerator DOWaitPlayerAct()
         {
-            m_IsPlayerAct = true;
+            onWaitPlayerAct?.Invoke();
+            Core.Logger.Log("Game Manager", "On Wait Player Act");
+            while (!m_IsPlayerAct)
+            {
+                yield return null;
+            }
         }
 
-        private IEnumerator DOLevelLoop()
+        private IEnumerator DOStartPlay()
+        {
+            yield return new WaitForSeconds(m_DelayOnStartPlay);
+            onStartPlay?.Invoke();
+            Core.Logger.Log("Game Manager", "On Start Play");
+
+            if (m_State == State.PlayingTown)
+            { 
+                yield return StartCoroutine(DOPlayingTown()); 
+            }
+            else if (m_State == State.PlayingPuzzle)
+            {
+                yield return StartCoroutine(DOPlayingPuzzle());
+            }
+        }
+
+        private IEnumerator DOPlayingTown()
+        {
+            onStartPlayTown?.Invoke();
+            Core.Logger.Log("Game Manager", "On Start Play Town");
+            while (m_State == State.PlayingTown)
+            {
+                yield return null;
+            }
+            yield return null;
+        }
+
+        private IEnumerator DOPlayingPuzzle()
+        {
+            onStartPlayPuzzle?.Invoke();
+            Core.Logger.Log("Game Manager", "On Start Play Puzzle");
+            while (m_State == State.PlayingPuzzle)
+            {
+                yield return null;
+            }
+            yield return null;
+        }
+
+        #region _old
+
+        /*private IEnumerator DOLevelLoop()
         {
             Core.Logger.Log("Game Manager", "Level Loop Started");
-            yield return StartCoroutine(DOSetup());
+            //yield return StartCoroutine(DOSetup());
             if (!m_IsPlayerAct)
                 yield return StartCoroutine(DOWaitPlayerAct());
             //else
@@ -156,6 +236,27 @@ namespace GameCore.Managers
 
             m_IsPlayerAct = false;
         }
+
+        private IEnumerator DOLevelLoop()
+        {
+            Core.Logger.Log("Game Manager", "Level Loop Started");
+            //yield return StartCoroutine(DOSetup());
+            if (!m_IsPlayerAct)
+                yield return StartCoroutine(DOWaitPlayerAct());
+            //else
+            //    yield return StartCoroutine(DOWaitFirstPlayerAct(level));
+
+            yield return StartCoroutine(DOStartPlay());
+
+            yield return StartCoroutine(DOLevelFinish());
+            if (m_State == State.Completed)
+                yield return StartCoroutine(DOLevelComplete());
+            else if (m_State == State.Failed)
+                yield return StartCoroutine(DOLevelFail());
+
+            m_IsPlayerAct = false;
+        }
+
         private IEnumerator DOSetup()
         {
             m_State = State.SettingUp;
@@ -168,8 +269,8 @@ namespace GameCore.Managers
 
         private IEnumerator DOClearCurrentLevel()
         {
-            /*if (_currentTownPlatform != null)
-                Destroy(_currentTownPlatform); */
+            //if (_currentTownPlatform != null)
+                //Destroy(_currentTownPlatform);
 
             yield return null;
         }
@@ -191,6 +292,7 @@ namespace GameCore.Managers
             yield return null;
             Core.Logger.Log("Game Manager", "On UI Setup");
         }
+
         private IEnumerator DOWaitPlayerAct()
         {
             onWaitPlayerAct?.Invoke();
@@ -201,7 +303,7 @@ namespace GameCore.Managers
             }
         }
 
-        /*private IEnumerator DOWaitFirstPlayerAct(TownData townData)
+        private IEnumerator DOWaitFirstPlayerAct(TownData townData)
         {
             Core.Logger.Log("Game Manager", "On Wait Player First Act");
             while (m_IsPlayerFirstAct)
@@ -209,7 +311,7 @@ namespace GameCore.Managers
                 yield return null;
             }
             onPlayerFirstAct?.Invoke();
-        }*/
+        }
 
         private IEnumerator DOStartPlay()
         {
@@ -223,6 +325,7 @@ namespace GameCore.Managers
             }
             yield return null;
         }
+
         private IEnumerator DOLevelFinish()
         {
             Core.Logger.Log("Game Manager", "On Finish Game");
@@ -249,11 +352,45 @@ namespace GameCore.Managers
                 m_FailFeedback.PlayFeedbacks();
             onLevelFail?.Invoke();
             yield return null;
-        }
+        }*/
+
+        #endregion
 
         #region Level Loop Controls
 
-        public void FailLevel()
+        //Town
+        public void StartPlay_Town()
+        {
+            m_IsPlayerAct = true;
+            m_State = State.PlayingTown;
+        }
+        public void TownComplete()
+        {
+            Debug.LogError("Town Complete");
+            onTownComplete?.Invoke();
+            DataManager.Instance.m_GameData.m_TownLocalData.m_TownLevel++;
+            DataManager.Instance.SaveGameData();
+        }
+
+        //Puzzle
+        public void StartPlay_Puzzle()
+        {
+            m_IsPlayerAct = true;
+            m_State = State.PlayingPuzzle;
+        }
+        public void PuzzleComplete()
+        {
+            Debug.LogError("Puzzle Complete");
+            onPuzzleComplete?.Invoke();
+        }
+        public void PuzzleFail()
+        {
+            Debug.LogError("Puzzle Fail");
+            onPuzzleFail?.Invoke();
+        }
+
+        //
+        /*public void FailLevel()
         {
             m_State = State.Failed;
         }
@@ -278,7 +415,7 @@ namespace GameCore.Managers
         {
             StartLevelLoop();
             onRestartLevel?.Invoke();
-        }
+        }*/
 
         #endregion
 

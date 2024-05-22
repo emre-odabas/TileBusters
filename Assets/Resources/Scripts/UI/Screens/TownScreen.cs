@@ -24,12 +24,14 @@ namespace GameCore.UI
         protected override void Start()
         {
             base.Start();
+            InitTown();
         }
 
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onAppStart += Show;
+            GameManager.Instance.onGameSetup += InitTown;
+            //GameManager.Instance.onInitialize += Show;
             //GameManager.Instance.onNextLevel += InitTown;
         }
 
@@ -38,7 +40,8 @@ namespace GameCore.UI
             base.OnDisable();
             if(GameManager.Instance != null)
             {
-                GameManager.Instance.onAppStart -= Show;
+                GameManager.Instance.onGameSetup -= InitTown;
+                //GameManager.Instance.onInitialize -= Show;
                 //GameManager.Instance.onNextLevel -= InitTown;
             }
         }
@@ -54,7 +57,7 @@ namespace GameCore.UI
         public override void Show()
         {
             base.Show();
-            InitTown();
+            
         }
 
         #endregion

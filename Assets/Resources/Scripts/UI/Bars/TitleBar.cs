@@ -16,14 +16,14 @@ namespace GameCore.UI
         
         private void OnEnable()
         {
-            GameManager.Instance.onLevelSetup += OnLevelSetup;
+            GameManager.Instance.onGameSetup += OnLevelSetup;
         }
 
         private void OnDisable()
         {
             if(GameManager.Instance != null)
             {
-                GameManager.Instance.onLevelSetup -= OnLevelSetup;
+                GameManager.Instance.onGameSetup -= OnLevelSetup;
             }
         }
 

@@ -42,8 +42,8 @@ namespace GameCore.Controllers
 
         private void OnEnable()
         {
-            GameManager.Instance.onLevelSetup += OnLevelSetup;
-            GameManager.Instance.onLevelComplete += OnLevelComplete;
+            //GameManager.Instance.onGameSetup += OnLevelSetup;
+            GameManager.Instance.onTownComplete += OnTownComplete;
             onBuildingUpgraded += OnBuildingUpgraded;
         }
         
@@ -51,8 +51,8 @@ namespace GameCore.Controllers
         {
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.onLevelSetup -= OnLevelSetup;
-                GameManager.Instance.onLevelComplete -= OnLevelComplete;
+                //GameManager.Instance.onGameSetup -= OnLevelSetup;
+                GameManager.Instance.onTownComplete -= OnTownComplete;
             }
             onBuildingUpgraded -= OnBuildingUpgraded;
         }
@@ -60,18 +60,20 @@ namespace GameCore.Controllers
         private void Start()
         {
             m_Buildings = GetComponentsInChildren<TownBuilding>().ToList();
+
+            Setup();
         }
 
         #endregion
 
         #region CALLBACKS
 
-        private void OnLevelSetup()
+        /*private void OnLevelSetup()
         {
             Setup();
-        }
+        }*/
 
-        private void OnLevelComplete()
+        private void OnTownComplete()
         {
             DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.Clear();
         }
@@ -80,7 +82,7 @@ namespace GameCore.Controllers
         {
             if (IsAllBuildingsMaxLevel())
             {
-                GameManager.Instance.CompleteLevel();
+                GameManager.Instance.TownComplete();
             }
         }
 

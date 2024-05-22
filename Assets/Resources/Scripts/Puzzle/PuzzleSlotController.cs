@@ -117,7 +117,7 @@ public class PuzzleSlotController : SingletonComponent<PuzzleSlotController>
         if (AllSlotsFull())
         {
             Debug.LogError("Puzzle game over!");
-            GameManager.Instance.FailLevel();
+            GameManager.Instance.PuzzleFail();
             return;
         }
 
@@ -125,7 +125,7 @@ public class PuzzleSlotController : SingletonComponent<PuzzleSlotController>
         {
             Debug.LogError("Puzzle solved!");
             GameManager.Instance.IncreaseCurrency(CurrencyType.Hammer, 2);
-            GameManager.Instance.CompleteLevel();
+            GameManager.Instance.PuzzleComplete();
             return;
         }
     }
