@@ -61,7 +61,8 @@ namespace GameCore.Controllers
         {
             m_Buildings = GetComponentsInChildren<TownBuilding>().ToList();
 
-            Setup();
+            if (gameObject.name != "_BaseTown")
+                Setup();
         }
 
         #endregion
@@ -124,7 +125,13 @@ namespace GameCore.Controllers
                 {
                     string id = m_Buildings[i].m_Id;
                     int level = -1;
-                    DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.Add(new TownBuildingLocalData() { m_Id = id, m_Level = level });
+                    DataManager.Instance.m_GameData.m_TownLocalData.m_TownBuildingLevels.Add(
+                        new TownBuildingLocalData() 
+                        { 
+                            m_Id = id, 
+                            m_Level = level 
+                        }
+                    );
                 }
             }
 

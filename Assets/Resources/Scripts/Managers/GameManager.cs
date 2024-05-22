@@ -139,8 +139,8 @@ namespace GameCore.Managers
             }
             Core.Logger.Log("Game Manager", "On Foundation Loaded");
             Core.Logger.Log("Game Manager", JsonUtility.ToJson(DataManager.Instance.m_DataLayer));
-            StartCoroutine(DOGameLoop());
             onInitialize?.Invoke();
+            StartCoroutine(DOGameLoop());
         }
 
         #endregion
@@ -160,10 +160,10 @@ namespace GameCore.Managers
 
         private IEnumerator DOSetup()
         {
-            m_State = State.Home;
-            onGameSetup?.Invoke();
             yield return new WaitForSeconds(m_DelayOnSplashScreen);
             m_SplashScreen.SetActive(false);
+            m_State = State.Home;
+            onGameSetup?.Invoke();
             yield return null;
         }
 

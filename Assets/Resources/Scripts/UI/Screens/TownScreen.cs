@@ -24,7 +24,6 @@ namespace GameCore.UI
         protected override void Start()
         {
             base.Start();
-            InitTown();
         }
 
         protected override void OnEnable()
