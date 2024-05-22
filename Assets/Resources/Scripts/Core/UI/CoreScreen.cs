@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using Sirenix.OdinInspector;
+using MoreMountains.Feedbacks;
 namespace GameCore.Core.UI
 {
     public class CoreScreen<T> : SingletonComponent<T> where T: Object
@@ -12,9 +13,12 @@ namespace GameCore.Core.UI
             Shown = 0, 
             Hidden = 1 
         };
+
         public State m_State = State.Hidden;
-        [FoldoutGroup("Components", expanded:true)]
-        public RectTransform m_Container;
+
+        [FoldoutGroup("Components")] public RectTransform m_Container;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideFeedbacks;
 
         protected virtual new void Awake()
         {
@@ -39,12 +43,12 @@ namespace GameCore.Core.UI
         public virtual void Show()
         {
             m_State = State.Shown;
-            m_Container.gameObject.SetActive(true);
+            m_ShowFeedbacks.PlayFeedbacks();
         }
         public virtual void Hide()
         {
             m_State = State.Hidden;
-            m_Container.gameObject.SetActive(false);
+            m_HideFeedbacks.PlayFeedbacks();
         }
     }
 }

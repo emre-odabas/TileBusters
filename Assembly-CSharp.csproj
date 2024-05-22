@@ -99,11 +99,9 @@
     <Compile Include="Assets\Resources\Scripts\Core\Data\TutorialStep.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\CommonScreen.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\Screens\FailScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreButtonToggle.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreCarouselPaginationItem.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\MainScreen.cs" />
-    <Compile Include="Assets\Resources\Scripts\UI\Screens\SuccessScreen.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Bars\TitleBar.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\Data\ScriptableObjects\PuzzleTileDataList.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\ScriptablesObjects\TownData.cs" />
