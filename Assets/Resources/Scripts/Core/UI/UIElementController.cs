@@ -1,3 +1,4 @@
+using GameCore.Core;
 using GameCore.Managers;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
@@ -27,13 +28,22 @@ public class UIElementController : MonoBehaviour
 
     private void Start()
     {
-        OnStateChange();
+        _isShowing = true;
+
+        Utilities.DelayedCall(0.1f, () =>
+        {
+            OnStateChange();
+        });
+
+        Utilities.DelayedCall(0.5f, () =>
+        {
+            GameManager.Instance.onStateChange += OnStateChange;
+        });
     }
 
     private void OnEnable()
     {
-        _isShowing = true;
-        GameManager.Instance.onStateChange += OnStateChange;
+        
     }
     private void OnDisable()
     {

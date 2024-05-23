@@ -64,8 +64,8 @@
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\Logger.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreUIAnimation.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\DataManager.cs" />
-    <Compile Include="Assets\Resources\Scripts\Puzzle\PuzzleSlotController.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\Popups\GetHammerPopup.cs" />
+    <Compile Include="Assets\Resources\Scripts\Puzzle\PuzzleSlotController.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Buttons\SoundButtonToggle.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreButton.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Properties\TownBuildingUpgradeProperty.cs" />

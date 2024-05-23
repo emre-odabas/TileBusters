@@ -711,11 +711,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3462273283553582150, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
         type: 3}
-      propertyPath: Timing.InitialDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3462273283553582150, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
-        type: 3}
       propertyPath: AnimatePositionTarget
       value: 
       objectReference: {fileID: 5922817647554680075}
