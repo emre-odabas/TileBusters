@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class ButtonSettings : MonoBehaviour
@@ -28,15 +27,15 @@ public class ButtonSettings : MonoBehaviour
     public virtual void Show()
     {
         m_State = State.Shown;
-        DOVirtual.Float(m_HiddenHeight, m_ShownHeight, 0.2f,(y)=>{
+        /*DOVirtual.Float(m_HiddenHeight, m_ShownHeight, 0.2f,(y)=>{
             m_Container.sizeDelta = new Vector2(m_Container.sizeDelta.x, y);
-        });
+        });*/
     }
     public virtual void Hide()
     {
         m_State = State.Hidden;
-        DOVirtual.Float(m_ShownHeight, m_HiddenHeight, 0.2f, (y) => {
+        /*DOVirtual.Float(m_ShownHeight, m_HiddenHeight, 0.2f, (y) => {
             m_Container.sizeDelta = new Vector2(m_Container.sizeDelta.x, y);
-        });
+        });*/
     }
 }

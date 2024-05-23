@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using TMPro;
-using DG.Tweening;
 using GameCore.Managers;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
@@ -87,10 +86,11 @@ namespace GameCore.UI
         {
             if (animate)
             {
-                DOVirtual.Float(currentCoin, targetCoin, m_UpdateDuration, (x) =>
+                /*DOVirtual.Float(currentCoin, targetCoin, m_UpdateDuration, (x) =>
                 {
                     m_CurrencyText.text = Mathf.RoundToInt(x).ToString();
-                });
+                });*/
+                m_CurrencyText.text = targetCoin.ToString();
             }
             else
             {

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using DG.Tweening;
 namespace MoreMountains.Feedbacks
 {
  
@@ -203,12 +202,12 @@ namespace MoreMountains.Feedbacks
                 GameObject temporaryAudioHost = new GameObject("TempAudio");
                 // we set the temp audio's position
                 temporaryAudioHost.transform.position = position;
-                DOVirtual.Float(1, 0, FadeDurationOnStop, (x) =>
+                /*DOVirtual.Float(1, 0, FadeDurationOnStop, (x) =>
                 {
                     temporaryAudioHost.GetComponent<AudioSource>().volume = x;
                 }).OnComplete(()=> {
                     Destroy(temporaryAudioHost);
-                });
+                });*/
             }
 
             if (PlayMethod == PlayMethods.Cached)
@@ -241,12 +240,12 @@ namespace MoreMountains.Feedbacks
         }
         protected virtual void StopAudioSource(AudioSource audioSource)
         {
-            DOVirtual.Float(1, 0, FadeDurationOnStop, (x) =>
+            /*DOVirtual.Float(1, 0, FadeDurationOnStop, (x) =>
             {
                 audioSource.volume = x;
             }).OnComplete(() => {
                 audioSource.Stop();
-            });
+            });*/
             
         }
 
