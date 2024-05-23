@@ -8,6 +8,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using GameCore.Core;
+using GameCore.Managers;
 
 public class PuzzleController : SingletonComponent<PuzzleController>
 {
@@ -36,18 +37,21 @@ public class PuzzleController : SingletonComponent<PuzzleController>
 
     #endregion
 
-    private void Awake()
-    {
-        //setTileCollector();
-    }
-
     private void Start() 
     {
         //collectedTiles = new TileCell[PuzzleSlotController.Instance.SlotCount()];
-        if (m_PuzzleLevelData != null && m_PuzzleLevelData.TileLayers != null)
+        /*if (m_PuzzleLevelData != null && m_PuzzleLevelData.TileLayers != null)
         {
            createTiles();
-        }    
+        }*/  
+    }
+
+    public void SetupPuzzle()
+    {
+        if (m_PuzzleLevelData != null && m_PuzzleLevelData.TileLayers != null)
+        {
+            createTiles();
+        }
     }
 
     private void setTilesCellData(Dictionary<(int, int, int), TileCell> _tileCellPairs)
@@ -111,19 +115,6 @@ public class PuzzleController : SingletonComponent<PuzzleController>
         _downCell.AddBlockCount();
         _upCell.onRemoveTile.AddListener(_downCell.BlockCellRemove);
     }
-
-    /*void setTileCollector()
-    {
-        var tileSpacingX = tileCollectorSpriteRenderer.sprite.bounds.extents.x * 2;
-        var collectorVect = tileCollectorSpriteRenderer.transform.localPosition;
-        int middleNum = 3;
-
-        for(ushort index = 0; index < collectVects.Length; index++)
-        {
-            float x = collectorVect.x + (index - middleNum) * tileSpacingX;
-            collectVects[index] = new Vector3(x ,collectorVect.y, collectorVect.z);
-        }
-    }*/
 
     void onTileClick(TileCell _cell)
     {
@@ -202,8 +193,19 @@ public class PuzzleController : SingletonComponent<PuzzleController>
 
 
     //Functions
-    void createTiles()
+
+    private void ClearTiles()
     {
+        for(int i = 0; i < m_TileCellList.Count; i++)
+        {
+            Destroy(m_TileCellList[i].gameObject);
+        }
+        m_TileCellList.Clear();
+    }
+
+    private void createTiles()
+    {
+        ClearTiles();
         TileLayer[] tileLayers = m_PuzzleLevelData.TileLayers;
         int tileWidth = (int)m_RefTileCell.GetComponent<RectTransform>().rect.width;
         int tileHeight = (int)m_RefTileCell.GetComponent<RectTransform>().rect.height;

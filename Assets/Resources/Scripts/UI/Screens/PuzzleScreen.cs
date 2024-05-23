@@ -11,7 +11,7 @@ namespace GameCore.UI
     public class PuzzleScreen : CoreScreen<PuzzleScreen>
     {
         //[FoldoutGroup("Components")]
-        //[FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Background; 
+        [FoldoutGroup("Components/Utilities"), SerializeField] private PuzzleController m_PuzzleController;
         
         #region MONOBEHAVIOUR
 
@@ -48,6 +48,7 @@ namespace GameCore.UI
         {
             base.Show();
             //m_Background.sprite = TownDataList.Instance.GetCurrentTownData().m_Background;
+            m_PuzzleController.SetupPuzzle();
         }
 
         #endregion
