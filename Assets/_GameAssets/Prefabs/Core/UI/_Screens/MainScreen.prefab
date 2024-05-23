@@ -312,7 +312,7 @@ PrefabInstance:
     - target: {fileID: 3499575741831725669, guid: 5d3de83606f830f40a69a7343d113c18,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4278910206807275316, guid: 5d3de83606f830f40a69a7343d113c18,
         type: 3}
@@ -1142,6 +1142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CurrencyBarHeart
       objectReference: {fileID: 0}
+    - target: {fileID: 3499575741831725669, guid: 737b8d0a4b638db449c07d3668f75c0f,
+        type: 3}
+      propertyPath: _bursts.Array.data[0].used
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4278910206807275316, guid: 737b8d0a4b638db449c07d3668f75c0f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1284,7 +1289,7 @@ PrefabInstance:
     - target: {fileID: 3499575741831725669, guid: bb352850320f83c43b597ccfabfa681d,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4278910206807275316, guid: bb352850320f83c43b597ccfabfa681d,
         type: 3}
@@ -1440,7 +1445,7 @@ PrefabInstance:
     - target: {fileID: 3499575741831725669, guid: e104fb27ef3e0134aa97b583765e1151,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4278910206807275316, guid: e104fb27ef3e0134aa97b583765e1151,
         type: 3}
@@ -1720,7 +1725,7 @@ PrefabInstance:
     - target: {fileID: 2857402277236314643, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2928991651431040811, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
@@ -1870,7 +1875,7 @@ PrefabInstance:
     - target: {fileID: 5858226168422368518, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127851538280955566, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
@@ -1880,7 +1885,7 @@ PrefabInstance:
     - target: {fileID: 6487671494097824662, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7136001641708273088, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
@@ -1910,12 +1915,12 @@ PrefabInstance:
     - target: {fileID: 8265080919660539242, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8454017010526036617, guid: b3e216151df25674ca30941e2d9b0880,
         type: 3}
       propertyPath: _bursts.Array.data[0].used
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1946,6 +1951,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TitleBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922817648944886776, guid: 98cf5f3046a4b9148a795dc9fd5e4081,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5922817648944886777, guid: 98cf5f3046a4b9148a795dc9fd5e4081,
         type: 3}

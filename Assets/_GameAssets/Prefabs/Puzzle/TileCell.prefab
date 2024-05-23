@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 3206587348833610185}
   - component: {fileID: 5647389830243197189}
   - component: {fileID: 7001881646783218506}
-  - component: {fileID: 1718746840088049268}
+  - component: {fileID: 635627251118612115}
   m_Layer: 5
   m_Name: MatchFeedbacks
   m_TagString: Untagged
@@ -209,8 +209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feedbacks:
   - {fileID: 5647389830243197189}
+  - {fileID: 635627251118612115}
   - {fileID: 7001881646783218506}
-  - {fileID: 1718746840088049268}
   InitializationMode: 2
   SafeMode: 3
   AutoPlayOnStart: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   Chance: 100
   Timing:
     TimescaleMode: 0
-    InitialDelay: 0
+    InitialDelay: 0.2
     CooldownDuration: 0
     NumberOfRepeats: 0
     RepeatForever: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   AnimateScaleTarget: {fileID: 7540324369417784256}
   AnimateScaleDuration: 0.2
   RemapCurveZero: 1
-  RemapCurveOne: 1.25
+  RemapCurveOne: 0
   Offset: 0
   AnimateX: 1
   AnimateScaleX:
@@ -256,8 +256,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -265,8 +265,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -281,8 +281,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -290,8 +290,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -306,8 +306,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -315,8 +315,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   StateOnStop: 1
   SetStateOnReset: 0
   StateOnReset: 1
---- !u!114 &1718746840088049268
+--- !u!114 &635627251118612115
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,15 +370,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 616509900363884506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3621cb3830d764284684d8293b65d2, type: 3}
+  m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Active: 1
-  Label: Particle Images Play
+  Label: Set Active
   Chance: 100
   Timing:
     TimescaleMode: 0
-    InitialDelay: 0
+    InitialDelay: 0.2
     CooldownDuration: 0
     NumberOfRepeats: 0
     RepeatForever: 0
@@ -388,7 +388,15 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  particleImage: {fileID: 5016675975130792175}
+  TargetGameObject: {fileID: 3237313364531704559}
+  SetStateOnInit: 0
+  StateOnInit: 1
+  SetStateOnPlay: 1
+  StateOnPlay: 0
+  SetStateOnStop: 0
+  StateOnStop: 1
+  SetStateOnReset: 0
+  StateOnReset: 1
 --- !u!1 &748344703877703543
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6235371531089860885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -507,7 +515,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3237313364531704559}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!114 &5016675975130792175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
@@ -549,7 +557,7 @@ MonoBehaviour:
   _emitterThickness: 0
   _loop: 0
   _duration: 1
-  _playMode: 0
+  _playMode: 1
   _startSize:
     separable: 1
     separated: 0
@@ -878,7 +886,7 @@ MonoBehaviour:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: 0
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     m_ColorMin: {r: 0, g: 0, b: 0, a: 1}
@@ -1911,8 +1919,8 @@ MonoBehaviour:
       m_Calls: []
   moduleEmitterFoldout: 1
   moduleParticleFoldout: 1
-  moduleMovementFoldout: 1
-  moduleEventsFoldout: 1
+  moduleMovementFoldout: 0
+  moduleEventsFoldout: 0
   m_Texture: {fileID: 2800000, guid: 5a6b42d1cb16d4e80a04cea43bc257bd, type: 3}
 --- !u!1 &3353000414282853089
 GameObject:
@@ -2213,7 +2221,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4457559204835085152
 GameObject:
