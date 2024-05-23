@@ -16,9 +16,11 @@ namespace GameCore.Gameplay
 {
     public class TownBuilding : MonoBehaviour
     {
-        #region UTILITIES
-
-        #endregion
+        public enum State
+        {
+            Show,
+            Hide
+        }
         
         #region FIELDS
 
@@ -34,14 +36,17 @@ namespace GameCore.Gameplay
         [FoldoutGroup("Components/Button"), SerializeField] private Image m_ButtonCurrencyImage;
         [FoldoutGroup("Components/Button"), SerializeField] private TextMeshProUGUI m_ButtonCurrencyText;
         [FoldoutGroup("Components/FX"), SerializeField] private ParticleImage m_PfxComet;
-        
-        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowButtonFeedbacks;
-        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideButtonFeedbacks;
+
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_FirstUpgradeFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_UpgradeFeedbacks;
         [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_MaxUpgradeFeedbacks;
-        
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_ShowButtonFeedbacks;
+        [FoldoutGroup("Components/Feedbacks"), SerializeField] private MMFeedbacks m_HideButtonFeedbacks;
+
         //Indicator
+        [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private State m_State = State.Show;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private bool isMaxLevel = false;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private int currentLevel = 0;
         [FoldoutGroup("Indicator"), SerializeField, ReadOnly] private TownBuildingProperty townBuildingProperty;
@@ -56,6 +61,19 @@ namespace GameCore.Gameplay
 
         #region MONOBEHAVIOUR
 
+        private void OnEnable()
+        {
+            GameManager.Instance.onStateChange += OnStateChange;
+        }
+
+        private void OnDisable()
+        {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.onStateChange -= OnStateChange;
+            }
+        }
+
         private void Update()
         {
             CheckButtonToggle();
@@ -64,6 +82,25 @@ namespace GameCore.Gameplay
         #endregion
 
         #region CALLBACKS
+
+        private void OnStateChange()
+        {
+            switch (GameManager.Instance.m_State)
+            {
+                case GameManager.State.Home:
+                    Show();
+                    break;
+                case GameManager.State.PlayingTown:
+                    Show();
+                    break;
+                case GameManager.State.PlayingPuzzle:
+                    Hide();
+                    break;
+                default:
+                    Show();
+                    break;
+            }
+        }
 
         #endregion
 
@@ -105,6 +142,20 @@ namespace GameCore.Gameplay
         #endregion
 
         #region FUNCTIONS
+
+        private void Show()
+        {
+            if (m_State == State.Show) return;
+            m_State = State.Show;
+            m_ShowFeedbacks.PlayFeedbacks();
+        }
+
+        private void Hide()
+        {
+            if (m_State == State.Hide) return;
+            m_State = State.Hide;
+            m_HideFeedbacks.PlayFeedbacks();
+        }
 
         public void Setup(TownBuildingLocalData localData)
         {

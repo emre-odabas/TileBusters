@@ -10,9 +10,9 @@ namespace GameCore.UI
 {
     public class TownScreen : CoreScreen<TownScreen>
     {
-        [FoldoutGroup("Components")]
-        [FoldoutGroup("Components/Utilities"), SerializeField] private Transform m_TownsPlaceholder;
-        [FoldoutGroup("Components/Utilities"), SerializeField] private GameObject m_CurrentTownPlatform;
+        //[FoldoutGroup("Components")]
+        //[FoldoutGroup("Components/Utilities"), SerializeField] private Transform m_TownsPlaceholder;
+        //[FoldoutGroup("Components/Utilities"), SerializeField] private GameObject m_CurrentTownPlatform;
         
         #region MONOBEHAVIOUR
 
@@ -29,20 +29,16 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onGameSetup += InitTown;
-            //GameManager.Instance.onInitialize += Show;
-            //GameManager.Instance.onNextLevel += InitTown;
+            //GameManager.Instance.onGameSetup += InitTown;
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
-            if(GameManager.Instance != null)
+            /*if(GameManager.Instance != null)
             {
                 GameManager.Instance.onGameSetup -= InitTown;
-                //GameManager.Instance.onInitialize -= Show;
-                //GameManager.Instance.onNextLevel -= InitTown;
-            }
+            }*/
         }
 
         #endregion
@@ -63,13 +59,13 @@ namespace GameCore.UI
 
         #region FUNCTIONS
 
-        private void InitTown()
+        /*private void InitTown()
         {
             if (m_CurrentTownPlatform != null)
                 Destroy(m_CurrentTownPlatform);
 
             m_CurrentTownPlatform = Instantiate(TownDataList.Instance.GetCurrentTownData().m_Platform, m_TownsPlaceholder);
-        }
+        }*/
 
         #endregion
 

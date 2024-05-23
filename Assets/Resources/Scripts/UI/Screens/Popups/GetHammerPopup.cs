@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using GameCore.Core.UI;
+using GameCore.Managers;
 
 namespace GameCore.UI
 {
@@ -40,7 +41,8 @@ namespace GameCore.UI
 
         public void OnClickPlayPuzzle()
         {
-
+            Hide();
+            GameManager.Instance.StartPlay_Puzzle();
         }
 
         #endregion

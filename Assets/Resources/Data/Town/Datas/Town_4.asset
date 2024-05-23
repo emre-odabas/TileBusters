@@ -21,13 +21,13 @@ MonoBehaviour:
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: 789ac6414440f384bb048219b09c811d, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 50
     - m_CostType: 2
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: 5dd3ec67aa8dc634b9657d4d25b7ba86, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 100
     - m_CostType: 2
       m_CostAmount: 2
@@ -41,13 +41,13 @@ MonoBehaviour:
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: 1823e4d4a8aaa4443a8ccf2510f7a265, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 50
     - m_CostType: 2
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: 3661f4f804563604891a9fcfb22399d8, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 100
     - m_CostType: 2
       m_CostAmount: 2
@@ -61,13 +61,13 @@ MonoBehaviour:
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: e56e129388c4bb3428745cbb342c6cf9, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 50
     - m_CostType: 2
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: 4a148d7a9310b0a4fa351441842a9be6, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 100
     - m_CostType: 2
       m_CostAmount: 2
@@ -81,13 +81,13 @@ MonoBehaviour:
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: f43c8fc6201a7aa47b425a6c42860a31, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 50
     - m_CostType: 2
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: 194f8df1b7a517e46b4f1b567731d2ca, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 100
     - m_CostType: 2
       m_CostAmount: 2
@@ -101,13 +101,13 @@ MonoBehaviour:
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: c7b2ea818fed8ac40a4be8d1653fb4ef, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 50
     - m_CostType: 2
       m_CostAmount: 2
       m_Sprite: {fileID: 21300000, guid: de701231d9e90e14c9037a70cfdbca28, type: 3}
       m_GiveReward: 1
-      m_RewardType: 1
+      m_RewardType: 3
       m_RewardAmount: 100
     - m_CostType: 2
       m_CostAmount: 2

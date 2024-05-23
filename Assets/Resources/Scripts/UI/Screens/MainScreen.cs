@@ -18,9 +18,11 @@ namespace GameCore.UI
 
         //Components
         [FoldoutGroup("Components", expanded: true)]
+        [FoldoutGroup("Components/Town"), SerializeField] private Transform m_TownsPlaceholder;
+        [FoldoutGroup("Components/Town"), SerializeField] private GameObject m_CurrentTownPlatform;
+        [FoldoutGroup("Components/Town"), SerializeField] private Image m_Background;
         [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtButtonTownTitle;
         [FoldoutGroup("Components/Utilities")] public TextMeshProUGUI m_TxtButtonPuzzleTitle;
-        [FoldoutGroup("Components/Utilities"), SerializeField] private Image m_Background;
         [FoldoutGroup("Components/Bars"), SerializeField] private List<CurrencyBar> m_CurrencyBarList = new List<CurrencyBar>();
 
         #endregion
@@ -45,7 +47,7 @@ namespace GameCore.UI
         {
             base.OnEnable();
             GameManager.Instance.onGameSetup += Show;
-            //GameManager.Instance.onStartPlayTown += Hide;
+            GameManager.Instance.onInitialize += InitTown;
         }
 
         protected override void OnDisable()
@@ -55,7 +57,7 @@ namespace GameCore.UI
             if(GameManager.Instance != null)
             {
                 GameManager.Instance.onGameSetup -= Show;
-                //GameManager.Instance.onStartPlayTown -= Hide;
+                GameManager.Instance.onInitialize -= InitTown;
             }
         }
 
@@ -66,6 +68,8 @@ namespace GameCore.UI
         public override void Show()
         {
             base.Show();
+
+            //InitTown();
 
             m_TxtButtonTownTitle.text = "Town " + (TownDataList.Instance.GetCurrentTownLevel()).ToString();
             m_TxtButtonPuzzleTitle.text = "1";
@@ -98,6 +102,18 @@ namespace GameCore.UI
             }
 
             return bar.m_Image;
+        }
+
+        #endregion
+
+        #region FUNCTIONS
+
+        private void InitTown()
+        {
+            if (m_CurrentTownPlatform != null)
+                Destroy(m_CurrentTownPlatform);
+
+            m_CurrentTownPlatform = Instantiate(TownDataList.Instance.GetCurrentTownData().m_Platform, m_TownsPlaceholder);
         }
 
         #endregion
