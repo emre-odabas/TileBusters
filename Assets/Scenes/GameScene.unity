@@ -17321,7 +17321,7 @@ MonoBehaviour:
   m_State: 0
   m_UICamera: {fileID: 1333086554}
   m_SplashScreen: {fileID: 1593423028}
-  m_DelayOnSplashScreen: 1
+  m_DelayOnSplashScreen: 3
   m_DelayOnStartPlay: 0
   m_DelayTownComplete: 1.5
   m_DelayPuzzleComplete: 1.5

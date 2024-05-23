@@ -2318,12 +2318,12 @@ PrefabInstance:
         type: 3}
       propertyPath: AnimatePositionTarget
       value: 
-      objectReference: {fileID: 5806639064337987442}
+      objectReference: {fileID: 5806639064852420583}
     - target: {fileID: 5695602711287506423, guid: 9403e1c5ded7d1942b66e8cf0297cdf1,
         type: 3}
       propertyPath: AnimatePositionTarget
       value: 
-      objectReference: {fileID: 5806639064337987442}
+      objectReference: {fileID: 5806639064852420583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
