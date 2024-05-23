@@ -66,6 +66,7 @@
     <Compile Include="Assets\Resources\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\Popups\GetHammerPopup.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\PuzzleSlotController.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Screens\Popups\PuzzleFailPopup.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Buttons\SoundButtonToggle.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\UI\CoreButton.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Properties\TownBuildingUpgradeProperty.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\Resources\Scripts\UI\Buttons\TapticButtonToggle.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Properties\TownBuildingProperty.cs" />
     <Compile Include="Assets\Resources\Scripts\Puzzle\UIController.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Screens\Popups\PuzzleCompletePopup.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\SingletonComponent.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\CoroutineStarter.cs" />
     <Compile Include="Assets\Resources\Scripts\Internal\Properties\CurrencyProperty.cs" />

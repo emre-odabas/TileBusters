@@ -116,14 +116,12 @@ public class PuzzleSlotController : SingletonComponent<PuzzleSlotController>
     {
         if (AllSlotsFull())
         {
-            Debug.LogError("Puzzle game over!");
             GameManager.Instance.PuzzleFail();
             return;
         }
 
         if (PuzzleController.Instance.GetIsSolved())
         {
-            Debug.LogError("Puzzle solved!");
             GameManager.Instance.IncreaseCurrency(CurrencyType.Hammer, 2);
             GameManager.Instance.PuzzleComplete();
             return;
