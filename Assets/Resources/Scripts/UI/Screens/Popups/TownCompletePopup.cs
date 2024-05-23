@@ -7,7 +7,7 @@ using GameCore.Core;
 
 namespace GameCore.UI
 {
-    public class PuzzleCompletePopup : CoreScreen<PuzzleCompletePopup>, IPopup
+    public class TownCompletePopup : CoreScreen<TownCompletePopup>, IPopup
     {
         #region FIELDS
 
@@ -25,7 +25,7 @@ namespace GameCore.UI
         protected override void OnEnable()
         {
             base.OnEnable();
-            GameManager.Instance.onPuzzleComplete += Show;
+            GameManager.Instance.onTownComplete += Show;
         }
 
         protected override void OnDisable()
@@ -33,7 +33,7 @@ namespace GameCore.UI
             base.OnDisable();
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.onPuzzleComplete -= Show;
+                GameManager.Instance.onTownComplete -= Show;
             }
         }
 
@@ -56,6 +56,7 @@ namespace GameCore.UI
         {
             Hide();
             GameManager.Instance.GoHome();
+            Utilities.DelayedCall(1.5f, () => { SceneManager.LoadScene(SceneManager.GetActiveScene().name); });
         }
 
         #endregion

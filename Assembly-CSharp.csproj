@@ -99,6 +99,7 @@
     <Compile Include="Assets\Resources\Scripts\Core\UI\UIElementController.cs" />
     <Compile Include="Assets\Resources\Scripts\Managers\SettingsManager.cs" />
     <Compile Include="Assets\Resources\Scripts\Feedbacks\MMFeedbackSound.cs" />
+    <Compile Include="Assets\Resources\Scripts\UI\Screens\Popups\TownCompletePopup.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Data\TutorialStep.cs" />
     <Compile Include="Assets\Resources\Scripts\Core\Utilities\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Resources\Scripts\UI\Screens\CommonScreen.cs" />
