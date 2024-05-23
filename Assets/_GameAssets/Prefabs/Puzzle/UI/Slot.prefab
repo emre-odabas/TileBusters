@@ -148,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3574577889107788107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_ItemContainer: {fileID: 932357961027474648}
   m_FilledFeedbacks: {fileID: 4937356080578140728}
   m_EmptyItFeedbacks: {fileID: 5062725501665158974}
-  m_isFull: 0
+  m_TileCell: {fileID: 0}
 --- !u!1 &8776979203168619384
 GameObject:
   m_ObjectHideFlags: 0

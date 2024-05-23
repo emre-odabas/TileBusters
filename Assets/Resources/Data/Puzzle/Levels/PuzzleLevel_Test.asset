@@ -10,58 +10,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93288622cb15448aeb76c8a36f891f5f, type: 3}
-  m_Name: PuzzleLevel_1
+  m_Name: PuzzleLevel_Test
   m_EditorClassIdentifier: 
   TileLayers:
   - Tiles:
+    - Id: _puzzleTile_4
+      RowY: 0
+      ColX: 0
+    - Id: _puzzleTile_3
+      RowY: 1
+      ColX: 0
     - Id: _puzzleTile_2
       RowY: 2
       ColX: 0
-    - Id: _puzzleTile_7
-      RowY: 2
+    - Id: _puzzleTile_8
+      RowY: 0
       ColX: 1
+    - Id: _puzzleTile_6
+      RowY: 0
+      ColX: 2
     - Id: _puzzleTile_4
       RowY: 2
       ColX: 2
     - Id: _puzzleTile_6
       RowY: 2
       ColX: 3
-    - Id: _puzzleTile_3
+    - Id: _puzzleTile_8
       RowY: 1
-      ColX: 0
+      ColX: 3
+    - Id: _puzzleTile_2
+      RowY: 0
+      ColX: 3
+    - Id: _puzzleTile_7
+      RowY: 2
+      ColX: 1
     - Id: _puzzleTile_8
       RowY: 1
       ColX: 1
     - Id: _puzzleTile_9
       RowY: 1
       ColX: 2
-    - Id: _puzzleTile_8
-      RowY: 1
-      ColX: 3
-    - Id: _puzzleTile_4
-      RowY: 0
-      ColX: 0
-    - Id: _puzzleTile_8
-      RowY: 0
-      ColX: 1
-    - Id: _puzzleTile_6
-      RowY: 0
-      ColX: 2
-    - Id: _puzzleTile_2
-      RowY: 0
-      ColX: 3
     ColCountX: 4
     RowCountY: 3
   - Tiles:
-    - Id: _puzzleTile_9
-      RowY: 1
-      ColX: 0
-    - Id: _puzzleTile_6
-      RowY: 1
-      ColX: 1
-    - Id: _puzzleTile_7
-      RowY: 1
-      ColX: 2
     - Id: _puzzleTile_2
       RowY: 0
       ColX: 0
@@ -70,6 +61,15 @@ MonoBehaviour:
       ColX: 1
     - Id: _puzzleTile_3
       RowY: 0
+      ColX: 2
+    - Id: _puzzleTile_6
+      RowY: 1
+      ColX: 1
+    - Id: _puzzleTile_9
+      RowY: 1
+      ColX: 0
+    - Id: _puzzleTile_7
+      RowY: 1
       ColX: 2
     ColCountX: 3
     RowCountY: 2
