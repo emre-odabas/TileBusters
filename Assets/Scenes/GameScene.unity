@@ -17194,12 +17194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_State: 0
-  m_IsPlayerAct: 0
-  m_IsPlayerFirstAct: 1
   m_UICamera: {fileID: 1333086554}
   m_SplashScreen: {fileID: 1593423028}
-  m_WinFeedback: {fileID: 0}
-  m_FailFeedback: {fileID: 0}
   m_DelayOnSplashScreen: 1
   m_DelayOnStartPlay: 0
   m_DelayTownComplete: 1.5

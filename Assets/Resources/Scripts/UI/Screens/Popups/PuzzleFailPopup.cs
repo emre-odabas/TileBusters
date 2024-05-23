@@ -25,20 +25,25 @@ namespace GameCore.UI
             GameManager.Instance.onPuzzleFail += Show;
         }
 
-        protected override void Start()
+        protected override void OnDisable()
         {
-            base.Start();
+            base.OnDisable();
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.onPuzzleFail -= Show;
             }
         }
 
+        protected override void Start()
+        {
+            base.Start();
+        }
+
         #endregion
 
         #region RECALL FUNCTIONS
 
-
+        
 
         #endregion
 

@@ -12,16 +12,6 @@ namespace GameCore.Managers
 {
     public class GameManager : SingletonComponent<GameManager>
     {
-        /*public enum State
-        {
-            Awaiting = 0,
-            SettingUp = 1,
-            PlayingTown = 2,
-            Finished = 3,
-            Completed = 4,
-            Failed = 5
-        }*/
-
         public enum State
         {
             Awaiting = 0,
@@ -53,12 +43,8 @@ namespace GameCore.Managers
         #region FIELDS
 
         [ReadOnly] public State m_State = State.Awaiting;
-        [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerAct = false;
-        [FoldoutGroup("Level"), ReadOnly] public bool m_IsPlayerFirstAct = true;
         [FoldoutGroup("Components")] public Camera m_UICamera;
         [FoldoutGroup("Components")] public GameObject m_SplashScreen;
-        [FoldoutGroup("Feedbacks", expanded: true)] public MMFeedbacks m_WinFeedback;
-        [FoldoutGroup("Feedbacks")] public MMFeedbacks m_FailFeedback;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnSplashScreen = 1.5f;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayOnStartPlay = 0;
         [FoldoutGroup("Loop Delay Settings")] public float m_DelayTownComplete = 1.5f;
@@ -69,6 +55,8 @@ namespace GameCore.Managers
         [FoldoutGroup("Database"), HideLabel] public TownDataList m_TownDataList;
 
         //Privates
+        private bool m_IsPlayerAct = false;
+        private bool m_IsPlayerFirstAct = true;
 
         #endregion
 
@@ -227,11 +215,11 @@ namespace GameCore.Managers
         }
         public void PuzzleComplete()
         {
-            Utilities.DelayedCall(m_DelayTownComplete, () => { onPuzzleComplete?.Invoke(); });
+            Utilities.DelayedCall(m_DelayPuzzleComplete, () => { onPuzzleComplete?.Invoke(); });
         }
         public void PuzzleFail()
         {
-            Utilities.DelayedCall(m_DelayTownComplete, () => { onPuzzleFail?.Invoke(); });
+            Utilities.DelayedCall(m_DelayPuzzleFail, () => { onPuzzleFail?.Invoke(); });
         }
 
         #endregion

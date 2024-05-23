@@ -163,6 +163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasePopup
       objectReference: {fileID: 0}
+    - target: {fileID: 2484708218973176546, guid: 957010284de38714e853ea1bebb9845f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8332106385559955043, guid: 957010284de38714e853ea1bebb9845f,
         type: 3}
       propertyPath: m_Pivot.x
